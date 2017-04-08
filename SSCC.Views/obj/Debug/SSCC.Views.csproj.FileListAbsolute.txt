@@ -1,0 +1,11 @@
+D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Views.exe.config
+D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Views.exe
+D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Views.pdb
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.csprojResolveAssemblyReference.cache
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.frmHome.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.frmPrincipal.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Properties.Resources.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.csproj.GenerateResource.Cache
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe.licenses
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.pdb
