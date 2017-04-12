@@ -11,19 +11,33 @@ using DevExpress.XtraBars;
 
 namespace SSCC.Views
 {
-    public partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
+    //Eventos de Controles
+    public sealed partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        /// <summary>
+        /// Constructor que inicializa componentes.
+        /// </summary>
         public Home()
         {
             InitializeComponent();
-            this.ribbonStatusBar.BackColor = Color.FromArgb(141, 147, 161);
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            ProgressIndicator c = new ProgressIndicator();
-            c.StartPosition = FormStartPosition.CenterScreen;
-            c.ShowDialog();
+            this.LoadDate(); //Muestra la fecha y hora en pantalla.
+        }
+
+        /// <summary>
+        /// Muestra la fecha y hora en pantalla.
+        /// </summary>
+        private void LoadDate()
+        {
+            lblDate.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
+        private void tmTime_Tick(object sender, EventArgs e)
+        {
+            this.LoadDate();
         }
     }
 }

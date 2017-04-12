@@ -31,7 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
+            this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewButtonItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
+            this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
+            this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.backstageViewTabItem3 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.backstageViewItemSeparator2 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
+            this.backstageViewButtonItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -44,6 +51,8 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -54,20 +63,17 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Skin = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.backstageViewTabItem3 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
-            this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
-            this.backstageViewButtonItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
-            this.backstageViewItemSeparator2 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
+            this.stState = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblDate = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tmTime = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
+            this.stState.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -104,8 +110,8 @@
             // 
             // backstageViewControl1
             // 
-            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl3);
             this.backstageViewControl1.Controls.Add(this.backstageViewClientControl1);
+            this.backstageViewControl1.Controls.Add(this.backstageViewClientControl3);
             this.backstageViewControl1.Items.Add(this.backstageViewButtonItem1);
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator1);
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem1);
@@ -118,10 +124,51 @@
             this.backstageViewControl1.Size = new System.Drawing.Size(634, 267);
             this.backstageViewControl1.TabIndex = 2;
             // 
+            // backstageViewClientControl3
+            // 
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(145, 63);
+            this.backstageViewClientControl3.Name = "backstageViewClientControl3";
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(488, 203);
+            this.backstageViewClientControl3.TabIndex = 2;
+            // 
+            // backstageViewClientControl1
+            // 
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(145, 63);
+            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(488, 203);
+            this.backstageViewClientControl1.TabIndex = 1;
+            // 
             // backstageViewButtonItem1
             // 
             this.backstageViewButtonItem1.Caption = "Nuevo";
             this.backstageViewButtonItem1.Name = "backstageViewButtonItem1";
+            // 
+            // backstageViewItemSeparator1
+            // 
+            this.backstageViewItemSeparator1.Name = "backstageViewItemSeparator1";
+            // 
+            // backstageViewTabItem1
+            // 
+            this.backstageViewTabItem1.Caption = "Configuración";
+            this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
+            this.backstageViewTabItem1.Name = "backstageViewTabItem1";
+            this.backstageViewTabItem1.Selected = false;
+            // 
+            // backstageViewTabItem3
+            // 
+            this.backstageViewTabItem3.Caption = "Ayuda";
+            this.backstageViewTabItem3.ContentControl = this.backstageViewClientControl3;
+            this.backstageViewTabItem3.Name = "backstageViewTabItem3";
+            this.backstageViewTabItem3.Selected = false;
+            // 
+            // backstageViewItemSeparator2
+            // 
+            this.backstageViewItemSeparator2.Name = "backstageViewItemSeparator2";
+            // 
+            // backstageViewButtonItem2
+            // 
+            this.backstageViewButtonItem2.Caption = "Salir";
+            this.backstageViewButtonItem2.Name = "backstageViewButtonItem2";
             // 
             // barButtonItem1
             // 
@@ -206,6 +253,22 @@
             this.barButtonItem12.ImageOptions.ImageUri.Uri = "AlignJustify";
             this.barButtonItem12.Name = "barButtonItem12";
             // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem1.Caption = "Fecha:";
+            this.barStaticItem1.Id = 19;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem2.Caption = "Hora:";
+            this.barStaticItem2.Id = 20;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -279,36 +342,6 @@
             // 
             this.Skin.LookAndFeel.SkinName = "Office 2016 Colorful";
             // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem1.Caption = "Fecha:";
-            this.barStaticItem1.Id = 19;
-            this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem2.Caption = "Hora:";
-            this.barStaticItem2.Id = 20;
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // backstageViewClientControl1
-            // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(133, 63);
-            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(500, 193);
-            this.backstageViewClientControl1.TabIndex = 1;
-            // 
-            // backstageViewTabItem1
-            // 
-            this.backstageViewTabItem1.Caption = "Configuración";
-            this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
-            this.backstageViewTabItem1.Name = "backstageViewTabItem1";
-            this.backstageViewTabItem1.Selected = false;
-            // 
             // backstageViewTabItem2
             // 
             this.backstageViewTabItem2.Caption = "Ayuda";
@@ -323,38 +356,57 @@
             this.backstageViewClientControl2.Size = new System.Drawing.Size(488, 193);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
-            // backstageViewClientControl3
+            // stState
             // 
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(145, 63);
-            this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(488, 193);
-            this.backstageViewClientControl3.TabIndex = 2;
+            this.stState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(191)))));
+            this.stState.Font = new System.Drawing.Font("Arial", 9F);
+            this.stState.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.lblDate});
+            this.stState.Location = new System.Drawing.Point(0, 427);
+            this.stState.Name = "stState";
+            this.stState.Size = new System.Drawing.Size(658, 22);
+            this.stState.TabIndex = 4;
+            this.stState.Text = "statusStrip1";
             // 
-            // backstageViewTabItem3
+            // toolStripStatusLabel1
             // 
-            this.backstageViewTabItem3.Caption = "Ayuda";
-            this.backstageViewTabItem3.ContentControl = this.backstageViewClientControl3;
-            this.backstageViewTabItem3.Name = "backstageViewTabItem3";
-            this.backstageViewTabItem3.Selected = false;
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Arial", 8F);
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel1.Text = "Estado:";
             // 
-            // backstageViewItemSeparator1
+            // toolStripStatusLabel2
             // 
-            this.backstageViewItemSeparator1.Name = "backstageViewItemSeparator1";
+            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Arial", 8F);
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(529, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "© Copyright - Petronic 2017. All rights reserved.";
             // 
-            // backstageViewButtonItem2
+            // lblDate
             // 
-            this.backstageViewButtonItem2.Caption = "Salir";
-            this.backstageViewButtonItem2.Name = "backstageViewButtonItem2";
+            this.lblDate.Font = new System.Drawing.Font("Arial", 8F);
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(40, 17);
+            this.lblDate.Text = "Fecha:";
             // 
-            // backstageViewItemSeparator2
+            // tmTime
             // 
-            this.backstageViewItemSeparator2.Name = "backstageViewItemSeparator2";
+            this.tmTime.Enabled = true;
+            this.tmTime.Interval = 500;
+            this.tmTime.Tick += new System.EventHandler(this.tmTime_Tick);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 449);
+            this.Controls.Add(this.stState);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbon);
             this.Name = "Home";
@@ -366,6 +418,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).EndInit();
             this.backstageViewControl1.ResumeLayout(false);
+            this.stState.ResumeLayout(false);
+            this.stState.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +463,10 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem2;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl2;
         private DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator backstageViewItemSeparator2;
+        private System.Windows.Forms.StatusStrip stState;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel lblDate;
+        private System.Windows.Forms.Timer tmTime;
     }
 }
