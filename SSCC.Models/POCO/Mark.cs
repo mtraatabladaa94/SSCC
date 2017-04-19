@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.ModelConfiguration;
 
 namespace SSCC.Models.POCO
 {
@@ -23,5 +24,21 @@ namespace SSCC.Models.POCO
 
         public virtual ICollection<Product> Products { get; set; }
 
+    }
+
+    public partial class MarkMapping : EntityTypeConfiguration<Mark>
+    {
+        public MarkMapping()
+        {
+            ToTable("tblMarks");
+
+            HasKey(c => c.MarkID);
+
+            Property(c => c.MarkName)
+                .HasColumnType("varchar")
+                .HasMaxLength(60)
+                .IsRequired();
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace SSCC.Models.Database
     /// </summary>
     public partial class ModelDb : DbContext // Características del objeto base de datos
     {
-        public ModelDb() : base("") { } // Establece la conexión de la base de datos
+        public ModelDb() : base(@"Data Source = .\UNANFAREMCH; Initial Catalog = SsccDB; Integrated Security = True;") { } // Establece la conexión de la base de datos
 
         public DbSet<Customer> Customers { get; set; }
         
@@ -34,7 +34,7 @@ namespace SSCC.Models.Database
         
         public DbSet<SaleDetail> SalesDetails { get; set; }
         
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
 
     }
 
@@ -45,6 +45,17 @@ namespace SSCC.Models.Database
 
             //Se elimina la pluralización del software
             modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
+
+            //Añadiendo configuración de entidades
+            modelBuilder.Configurations.Add(new CustomerMapping());
+            modelBuilder.Configurations.Add(new LineMapping());
+            modelBuilder.Configurations.Add(new MarkMapping());
+            modelBuilder.Configurations.Add(new ProductMapping());
+            modelBuilder.Configurations.Add(new ReceiptMapping());
+            modelBuilder.Configurations.Add(new ReceiptAdvanceMapping());
+            modelBuilder.Configurations.Add(new ReceiptDetailMapping());
+            modelBuilder.Configurations.Add(new SaleMapping());
+            modelBuilder.Configurations.Add(new SaleDetailMapping());
 
             //Se llama al método sobrecargado de la superclase OnModelCreating
             base.OnModelCreating(modelBuilder);

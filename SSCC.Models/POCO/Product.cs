@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data.Entity.ModelConfiguration;
+
 namespace SSCC.Models.POCO
 {
     /// <summary>
@@ -13,7 +15,7 @@ namespace SSCC.Models.POCO
     {
         public Guid ProductID { get; set; }
         
-        public string ProductoCode { get; set; }
+        public string ProductCode { get; set; }
         
         public string ProductName { get; set; }
         
@@ -39,4 +41,39 @@ namespace SSCC.Models.POCO
         public virtual ICollection<SaleDetail> SalesDetails { get; set; }
 
     }
+
+    public partial class ProductMapping : EntityTypeConfiguration<Product>
+    {
+        public ProductMapping()
+        {
+            ToTable("tblProducts");
+
+
+            HasKey(c => c.ProductID);
+
+
+            Property(c => c.ProductCode)
+                .HasColumnType("varchar")
+                .HasMaxLength(20)
+                .IsRequired();
+
+
+            Property(c => c.ProductName)
+                .HasColumnType("varchar")
+                .HasMaxLength(60)
+                .IsRequired();
+
+
+            Property(c => c.ProductDescription)
+                .HasColumnType("varchar")
+                .HasMaxLength(null);
+
+
+
+            Property(c => c.ProductPrice)
+                .HasColumnType("decimal")
+                .HasPrecision(10, 4);
+        }
+    }
+
 }

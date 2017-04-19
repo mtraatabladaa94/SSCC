@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.ModelConfiguration;
 
 namespace SSCC.Models.POCO
 {
@@ -25,5 +26,19 @@ namespace SSCC.Models.POCO
 
     }
 
+    public partial class LineMapping : EntityTypeConfiguration<Line>
+    {
+        public LineMapping()
+        {
+            ToTable("tblLines");
 
+            HasKey(c => c.LineID);
+
+            Property(c => c.LineName)
+                .HasColumnType("varchar")
+                .HasMaxLength(60)
+                .IsRequired();
+
+        }
+    }
 }

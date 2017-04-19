@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data.Entity.ModelConfiguration;
+
 namespace SSCC.Models.POCO
 {
     /// <summary>
@@ -22,6 +24,8 @@ namespace SSCC.Models.POCO
 
         public Boolean ReceiptType { get; set; }
 
+        public Boolean ReceiptIsActive { get; set; }
+
     }
 
     public partial class Receipt // Navegación del objeto Recibo
@@ -32,4 +36,23 @@ namespace SSCC.Models.POCO
         public virtual ICollection<ReceiptAdvance> ReceiptsAvances { get; set; }
 
     }
+
+    public partial class ReceiptMapping : EntityTypeConfiguration<Receipt>
+    {
+        public ReceiptMapping()
+        {
+            ToTable("tblReceipts");
+
+            HasKey(c => c.ReceiptID);
+
+            Property(c => c.ReceiptDescription)
+                .HasColumnType("varchar")
+                .HasMaxLength(null);
+
+            Property(c => c.ReceiptAmount)
+                .HasColumnType("decimal")
+                .HasPrecision(10, 4);
+        }
+    }
+
 }
