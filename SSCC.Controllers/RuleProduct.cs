@@ -9,7 +9,7 @@ using SSCC.Models.Database;
 
 namespace SSCC.Controllers
 {
-    public partial class RuleProduct
+    public partial class RuleProduct // Métodos públicos
     {
         /// <summary>
         /// Permite guardar un producto.
@@ -33,5 +33,60 @@ namespace SSCC.Controllers
             return Product.ProductID;
 
         }
+
+        public void Edit(Product Product)
+        {
+
+        }
+
+        public void Delete(Guid ProductID)
+        {
+            using (var db = new ModelDb())
+            {
+                var Product = this.Find(ProductID);
+                if (Product != null)
+                {
+
+                    Product.ProductIsActive = false;
+
+                    db.Entry(Product).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+
+                }
+            }
+        }
+
+        #region
+
+        public Product Find(Guid ProductID)
+        {
+            using (var db = new ModelDb())
+            {
+                return db.Products.Where(c => c.ProductIsActive && c.ProductID == ProductID).FirstOrDefault();
+            }
+        }
+
+        public Product Find(String ProductCode)
+        {
+            using (var db = new ModelDb())
+            {
+                return db.Products.Where(c => c.ProductIsActive && c.ProductCode == ProductCode).FirstOrDefault();
+            }
+        }
+
+        public IEnumerable<Product> List()
+        {
+
+            return null;
+        }
+
+        #endregion
+
+        
+    }
+
+    public partial class RuleProduct // Métodos privados
+    {
+
     }
 }
