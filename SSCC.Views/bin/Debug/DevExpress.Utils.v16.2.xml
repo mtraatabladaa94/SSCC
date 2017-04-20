@@ -4,6 +4,336 @@
         <name>DevExpress.Utils.v16.2</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.Utils.TextOptions">
+
+            <summary>
+                <para>Contains options that specify how text is rendered.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming)">
+            <summary>
+                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
+
+</para>
+            </summary>
+            <param name="hAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
+
+
+            </param>
+            <param name="vAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
+
+
+            </param>
+            <param name="wordWrap">
+		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
+
+
+            </param>
+            <param name="trimming">
+		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.AppearanceObject)">
+            <summary>
+                <para>Initializes a new instance of the TextOptions class with the specified owner, the text settings are set to default values.
+
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which becomes the owner of the current object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming,DevExpress.Utils.HKeyPrefix)">
+            <summary>
+                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
+
+</para>
+            </summary>
+            <param name="hAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
+
+            </param>
+            <param name="vAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
+
+
+            </param>
+            <param name="wordWrap">
+		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
+
+            </param>
+            <param name="trimming">
+		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
+
+            </param>
+            <param name="hotKeyPrefix">
+		A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value that specifies the hotkey prefix for the text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HotkeyPrefix"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.Assign(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>Copies settings from the specified object to the current TextOptions object.
+</para>
+            </summary>
+            <param name="options">
+		A TextOptions object whose settings are copied to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptions">
+            <summary>
+                <para>Gets an object that specifies the default text options.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.TextOptions"/> object that specifies the default text options.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsCenteredWithEllipsis">
+            <summary>
+                <para>Gets an object whose settings force text to be centered.
+
+</para>
+            </summary>
+            <value>A TextOptions object with its settings set to the corresponding values.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsMultiLine">
+            <summary>
+                <para>Gets an object whose settings allow text to wrap.
+</para>
+            </summary>
+            <value>A TextOptions object with its settings set to the corresponding values.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrap">
+            <summary>
+                <para>Gets an object whose settings prevent text from wrapping.
+
+</para>
+            </summary>
+            <value>A TextOptions object with its settings set to the corresponding values.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrapEx">
+            <summary>
+                <para>Gets an object whose settings force text to be centered and prevent it from wrapping.
+
+</para>
+            </summary>
+            <value>A TextOptions object with its settings set to the corresponding values.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultStringFormat">
+            <summary>
+                <para>Gets an object that contains the default formatting settings.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.StringFormat"/> object containing the default formatting settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.ForceUseGenericDefaultStringFormat">
+            <summary>
+                <para>Specifies how the default string format referred to by the <see cref="P:DevExpress.Utils.TextOptions.DefaultStringFormat"/> property is constructed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat">
+            <summary>
+                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the <see cref="P:DevExpress.Utils.TextOptions.DefaultOptions"/> object.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the specified TextOptions object.
+
+</para>
+            </summary>
+            <param name="defaultOptions">
+		A TextOptions object whose settings are used to initialize the corresponding settings of the <see cref="T:System.Drawing.StringFormat"/> object that is to be returned.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
+
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.HAlignment">
+            <summary>
+                <para>Gets or sets the horizontal alignment of text.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the text horizontal alignment.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.HorzAlignmentToStringAlignment(DevExpress.Utils.HorzAlignment)">
+            <summary>
+                <para>Converts the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
+
+</para>
+            </summary>
+            <param name="align">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that is to be converted.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.HotkeyPrefix">
+            <summary>
+                <para>Gets or sets the hotkey prefix for the text. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value which represents the hotkey prefix for the text.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.IsEqual(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>Tests whether two objects have the same property values.
+</para>
+            </summary>
+            <param name="options">
+		The TextOptions object to which the current object is compared.
+
+            </param>
+            <returns><b>true</b> if the current object has the same property values as the specified object; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.Reset">
+            <summary>
+                <para>Resets all the text settings to their default values.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.RightToLeft">
+            <summary>
+                <para>Gets or sets whether the text is directed from right to left.
+</para>
+            </summary>
+            <value><b>true</b>, if the text is directed from right to left; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.ToString">
+            <summary>
+                <para>Returns the text representation of the current object.
+</para>
+            </summary>
+            <returns>The text representation of the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.Trimming">
+            <summary>
+                <para>Gets or sets text trimming mode.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.UpdateDefaultOptions(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>For internal use. Copies settings from the specified object to the current object.
+</para>
+            </summary>
+            <param name="defaultOptions">
+		A <see cref="T:DevExpress.Utils.TextOptions"/> object whose settings are copied to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.VAlignment">
+            <summary>
+                <para>Gets or sets the vertical alignment of text.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> value that specifies the text vertical alignment.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.VertAlignmentToStringAlignment(DevExpress.Utils.VertAlignment)">
+            <summary>
+                <para>Converts the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
+</para>
+            </summary>
+            <param name="align">
+		A <see cref="T:DevExpress.Utils.VertAlignment"/> value that is to be converted.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.WordWrap">
+            <summary>
+                <para>Gets or sets text wrapping mode.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies text wrapping mode.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Utils.VisualEffects.GuideProperties">
 
             <summary>
@@ -5387,6 +5717,14 @@ This is a static property.
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.PreferredDateTimeCulture">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.RightToLeft">
             <summary>
                 <para>Gets or sets whether visual elements of DevExpress controls are aligned to support locales using right-to-left fonts. This is a static property.
@@ -5514,6 +5852,16 @@ This is a static property.
                 <para>Initializes a new instance of the TransitionManager class with the default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Animation.TransitionManager.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="container">
+		 
+            </param>
 
 
         </member>
@@ -8202,6 +8550,14 @@ Currently, the <b>Default</b> option is equivalent to the <b>BeforeText</b> opti
 
 
         </member>
+        <member name="P:DevExpress.Skins.SkinManager.AllowCopyScaledInfoFromTemplate">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.Skins.SkinManager.AllowFormSkins">
             <summary>
                 <para>Gets whether the form title bar skinning feature is enabled.
@@ -8474,6 +8830,14 @@ Currently, the <b>Default</b> option is equivalent to the <b>BeforeText</b> opti
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.Skins.SkinManager.OpenedInSkinEditor">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -10835,336 +11199,6 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 
 
         </member>
-        <member name="T:DevExpress.Utils.TextOptions">
-
-            <summary>
-                <para>Contains options that specify how text is rendered.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
-
-</para>
-            </summary>
-            <param name="hAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
-
-
-            </param>
-            <param name="vAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
-
-
-            </param>
-            <param name="wordWrap">
-		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
-
-
-            </param>
-            <param name="trimming">
-		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.AppearanceObject)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified owner, the text settings are set to default values.
-
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which becomes the owner of the current object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming,DevExpress.Utils.HKeyPrefix)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
-
-</para>
-            </summary>
-            <param name="hAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
-
-            </param>
-            <param name="vAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
-
-
-            </param>
-            <param name="wordWrap">
-		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
-
-            </param>
-            <param name="trimming">
-		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
-
-            </param>
-            <param name="hotKeyPrefix">
-		A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value that specifies the hotkey prefix for the text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HotkeyPrefix"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.Assign(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Copies settings from the specified object to the current TextOptions object.
-</para>
-            </summary>
-            <param name="options">
-		A TextOptions object whose settings are copied to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptions">
-            <summary>
-                <para>Gets an object that specifies the default text options.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.TextOptions"/> object that specifies the default text options.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsCenteredWithEllipsis">
-            <summary>
-                <para>Gets an object whose settings force text to be centered.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsMultiLine">
-            <summary>
-                <para>Gets an object whose settings allow text to wrap.
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrap">
-            <summary>
-                <para>Gets an object whose settings prevent text from wrapping.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrapEx">
-            <summary>
-                <para>Gets an object whose settings force text to be centered and prevent it from wrapping.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultStringFormat">
-            <summary>
-                <para>Gets an object that contains the default formatting settings.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.StringFormat"/> object containing the default formatting settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.ForceUseGenericDefaultStringFormat">
-            <summary>
-                <para>Specifies how the default string format referred to by the <see cref="P:DevExpress.Utils.TextOptions.DefaultStringFormat"/> property is constructed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat">
-            <summary>
-                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the <see cref="P:DevExpress.Utils.TextOptions.DefaultOptions"/> object.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the specified TextOptions object.
-
-</para>
-            </summary>
-            <param name="defaultOptions">
-		A TextOptions object whose settings are used to initialize the corresponding settings of the <see cref="T:System.Drawing.StringFormat"/> object that is to be returned.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
-
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.HAlignment">
-            <summary>
-                <para>Gets or sets the horizontal alignment of text.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the text horizontal alignment.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.HorzAlignmentToStringAlignment(DevExpress.Utils.HorzAlignment)">
-            <summary>
-                <para>Converts the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
-
-</para>
-            </summary>
-            <param name="align">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that is to be converted.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.HotkeyPrefix">
-            <summary>
-                <para>Gets or sets the hotkey prefix for the text. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value which represents the hotkey prefix for the text.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.IsEqual(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Tests whether two objects have the same property values.
-</para>
-            </summary>
-            <param name="options">
-		The TextOptions object to which the current object is compared.
-
-            </param>
-            <returns><b>true</b> if the current object has the same property values as the specified object; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.Reset">
-            <summary>
-                <para>Resets all the text settings to their default values.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.RightToLeft">
-            <summary>
-                <para>Gets or sets whether the text is directed from right to left.
-</para>
-            </summary>
-            <value><b>true</b>, if the text is directed from right to left; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.ToString">
-            <summary>
-                <para>Returns the text representation of the current object.
-</para>
-            </summary>
-            <returns>The text representation of the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.Trimming">
-            <summary>
-                <para>Gets or sets text trimming mode.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.UpdateDefaultOptions(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>For internal use. Copies settings from the specified object to the current object.
-</para>
-            </summary>
-            <param name="defaultOptions">
-		A <see cref="T:DevExpress.Utils.TextOptions"/> object whose settings are copied to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.VAlignment">
-            <summary>
-                <para>Gets or sets the vertical alignment of text.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> value that specifies the text vertical alignment.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.VertAlignmentToStringAlignment(DevExpress.Utils.VertAlignment)">
-            <summary>
-                <para>Converts the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
-</para>
-            </summary>
-            <param name="align">
-		A <see cref="T:DevExpress.Utils.VertAlignment"/> value that is to be converted.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.WordWrap">
-            <summary>
-                <para>Gets or sets text wrapping mode.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies text wrapping mode.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Utils.ToolTipControllerCustomDrawEventHandler">
 
             <summary>
@@ -11656,15 +11690,20 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
         </member>
         <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageSize(System.Object,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Returns the size of the image at the specified position in the image list.
+</para>
             </summary>
             <param name="images">
-		 
+		An object that represents the source of images.
+
+
             </param>
             <param name="index">
-		 
+		The index of the required image in the <i>images</i> list. 
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:System.Drawing.Size"/> value that specifies the size of a specific image.
+</returns>
 
 
         </member>
@@ -11995,7 +12034,7 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
 For the Grid Control, this option acts as the <see cref="F:DevExpress.Utils.EditorShowMode.Click"/> option if multiple cell selection is enabled (see the <see cref="F:DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect"/> topic). Otherwise, this option acts as the <see cref="F:DevExpress.Utils.EditorShowMode.MouseDown"/> option.
 </para>
 <para>
-For the XtraPivotGrid control, this option acts as the <see cref="F:DevExpress.Utils.EditorShowMode.MouseDownFocused"/> option.
+For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils.EditorShowMode.MouseDownFocused"/> option.
 </para>
 </para>
             </summary>

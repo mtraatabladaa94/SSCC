@@ -186,7 +186,7 @@
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.Caption = "Administrar Productos";
+            this.barButtonItem3.Caption = "Administrar Producto";
             this.barButtonItem3.Id = 5;
             this.barButtonItem3.ImageOptions.ImageUri.Uri = "BringToFrontOfText";
             this.barButtonItem3.Name = "barButtonItem3";

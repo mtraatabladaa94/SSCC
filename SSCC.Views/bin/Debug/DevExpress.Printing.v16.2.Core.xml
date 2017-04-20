@@ -322,7 +322,7 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.#ctor">
             <summary>
-                <para>Initializes a new instance of the IntelligentMailPackageGenerator class with default settings.
+                <para>Initializes a new instance of the IntelligentMailPackageGenerator class with the default settings.
 </para>
             </summary>
 
@@ -459,7 +459,7 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.#ctor">
             <summary>
-                <para>Initializes a new instance of the DataSourceInfo class with default settings.
+                <para>Initializes a new instance of the DataSourceInfo class with the default settings.
 </para>
             </summary>
 
@@ -1432,7 +1432,7 @@
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobDto.#ctor">
             <summary>
-                <para>Initializes a new instance of the ScheduledJobDto class with default settings.
+                <para>Initializes a new instance of the ScheduledJobDto class with the default settings.
 </para>
             </summary>
 
@@ -2379,7 +2379,7 @@
 
 </para>
             </summary>
-            <value><b>true</b> to include watermarks; otherwise, <b>false</b>.
+            <value><b>true</b>, to include watermarks; otherwise, <b>false</b>.
 </value>
 
 
@@ -4368,6 +4368,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.UseRichTextFontSubstitution">
+            <summary>
+                <para>Specifies whether or not to substitute missing fonts in the Rich Text when a report is exported to HTML.
+</para>
+            </summary>
+            <value><b>true</b>, to automatically substitute fonts missing in the system; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.VerticalContentSplittingNewBehavior">
             <summary>
                 <para>Enables you to make the Pivot Grid width equal to the page width when setting the <see cref="P:DevExpress.XtraReports.UI.XtraReport.VerticalContentSplitting"/> property to <see cref="F:DevExpress.XtraPrinting.VerticalContentSplitting.Smart"/>.
@@ -4512,6 +4522,16 @@
 </para>
             </summary>
             <value>An object that specifies the resulting document options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlExportOptionsBase.EncryptionOptions">
+            <summary>
+                <para>Provides access to the Excel file encryption options.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.XlEncryptionOptions"/> object.
 </value>
 
 
@@ -5424,6 +5444,14 @@
 
 
         </member>
+        <member name="P:DevExpress.Export.Xl.IXlPicture.SourceRectangle">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="M:DevExpress.Export.Xl.IXlPicture.StretchToCell(DevExpress.Export.Xl.XlCellPosition)">
             <summary>
                 <para>Stretches an IXlPicture object to fill the specified cell.
@@ -5739,6 +5767,42 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> which stores a Title.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.XlEncryptionOptions">
+
+            <summary>
+                <para>Provides the options to encrypt XLSX files.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.XlEncryptionOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XlEncryptionOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlEncryptionOptions.Password">
+            <summary>
+                <para>Specifies the password to open the file.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> vaue, specifying the password to open the file. The default is <b>string.Empty</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlEncryptionOptions.Type">
+            <summary>
+                <para>Specifies the applied encryption mechanism.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraPrinting.XlEncryptionType"/> enumeration value, specifying the encryption mechanism.
 </value>
 
 
@@ -7384,6 +7448,74 @@
 
 
         </member>
+        <member name="T:DevExpress.Office.Crypto.EncryptionOptions">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Office.Crypto.EncryptionOptions.#ctor">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Crypto.EncryptionOptions.CopyFrom(DevExpress.Office.Crypto.EncryptionOptions)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="options">
+		 
+            </param>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Crypto.EncryptionOptions.DefaultType">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Crypto.EncryptionOptions.Password">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Crypto.EncryptionOptions.PreserveSession(DevExpress.Office.Crypto.EncryptionSession,System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="session">
+		 
+            </param>
+            <param name="password">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Crypto.EncryptionOptions.Reset">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Crypto.EncryptionOptions.Type">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.ChangingPermissions">
 
             <summary>
@@ -7926,7 +8058,7 @@
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.GeneratedReportIdentity.#ctor">
             <summary>
-                <para>Initializes a new instance of the GeneratedReportIdentity class with default settings.
+                <para>Initializes a new instance of the GeneratedReportIdentity class with the default settings.
 </para>
             </summary>
 
@@ -14595,8 +14727,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="E:DevExpress.XtraPrinting.PrintingSystemBase.XlsxDocumentCreated">
             <summary>
-                <para>Occurs after the creation of an XLSX document is finished.
-
+                <para>Obsolete. Use the <see cref="E:DevExpress.XtraPrinting.PrintingSystemBase.XlSheetCreated"/> event instead.
 </para>
             </summary>
 
@@ -14914,6 +15045,72 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlSourceRectangle">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlSourceRectangle.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="left">
+		 
+            </param>
+            <param name="top">
+		 
+            </param>
+            <param name="right">
+		 
+            </param>
+            <param name="bottom">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSourceRectangle.Bottom">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSourceRectangle.IsDefault">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSourceRectangle.Left">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSourceRectangle.Right">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSourceRectangle.Top">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.Export.ExportType">
 
             <summary>
@@ -15090,6 +15287,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
                 <para>When exporting to XLSX format, this event fires immediately after a row has been added to the output document.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowBandHeaderCellMerge">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15356,9 +15561,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ShowBandHeaders">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether band headers are visible in the exported document. This option is in effect when exporting from Banded Grid Views if the <see cref="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.BandedLayoutMode"/> option is set to <b>Default</b>. 
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether band headers are visible in the exported document. 
+</value>
 
 
         </member>
@@ -15496,6 +15703,14 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
                 <para>When exporting to XLS format, this event fires immediately after a row has been added to the output document.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.AllowBandHeaderCellMerge">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15766,9 +15981,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.ShowBandHeaders">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether band headers are visible in the exported document. This option is in effect when exporting from Banded Grid Views if the <see cref="P:DevExpress.XtraPrinting.XlsExportOptionsEx.BandedLayoutMode"/> option is set to <b>Default</b>. 
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether band headers are visible in the exported document. 
+</value>
 
 
         </member>
@@ -15882,6 +16099,20 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
             </param>
             <returns>An <see cref="T:DevExpress.Export.Xl.IXlDocument"/> object that is the newly created workbook.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.IXlExporter.CreateDocument(System.IO.Stream,DevExpress.Office.Crypto.EncryptionOptions)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="stream">
+		 
+            </param>
+            <param name="encryptionOptions">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -16082,7 +16313,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 		A <see cref="T:System.String"/> value that specifies the recipient e-mail address. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.Address"/> property.
 
             </param>
-            <param name="recipientName">
+            <param name="contactName">
 		A <see cref="T:System.String"/> value that specifies the recipient contact name. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.ContactName"/> property.
 
             </param>
@@ -16106,7 +16337,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 		A <see cref="T:System.String"/> value that specifies the recipient e-mail address. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.Address"/> property.
 
             </param>
-            <param name="recipientName">
+            <param name="contactName">
 		A <see cref="T:System.String"/> value that specifies the recipient contact name. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.ContactName"/> property.
 
             </param>
@@ -16126,7 +16357,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 		A <see cref="T:System.String"/> value that specifies the recipient e-mail address. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.Address"/> property.
 
             </param>
-            <param name="recipientName">
+            <param name="contactName">
 		A <see cref="T:System.String"/> value that specifies the recipient contact name. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.ContactName"/> property.
 
             </param>
@@ -16146,7 +16377,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 		A <see cref="T:System.String"/> value that specifies the recipient e-mail address. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.Address"/> property.
 
             </param>
-            <param name="recipientName">
+            <param name="contactName">
 		A <see cref="T:System.String"/> value that specifies the recipient contact name. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Recipient.ContactName"/> property.
 
             </param>
@@ -22249,6 +22480,32 @@ Converts the current cell format to the differential formatting object.
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.PageInfoDataProviderBase">
+
+            <summary>
+                <para>A service enabling the <see cref="T:DevExpress.XtraReports.UI.XRPageInfo"/> control to display custom information (e.g., the name of a logged user instead of a user under whose account the web server is running).
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageInfoDataProviderBase.GetText(DevExpress.XtraPrinting.PrintingSystemBase,DevExpress.XtraPrinting.PageInfoTextBrickBase)">
+            <summary>
+                <para>Enables you to obtain and customize the text of the Page Info control.
+</para>
+            </summary>
+            <param name="ps">
+		A <see cref="T:DevExpress.XtraPrinting.PrintingSystemBase"/> object.
+
+            </param>
+            <param name="brick">
+		A <see cref="T:DevExpress.XtraPrinting.PageInfoTextBrickBase"/> descendant.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Parameters.ParameterExtensions">
 
             <summary>
@@ -22786,6 +23043,18 @@ Converts the current cell format to the differential formatting object.
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickPagePair.UpdatePageIndex(DevExpress.XtraPrinting.PageList)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="pages">
+		 
+
+            </param>
 
 
         </member>
@@ -26354,7 +26623,8 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.ExportOptionKind.XlsUseNativeFormat">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
 
 
@@ -28704,6 +28974,30 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.XlEncryptionType">
+
+            <summary>
+                <para>Lists the supported encryption types.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.XlEncryptionType.Compatible">
+            <summary>
+                <para>Applies the Standard Encryption mechanism that is compatible with Excel 2007.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.XlEncryptionType.Strong">
+            <summary>
+                <para>Applies the Agile Encryption mechanism.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.LinkBase">
 
             <summary>
@@ -29713,6 +30007,292 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.VerticalContentSplitting"/> enumeration value, which specifies the way of splitting method of content bricks in the vertical direction. 
 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.PageSettingsHelper">
+
+            <summary>
+                <para>Enables you to override the default printer settings in your application.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PageSettingsHelper class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.ChangePageSettings(System.Drawing.Printing.PageSettings,System.Drawing.Printing.PaperSize,DevExpress.XtraPrinting.Native.ReadonlyPageData)">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <param name="pageSettings">
+		A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+
+            </param>
+            <param name="paperSize">
+		A <see cref="T:System.Drawing.Printing.PaperSize"/> object.
+
+            </param>
+            <param name="pageData">
+		A DevExpress.XtraPrinting.Native.ReadonlyPageData object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.CreateLetterPaperSize">
+            <summary>
+                <para>Specifies a custom letter paper size.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Printing.PaperSize"/> object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PageSettingsHelper.DefaultPageSettings">
+            <summary>
+                <para>Provides access to the page settings defined for the system's default printer.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PageSettingsHelper.DefaultSettings">
+            <summary>
+                <para>Provides access to the page settings defined for the system's default printer.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.GetLandscapeFieldValue(System.Drawing.Printing.PageSettings)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="pageSettings">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.GetMinMargins(System.Drawing.Printing.PageSettings)">
+            <summary>
+                <para>Returns the minimum page margins supported by the specified page settings.
+</para>
+            </summary>
+            <param name="pageSettings">
+		A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.Printing.Margins"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.GetPaperSizeFieldValue(System.Drawing.Printing.PageSettings)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="pageSettings">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PageSettingsHelper.Instance">
+            <summary>
+                <para>Specifies an instance of the PageSettingsHelper class.
+</para>
+            </summary>
+            <value>The instance of the PageSettingsHelper class.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.PageSettingsHelper.PrinterExists">
+            <summary>
+                <para>Indicates whether or not there are any printers installed on the machine.
+</para>
+            </summary>
+            <value><b>true</b>, if there is at least one printer installed on the machine; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.SetDefaultPageSettings(System.Drawing.Printing.PrinterSettings,System.Drawing.Printing.PageSettings)">
+            <summary>
+                <para>Specifies the default printer settings.
+</para>
+            </summary>
+            <param name="printerSettings">
+		A <see cref="T:System.Drawing.Printing.PrinterSettings"/> object.
+
+            </param>
+            <param name="pageSettings">
+		A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.SetLandscapeFieldValue(System.Drawing.Printing.PageSettings,System.Object)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="pageSettings">
+		 
+            </param>
+            <param name="value">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.SetPaperSizeFieldValue(System.Drawing.Printing.PageSettings,System.Object)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="pageSettings">
+		 
+            </param>
+            <param name="value">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.SetPrinterName(System.Drawing.Printing.PrinterSettings,System.String)">
+            <summary>
+                <para>Assigns the specified printer name to the default printer settings (if such a printer is installed on the machine).
+</para>
+            </summary>
+            <param name="sets">
+		A <see cref="T:System.Drawing.Printing.PrinterSettings"/> object.
+
+            </param>
+            <param name="printerName">
+		A <see cref="T:System.String"/> value, specifying the printer name.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Export.DataAwareEventArgsBase">
+
+            <summary>
+                <para>Provides data used to identify elements of controls during an export procedure.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.DataAwareEventArgsBase.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DataAwareEventArgsBase class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.DataAwareEventArgsBase.DataSourceOwner">
+            <summary>
+                <para>Gets the source control being exported. 
+</para>
+            </summary>
+            <value>The control being exported. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.DataAwareEventArgsBase.DataSourceRowIndex">
+            <summary>
+                <para>Gets the data source row index to which the current cell belongs. 
+</para>
+            </summary>
+            <value>A zero-based index of the current row in the underlying data source.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.DataAwareEventArgsBase.DocumentRow">
+            <summary>
+                <para>Gets the index of the row in the export output to which the current cell is exported. 
+
+</para>
+            </summary>
+            <value>A zero-based integer value that specifies the index of the row in the export output. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.DataAwareEventArgsBase.Handled">
+            <summary>
+                <para>Gets or sets whether the event is handled, and thus your cell customizations will be applied. 
+
+</para>
+            </summary>
+            <value><b>true</b> if the event is handled, and thus your cell customizations will be applied; <b>false</b> if your cell customizations (if any) will be ignored, and the cell will be exported using the default settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.DataAwareEventArgsBase.RowHandle">
+            <summary>
+                <para>Gets the handle (identifier) of the current data row in the source control. 
+
+</para>
+            </summary>
+            <value>The handle of the current data row in the source control. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.CustomizeCellEventArgsExtended">
+
+            <summary>
+                <para>Provides data for events that allow cells in the export output to be customized. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.CustomizeCellEventArgsExtended.#ctor">
+            <summary>
+                <para>Initializes a new instance of the CustomizeCellEventArgsExtended class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.CustomizeCellEventArgsExtended.Column">
+            <summary>
+                <para>Allows you to get information on the currently processed column object.
+</para>
+            </summary>
+            <value>The currently processed column object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.CustomizeCellEventArgsExtended.Row">
+            <summary>
+                <para>Allows you to get information on the currently processed row object.
+</para>
+            </summary>
+            <value>The currently processed row object.
 </value>
 
 
@@ -31416,9 +31996,7 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         </member>
         <member name="M:DevExpress.XtraPrinting.PrinterSettingsUsing.#ctor(System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-                <para>Initializes a new instance of the PrinterSettingsUsing class with the specified margins, paper kind and orientation settings of the system's default printer.
-
-
+                <para>For internal use. Initializes a new instance of the PrinterSettingsUsing class with the specified margins, paper kind and orientation settings of the system's default printer.
 </para>
             </summary>
             <param name="useMargins">
@@ -31454,11 +32032,10 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.AllSettingsUsed">
             <summary>
-                <para>Gets a value indicating if all of the default printer settings are used when a document is printed.
-
+                <para>Gets a value indicating whether or not all of the default printer settings are used for printing a report.
 </para>
             </summary>
-            <value><b>true</b> if all of the default printer settings are used for printing; otherwise, <b>false</b>.
+            <value><b>true</b>, if all of the default printer settings are used for printing a report; otherwise, <b>false</b>.
 
 </value>
 
@@ -31466,11 +32043,10 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.AnySettingUsed">
             <summary>
-                <para>Gets a value indicating if any of the default printer settings are used when printing a document.
-
+                <para>Gets a value indicating whether or not any of the default printer settings are used for printing a report.
 </para>
             </summary>
-            <value><b>true</b> if at least one of the default printer settings is used when printing; otherwise, <b>false</b>.
+            <value><b>true</b>, if at least one of the default printer settings is used for printing a report; otherwise, <b>false</b>.
 
 </value>
 
@@ -31478,38 +32054,32 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseLandscape">
             <summary>
-                <para>Gets or sets a value specifying whether the default printer's landscape option value is used when printing a document.
-
-
+                <para>Specifies whether or not the <b>Landscape</b> setting of the system's default printer is used when printing a document.
 </para>
             </summary>
-            <value><b>true</b> to use the landscape option of the default printer's settings; otherwise, <b>false</b>.
-
+            <value><b>true</b>, to use the page orientation of the default printer's settings; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseMargins">
             <summary>
-                <para>Gets or sets a value specifying whether the default printer's margins value is used when printing a document.
+                <para>For internal use. 
 
 
 </para>
             </summary>
-            <value><b>true</b> to use the margin values of the default printer's settings; otherwise, <b>false</b>.
-
+            <value>Always <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UsePaperKind">
             <summary>
-                <para>Gets or sets a value indicating if the default printer's paper kind value is used when printing a document.
-
+                <para>Specifies whether or not the <b>Paper Kind</b> setting of the system's default printer is used when printing a document.
 </para>
             </summary>
-            <value><b>true</b> if the paper kind value of the default printer settings is used; otherwise, <b>false</b>.
-
+            <value><b>true</b>, to use the paper kind of the default printer's settings; otherwise, <b>false</b>.
 </value>
 
 
@@ -34112,6 +34682,42 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.Parameters.LookUpHelper.GetUpdatedMultiValueParameterValue(System.Object,System.Collections.Generic.IList`1)">
+            <summary>
+                <para>Returns an updated collection of parameter values available in a look-up editor.
+</para>
+            </summary>
+            <param name="oldValueObject">
+		A <see cref="T:System.Object"/> value, specifying the previously selected parameter values.
+
+            </param>
+            <param name="lookUps">
+		A collection of <see cref="T:DevExpress.XtraReports.Parameters.LookUpValue"/> objects, specifying the look-up values available for the parameter.
+
+            </param>
+            <returns>A <see cref="T:System.Object"/> value, specifying the currently selected parameter values.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Parameters.LookUpHelper.GetUpdatedSingleValueParameterValue(System.Object,System.Collections.Generic.IList`1)">
+            <summary>
+                <para>Returns an updated collection of parameter values available in a look-up editor.
+</para>
+            </summary>
+            <param name="oldValue">
+		A <see cref="T:System.Object"/> value, specifying the previously selected parameter value.
+
+            </param>
+            <param name="lookUps">
+		A collection of <see cref="T:DevExpress.XtraReports.Parameters.LookUpValue"/> objects, specifying the look-up values available for the parameter.
+
+            </param>
+            <returns>A <see cref="T:System.Object"/> value, specifying the currently selected parameter value.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Parameters.DynamicListLookUpSettings">
 
             <summary>
@@ -34688,7 +35294,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.SchedulerParametersDictionary.#ctor">
             <summary>
-                <para>Initializes a new instance of the SchedulerParametersDictionary class with default settings.
+                <para>Initializes a new instance of the SchedulerParametersDictionary class with the default settings.
 </para>
             </summary>
 
@@ -34704,7 +35310,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.DataPaginationByDate.#ctor">
             <summary>
-                <para>Initializes a new instance of the DataPaginationByDate class with default settings.
+                <para>Initializes a new instance of the DataPaginationByDate class with the default settings.
 </para>
             </summary>
 
@@ -34742,7 +35348,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.SchedulerParameters.#ctor">
             <summary>
-                <para>Initializes a new instance of the SchedulerParameters class with default settings.
+                <para>Initializes a new instance of the SchedulerParameters class with the default settings.
 </para>
             </summary>
 
@@ -34834,7 +35440,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ParametersBinding.#ctor">
             <summary>
-                <para>Initializes a new instance of the ParametersBinding class with default settings.
+                <para>Initializes a new instance of the ParametersBinding class with the default settings.
 </para>
             </summary>
 
@@ -35076,7 +35682,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobResultDto.#ctor">
             <summary>
-                <para>Initializes a new instance of the ScheduledJobResultDto class with default settings.
+                <para>Initializes a new instance of the ScheduledJobResultDto class with the default settings.
 </para>
             </summary>
 
@@ -35122,7 +35728,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobResultCatalogItemDto.#ctor">
             <summary>
-                <para>Initializes a new instance of the ScheduledJobResultCatalogItemDto class with default settings.
+                <para>Initializes a new instance of the ScheduledJobResultCatalogItemDto class with the default settings.
 </para>
             </summary>
 
@@ -35168,7 +35774,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobLogDto.#ctor">
             <summary>
-                <para>Initializes a new instance of the ScheduledJobLogDto class with default settings.
+                <para>Initializes a new instance of the ScheduledJobLogDto class with the default settings.
 </para>
             </summary>
 
@@ -35204,7 +35810,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.ScheduledJobCatalogItemDto.#ctor">
             <summary>
-                <para>Initializes a new instance of the ScheduledJobCatalogItemDto class with default settings.
+                <para>Initializes a new instance of the ScheduledJobCatalogItemDto class with the default settings.
 </para>
             </summary>
 
@@ -35283,6 +35889,14 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
                 <para>Initializes a new instance of the XlCondFmtValueObject class with the default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCondFmtValueObject.GreaterThanOrEqual">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -35430,38 +36044,6 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="F:DevExpress.Export.Xl.XlDataValidationErrorStyle.Warning">
             <summary>
                 <para>The dialog displays the Warning icon; the end-user can decide whether to allow entry of the invalid data, to retry, or to remove the invalid entry.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Export.Xl.XlDataBarDirection">
-
-            <summary>
-                <para>Lists values that specify the direction of data bars when the data bar conditional format is applied.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.Context">
-            <summary>
-                <para>Specifies the direction based on the current locale.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.LeftToRight">
-            <summary>
-                <para>Specifies the left-to-right direction.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.RightToLeft">
-            <summary>
-                <para>Specifies the right-to-left direction.
 </para>
             </summary>
 
@@ -37493,7 +38075,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.#ctor">
             <summary>
-                <para>Initializes a new instance of the ReportGenerationOptions class with default settings.
+                <para>Initializes a new instance of the ReportGenerationOptions class with the default settings.
 </para>
             </summary>
 
@@ -37526,6 +38108,16 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
 </para>
             </summary>
             <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to render odd rows in the report using the corresponding grid view appearance settings; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintBandHeaders">
+            <summary>
+                <para>Specifies whether to add band headers to the report. This option is in effect when the source object supports bands (<see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedGridView"/> and <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView"/>).
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add band headers to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
 </value>
 
 
@@ -37937,7 +38529,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.DataContracts.DataPaginationByCount.#ctor">
             <summary>
-                <para>Initializes a new instance of the DataPaginationByCount class with default settings.
+                <para>Initializes a new instance of the DataPaginationByCount class with the default settings.
 </para>
             </summary>
 
@@ -39090,6 +39682,38 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="F:DevExpress.Export.Xl.XlColorType.Theme">
             <summary>
                 <para>Specifies a theme-based color.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlDataBarDirection">
+
+            <summary>
+                <para>Lists values that specify the direction of data bars when the data bar conditional format is applied.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.Context">
+            <summary>
+                <para>Specifies the direction based on the current locale.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.LeftToRight">
+            <summary>
+                <para>Specifies the left-to-right direction.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlDataBarDirection.RightToLeft">
+            <summary>
+                <para>Specifies the right-to-left direction.
 </para>
             </summary>
 

@@ -1976,7 +1976,8 @@ The object specifies dates that lie in the range between the DateRange.StartDate
         </member>
         <member name="E:DevExpress.XtraEditors.Controls.CalendarControlBase.CustomWeekDayAbbreviation">
             <summary>
-                <para> </para>
+                <para>Allows you to provide custom week day abbreviations.
+</para>
             </summary>
 
 
@@ -2164,6 +2165,14 @@ The object specifies dates that lie in the range between the DateRange.StartDate
             </param>
             <returns>A <see cref="T:DevExpress.XtraEditors.Calendar.CalendarHitInfo"/> object which comprises information about a specific point in the calendar control. 
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Controls.CalendarControlBase.GetPreferredCulture">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -2821,7 +2830,8 @@ The object specifies dates that lie in the range between the DateRange.StartDate
         <member name="T:DevExpress.XtraEditors.ColorPickEdit">
 
             <summary>
-                <para>The advanced dropdown color picker that supports multiple palettes (a predefined color palette, Web, Web-Safe and System) to choose colors from.
+                <para>An advanced dropdown color picker that supports multiple palettes (a predefined color palette, Web, Web-Safe and System) to choose colors from.
+
 </para>
             </summary>
 
@@ -7934,9 +7944,11 @@ A search for rows is performed against the column specified by the editor's <b>P
         </member>
         <member name="P:DevExpress.XtraEditors.Calendar.CalendarHitInfo.IsInRightArea">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the test point is located in the clock area.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the test point is located in the clock area; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -7952,9 +7964,11 @@ A search for rows is performed against the column specified by the editor's <b>P
         </member>
         <member name="P:DevExpress.XtraEditors.Calendar.CalendarHitInfo.RightArea">
             <summary>
-                <para> </para>
+                <para>Gets the object which contains the information used to render the clock area.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="CalendarAreaViewInfoBase"/> class descendant providing view information on the clock area.
+</value>
 
 
         </member>
@@ -14402,49 +14416,63 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
         </member>
         <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(System.String,System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Displays a dialog box using the specified title, prompt, and default response.
+</para>
             </summary>
             <param name="prompt">
-		 
+		The text to display in the dialog box.
+
             </param>
             <param name="title">
-		 
+		The text to display in the title bar of the dialog box.
+
             </param>
             <param name="defaultResponse">
-		 
+		The text to display as the editor's default edit value.
+
             </param>
-            <returns> </returns>
+            <returns>A <b>String</b> that represents the dialog box editor's edit value if the <i>OK</i> button is clicked; otherwise, <b>String.Empty</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Displays a dialog box using the specified owning window, title, prompt, and default response.
+</para>
             </summary>
             <param name="owner">
-		 
+		An implementation of <b>IWin32Window</b> that will own the modal dialog box.
+
             </param>
             <param name="prompt">
-		 
+		The text to display in the dialog box.
+
             </param>
             <param name="title">
-		 
+		The text to display in the title bar of the dialog box.
+
             </param>
             <param name="defaultResponse">
-		 
+		The text to display as the editor's default edit value.
+
             </param>
-            <returns> </returns>
+            <returns>A <b>String</b> that represents the dialog box editor's edit value if the <i>OK</i> button is clicked; otherwise, <b>String.Empty</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(DevExpress.XtraEditors.XtraInputBoxArgs)">
             <summary>
-                <para> </para>
+                <para>Displays a dialog box using the specified arguments.
+</para>
             </summary>
             <param name="args">
-		 
+		An <see cref="T:DevExpress.XtraEditors.XtraInputBoxArgs"/> object that comprises dialog box settings.
+
             </param>
-            <returns> </returns>
+            <returns>An <b>Object</b> that represents the dialog box editor's edit value if the <i>OK</i> or <i>Yes</i> button is clicked; otherwise, <b>null</b> (<b>Nothing</b> in VB).
+</returns>
 
 
         </member>
@@ -16972,6 +17000,20 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIconInternal(DevExpress.XtraEditors.DXErrorProvider.ErrorType,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="type">
+		 
+            </param>
+            <param name="lookAndFeel">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorType(System.Windows.Forms.Control)">
             <summary>
                 <para>Gets the type of error associated with the specified control.
@@ -16997,6 +17039,17 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
             </param>
             <returns>A <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment of the control's error icon.
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetSvgErrorIcon(System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="svgPath">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -19656,9 +19709,11 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.UseCtrlScroll">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the CTRL key must be pressed to scroll data records using the UP/DOWN ARROW keys when the popup window is closed. 
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the CTRL key must be pressed to scroll data records using the UP/DOWN ARROW keys when the popup window is closed; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -20015,94 +20070,119 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="M:DevExpress.XtraEditors.XtraInputBoxArgs.#ctor(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the XtraInputBoxArgs class with the specified settings.
+</para>
             </summary>
             <param name="owner">
-		 
+		An implementation of <b>IWin32Window</b> that will own the modal dialog box.
+
             </param>
             <param name="prompt">
-		 
+		The text to display in the dialog box.
+
             </param>
             <param name="title">
-		 
+		The text to display in the title bar of the dialog box.
+
             </param>
             <param name="defaultResponse">
-		 
+		The text to display as the editor's default edit value.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.XtraInputBoxArgs.#ctor(DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,System.String,System.String,System.String,System.Windows.Forms.DialogResult[],System.Int32,DevExpress.Utils.DefaultBoolean,DevExpress.XtraEditors.MessageBeepSound)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the XtraInputBoxArgs class with the specified settings.
+</para>
             </summary>
             <param name="lookAndFeel">
-		 
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object that comprises look and feel settings.
+
             </param>
             <param name="owner">
-		 
+		An implementation of <b>IWin32Window</b> that will own the modal dialog box.
+
             </param>
             <param name="prompt">
-		 
+		The text to display in the dialog box.
+
             </param>
             <param name="title">
-		 
+		The text to display in the title bar of the dialog box.
+
             </param>
             <param name="defaultResponse">
-		 
+		The text to display as the editor's default edit value.
+
             </param>
             <param name="buttons">
-		 
+		A collection of <b>DialogResult</b> enumeration values that specifies which buttons to display in the dialog box.
+
             </param>
             <param name="defaultButtonIndex">
-		 
+		An integer value that specifies the index of the default button for the dialog box.
+
             </param>
             <param name="allowHtmlText">
-		 
+		<b>True</b> to parse HTML tags in the prompt and title; otherwise, <b>Default</b> or <b>False</b>.
+
             </param>
             <param name="beep">
-		 
+		A <b>MessageBeepSound</b> enumeration value that specifies the simple tone on the speaker.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Buttons">
             <summary>
-                <para> </para>
+                <para>Gets or sets the buttons to be displayed in the dialog box.
+</para>
             </summary>
-            <value> </value>
+            <value>An array of the <b>DialogResult</b> enumeration values representing buttons to be displayed in the dialog box.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Content">
             <summary>
-                <para> </para>
+                <para>Gets or sets the content of the dialog box.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>Control</b> representing the content of the dialog box.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.DefaultResponse">
             <summary>
-                <para> </para>
+                <para>Gets or sets the default response for the dialog box.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>Object</b> that represent the default response.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Editor">
             <summary>
-                <para> </para>
+                <para>Gets or sets a custom editor for the dialog box.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="BaseEdit"/> object that represents a custom editor for the dialog box.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Prompt">
             <summary>
-                <para> </para>
+                <para>Gets or sets the text to display in the dialog box.
+</para>
             </summary>
-            <value> </value>
+            <value>A string value that specifies the text to display in the dialog box.
+</value>
 
 
         </member>
@@ -32717,9 +32797,11 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.PopupFilterMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets how data records in the popup window are filtered.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="PopupFilterMode"/> enumerator value that specifies how data records in the popup window are filtered.
+</value>
 
 
         </member>
@@ -48331,25 +48413,31 @@ Allows you to disable fade-in and fade-out effects for the image and draw custom
         </member>
         <member name="P:DevExpress.XtraWaitForm.ProgressPanel.BarAnimationElementLength">
             <summary>
-                <para> </para>
+                <para>Gets or sets the length, in pixels, of the bar wait indicator.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the length, in pixels, of the bar wait indicator.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraWaitForm.ProgressPanel.BarAnimationElementThickness">
             <summary>
-                <para> </para>
+                <para>Gets or sets the thickness, in pixels, of the bar wait indicator.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the thickness, in pixels, of the bar wait indicator.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraWaitForm.ProgressPanel.BarAnimationMotionType">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the bar wait indicator moves with a uniform velocity or with acceleration.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="MotionType"/> enumeration type that specifies whether the bar wait indicator moves with a uniform velocity or with acceleration.
+</value>
 
 
         </member>
@@ -53559,7 +53647,8 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemDateEdit.CustomWeekDayAbbreviation">
             <summary>
-                <para> </para>
+                <para>Allows you to provide custom week day abbreviations.
+</para>
             </summary>
 
 
@@ -54433,6 +54522,16 @@ This property is in effect for standalone editors and for editors embedded in to
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowAutomaticButton">
+            <summary>
+                <para>Gets or sets whether the Automatic button is displayed in the Custom tab.
+</para>
+            </summary>
+            <value><b>true</b>, if the Automatic button is displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowColorDialog">
             <summary>
                 <para>Gets or sets whether the standard color dialog is displayed when an end-user right-clicks on a custom color box within the dropdown window.
@@ -54449,6 +54548,16 @@ This property is in effect for standalone editors and for editors embedded in to
 </para>
             </summary>
             <value><b>true</b> if the <b>Custom</b> tabbed page is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorEdit.ShowMoreColorsButton">
+            <summary>
+                <para>Gets or sets whether the More Colors button is displayed in the Custom tab.
+</para>
+            </summary>
+            <value><b>true</b>, if the More Colors button is displayed; otherwise, <b>false</b>.
 </value>
 
 
@@ -58043,6 +58152,14 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <value>A <see cref="T:DevExpress.XtraEditors.Controls.ButtonPredefines"/> enumerator value that specifies the type of image to display within the button.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Controls.EditorButton.PerformClick">
+            <summary>
+                <para>Raises the <see cref="E:DevExpress.XtraEditors.Controls.EditorButton.Click"/> event.
+</para>
+            </summary>
 
 
         </member>

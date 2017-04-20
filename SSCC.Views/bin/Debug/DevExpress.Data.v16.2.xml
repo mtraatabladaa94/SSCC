@@ -880,6 +880,14 @@
 
 
         </member>
+        <member name="F:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration.SuppressExplicitTransactionExceptions">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration.TableDictionary">
             <summary>
                 <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
@@ -3195,7 +3203,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         <member name="T:DevExpress.Data.WizardFramework.IWizardView">
 
             <summary>
-                <para>If implemented, provides the View functionality to a Data Source Wizard.
+                <para>If implemented, provides the View functionality to the Data Source Wizard.
 </para>
             </summary>
 
@@ -3214,7 +3222,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="enable">
-		<b>true</b> if the <b>Finish</b> button is available; otherwise <b>false</b>.
+		<b>true</b>, if the <b>Finish</b> button is available; otherwise, <b>false</b>.
 
             </param>
 
@@ -3226,7 +3234,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="enable">
-		<b>true</b> if the <b>Next</b> button is available; otherwise <b>false</b>.
+		<b>true</b>, if the <b>Next</b> button is available; otherwise, <b>false</b>.
 
             </param>
 
@@ -3238,7 +3246,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="enable">
-		<b>true</b> if the <b>Previous</b> button is available; otherwise <b>false</b>.
+		<b>true</b>, if the <b>Previous</b> button is available; otherwise, <b>false</b>.
 
             </param>
 
@@ -4788,6 +4796,50 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
 
         </member>
+        <member name="T:DevExpress.Utils.IoC.ResolutionFailedException">
+
+            <summary>
+                <para>Occurs if there is an error during request of a dependency.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.ResolutionFailedException.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ResolutionFailedException class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.ResolutionFailedException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the ResolutionFailedException class with the specified error message.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the error message.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.ResolutionFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+                <para>Initializes a new instance of the ResolutionFailedException class with the specified message and exception details.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+            <param name="inner">
+		A <see cref="T:System.Exception"/> object, specifying the error details.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Utils.PointFloat">
 
             <summary>
@@ -4911,6 +4963,36 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.IoC.InstanceRegistration">
+
+            <summary>
+                <para>Provides a container registration for dependencies that are registered by passing an instance (using the <see cref="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterInstance"/> method).
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.InstanceRegistration.#ctor(System.Object)">
+            <summary>
+                <para>Initializes a new instance of the InstanceRegistration class with the specified instance.
+</para>
+            </summary>
+            <param name="instance">
+		A <see cref="T:System.Object"/> value.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.InstanceRegistration.Instance">
+            <summary>
+                <para>Gets the passed reference as a dependency.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> value.
 </value>
 
 
@@ -8232,6 +8314,63 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
 
         </member>
+        <member name="T:DevExpress.Utils.IoC.FactoryRegistration">
+
+            <summary>
+                <para>Enables you to register factories that are used to create object instances.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.FactoryRegistration.#ctor(System.Func`1)">
+            <summary>
+                <para>Initializes a new instance of the FactoryRegistration class with the specified factory.
+</para>
+            </summary>
+            <param name="factory">
+		A function, specifying the required <see cref="T:System.Object"/>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.FactoryRegistration.AsTransient">
+            <summary>
+                <para>Modifies the registration so that a new dependency will be created on each <see cref="M:DevExpress.Utils.IoC.IntegrityContainer.Resolve"/> method call.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.FactoryRegistration.Dispose">
+            <summary>
+                <para>Releases all resources used by FactoryRegistration.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.FactoryRegistration.Instance">
+            <summary>
+                <para>Gets the cached resolved instance for a resolved non-transient dependency.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.FactoryRegistration.Transient">
+            <summary>
+                <para>Gets the flag for a transient registration.
+</para>
+            </summary>
+            <value>A Boolean value.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.FieldType">
 
             <summary>
@@ -9417,7 +9556,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="M:DevExpress.Data.XtraReports.Labels.PaperKindData.#ctor">
             <summary>
-                <para>Initializes a new instance of the PaperKindData class with default settings.
+                <para>Initializes a new instance of the PaperKindData class with the default settings.
 </para>
             </summary>
 
@@ -9516,7 +9655,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="M:DevExpress.Data.XtraReports.Labels.LabelProductRepositoryFactory.#ctor">
             <summary>
-                <para>Initializes a new instance of the LabelProductRepositoryFactory class with default settings.
+                <para>Initializes a new instance of the LabelProductRepositoryFactory class with the default settings.
 </para>
             </summary>
 
@@ -9542,7 +9681,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="M:DevExpress.Data.XtraReports.Labels.LabelProduct.#ctor">
             <summary>
-                <para>Initializes a new instance of the LabelProduct class with default settings.
+                <para>Initializes a new instance of the LabelProduct class with the default settings.
 </para>
             </summary>
 
@@ -9578,7 +9717,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="M:DevExpress.Data.XtraReports.Labels.LabelDetails.#ctor">
             <summary>
-                <para>Initializes a new instance of the LabelDetails class with default settings.
+                <para>Initializes a new instance of the LabelDetails class with the default settings.
 </para>
             </summary>
 
@@ -10722,7 +10861,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="M:DevExpress.Data.XtraReports.Wizard.ColumnInfoCache.#ctor">
             <summary>
-                <para>Initializes a new instance of the ColumnInfoCache class with default settings.
+                <para>Initializes a new instance of the ColumnInfoCache class with the default settings.
 </para>
             </summary>
 
@@ -14306,14 +14445,14 @@ The <see cref="E:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetError
         <member name="T:DevExpress.Xpo.DB.DBTableMultiColumnGadget">
 
             <summary>
-                <para>For internal use.
+                <para>An abstract base class for <see cref="T:DevExpress.Xpo.DB.DBPrimaryKey"/>, <see cref="T:DevExpress.Xpo.DB.DBForeignKey"/> and <see cref="T:DevExpress.Xpo.DB.DBIndex"/>.
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.Xpo.DB.DBTableMultiColumnGadget.Columns">
             <summary>
-                <para>A collection of strings that specify the columns that function as primary keys for a table. This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.
+                <para>Specifies a collection of strings that are the names of the columns comprising the DBTableMultiColumnGadget object. In the <see cref="T:DevExpress.Xpo.DB.DBPrimaryKey"/> descendant class, these columns are primary keys.  In <see cref="T:DevExpress.Xpo.DB.DBForeignKey"/>, these are foreign keys. In <see cref="T:DevExpress.Xpo.DB.DBIndex"/>, these are columns comprising the index.
 </para>
             </summary>
             <returns> </returns>
@@ -20518,18 +20657,20 @@ To create the addition operator using the <see cref="M:DevExpress.Data.Filtering
         </member>
         <member name="P:DevExpress.Data.ODataLinq.ODataServerModeSource.KeyExpression">
             <summary>
-                <para> </para>
+                <para>Specifies the name of the key property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the key property name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Data.ODataLinq.ODataServerModeSource.KeyExpressions">
             <summary>
-                <para>Specifies the key expressions.
+                <para>For internal use.
 </para>
             </summary>
-            <value>A string array that specifies the key expressions.
+            <value> 
 </value>
 
 
@@ -20695,18 +20836,20 @@ To create the addition operator using the <see cref="M:DevExpress.Data.Filtering
         </member>
         <member name="P:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.KeyExpression">
             <summary>
-                <para> </para>
+                <para>Specifies the name of the key property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the key property name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.KeyExpressions">
             <summary>
-                <para>Specifies the name of the key property.
+                <para>For internal use.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the key property name.
+            <value> 
 </value>
 
 
@@ -22417,6 +22560,50 @@ Otherwise, the closest matching image side (height or width) will be sized to th
 
 
         </member>
+        <member name="T:DevExpress.Utils.IoC.RegistrationFailedException">
+
+            <summary>
+                <para>Occurs if there is an error during registration of a type.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.RegistrationFailedException.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RegistrationFailedException class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.RegistrationFailedException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the RegistrationFailedException class with the specified error message.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the error message.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.RegistrationFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+                <para>Initializes a new instance of the RegistrationFailedException class with the specified message and exception details.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+            <param name="inner">
+		A <see cref="T:System.Exception"/> object, specifying the error details.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.RangeControlRange">
 
             <summary>
@@ -22814,7 +23001,7 @@ Otherwise, the closest matching image side (height or width) will be sized to th
         </member>
         <member name="M:DevExpress.XtraPrinting.GraphicsDpi.#ctor">
             <summary>
-                <para>Initializes a new instance of the GraphicsDpi class with default settings.
+                <para>Initializes a new instance of the GraphicsDpi class with the default settings.
 </para>
             </summary>
 
@@ -23149,7 +23336,7 @@ Otherwise, the closest matching image side (height or width) will be sized to th
         </member>
         <member name="M:DevExpress.XtraPrinting.GraphicsUnitConverter.#ctor">
             <summary>
-                <para>Initializes a new instance of the GraphicsUnitConverter class with default settings.
+                <para>Initializes a new instance of the GraphicsUnitConverter class with the default settings.
 </para>
             </summary>
 
@@ -25750,6 +25937,134 @@ Otherwise, the closest matching image side (height or width) will be sized to th
 
 
         </member>
+        <member name="T:DevExpress.Utils.IoC.TypeRegistration">
+
+            <summary>
+                <para>Enables a container registration for dependencies that are registered by type (i.e., by calling the <see cref="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterType"/> methods).
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.TypeRegistration.#ctor(System.Type,System.Reflection.ConstructorInfo)">
+            <summary>
+                <para>Initializes a new instance of the TypeRegistration class with the specified settings.
+</para>
+            </summary>
+            <param name="concreteType">
+		A <see cref="T:System.Type"/> object.
+
+            </param>
+            <param name="constructorInfo">
+		A <see cref="T:System.Reflection.ConstructorInfo"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.TypeRegistration.AsTransient">
+            <summary>
+                <para>Modifies the registration so that a new dependency will be created on each <see cref="M:DevExpress.Utils.IoC.IntegrityContainer.Resolve"/> method call.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.TypeRegistration.ConcreteType">
+            <summary>
+                <para>Gets the type of a dependency.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Type"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.TypeRegistration.ConstructorInfo">
+            <summary>
+                <para>Gets the selected constructor to be resolved.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Reflection.ConstructorInfo"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.TypeRegistration.Dispose">
+            <summary>
+                <para>Releases all resources used by TypeRegistration.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.TypeRegistration.Instance">
+            <summary>
+                <para>Gets the cached instance for a resolved non-transient dependency.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.TypeRegistration.SyncRoot">
+            <summary>
+                <para>Gets an object that can be used to synchronize access.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.IoC.TypeRegistration.Transient">
+            <summary>
+                <para>Gets the flag for a transient registration.
+</para>
+            </summary>
+            <value>A Boolean value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.TypeRegistration.TryGetParameterValue(System.String,System.Object@)">
+            <summary>
+                <para>Gets the registered value for a constructor parameter that was registered using the <see cref="M:DevExpress.Utils.IoC.TypeRegistration.WithCtorArgument"/> methods.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value.
+
+            </param>
+            <param name="value">
+		A <see cref="T:System.Object"/> value.
+
+            </param>
+            <returns><b>true</b>, if the constructor parameter value has been obtained; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.TypeRegistration.WithCtorArgument(System.String,System.Object)">
+            <summary>
+                <para>Registers a constructor parameter value (if it is not registered in the container as a dependency).
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value, specifying the parameter name.
+
+            </param>
+            <param name="value">
+		A <see cref="T:System.Object"/> value, specifying the parameter value.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.TypeRegistration"/> object.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.Data.XtraReports.ServiceModel.DataContracts.PropertyDescriptorProxy">
 
             <summary>
@@ -28061,7 +28376,8 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         </member>
         <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.ExportOption_PdfCompressed">
             <summary>
-                <para>"<b>Compressed</b>"
+                <para>This member has become obsolete.
+
 </para>
             </summary>
 
@@ -28490,7 +28806,7 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         </member>
         <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.ExportOption_XlsUseNativeFormat">
             <summary>
-                <para>For internal use.
+                <para>This member has become obsolete.
 </para>
             </summary>
 
@@ -32620,6 +32936,14 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
 
 
         </member>
+        <member name="T:DevExpress.Utils.IoC.Registration">
+
+            <summary>
+                <para>Provides an abstract container registration.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.BrickStyle">
 
             <summary>
@@ -33311,6 +33635,153 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
                 <para>The complex properties are shown at the bottom of the Field List.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.IoC.IntegrityContainer">
+
+            <summary>
+                <para>A dependency injection container.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the IntegrityContainer class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.Dispose">
+            <summary>
+                <para>Releases all resources used by IntegrityContainer.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterFactory``1(System.Func{System.IServiceProvider,``0})">
+            <summary>
+                <para>Registers a delegate with the specified container as an argument to resolve an instance of the specified type with a corresponding <b>TServiceType</b> key.
+</para>
+            </summary>
+            <param name="factory">
+		A function, specifying the type to resolve.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.FactoryRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterFactory``1(System.Func{``0})">
+            <summary>
+                <para>Registers a delegate to resolve an instance of the specified type with a specified <b>TServiceType</b> key.
+
+</para>
+            </summary>
+            <param name="factory">
+		A function, specifying the type to resolve.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.FactoryRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterInstance(System.Type,System.Object)">
+            <summary>
+                <para>Registers the specified <i>instance</i> as a singleton with the specified <i>serviceType</i> key.
+</para>
+            </summary>
+            <param name="serviceType">
+		A <see cref="T:System.Type"/> object.
+
+            </param>
+            <param name="instance">
+		A <see cref="T:System.Object"/> value.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Utils.IoC.InstanceRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterInstance``1(``0)">
+            <summary>
+                <para>Registers the specified instance as a singleton with the specified <b>TServiceType</b> key.
+</para>
+            </summary>
+            <param name="instance">
+		A <see cref="T:System.Object"/> value.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Utils.IoC.InstanceRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterType(System.Type,System.Type)">
+            <summary>
+                <para>Registers the specified <i>concreteType</i> with the specified <i>serviceType</i> key.
+</para>
+            </summary>
+            <param name="serviceType">
+		A <see cref="T:System.Type"/> object.
+
+            </param>
+            <param name="concreteType">
+		A <see cref="T:System.Type"/> object.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.TypeRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterType``1">
+            <summary>
+                <para>Registers the specified <b>TConcreteType</b> as a dependency.
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.TypeRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.RegisterType``2">
+            <summary>
+                <para>Registers the specified <b>TConcreteType</b> with the specified <b>TServiceType</b> key.
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Utils.IoC.TypeRegistration"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.Resolve(System.Type)">
+            <summary>
+                <para>Gets an instance with the specified <i>serviceType</i> key.
+</para>
+            </summary>
+            <param name="serviceType">
+		A <see cref="T:System.Type"/> object.
+
+            </param>
+            <returns>A <see cref="T:System.Object"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.IoC.IntegrityContainer.Resolve``1">
+            <summary>
+                <para>Gets an instance of the specified type with a corresponding <b>TServiceType</b> key.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Object"/> value.
+</returns>
 
 
         </member>
