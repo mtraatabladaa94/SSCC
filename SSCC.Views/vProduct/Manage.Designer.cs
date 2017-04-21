@@ -33,8 +33,6 @@
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.txtPrice = new DevExpress.XtraEditors.SpinEdit();
-            this.cmbMark = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cmbLine = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -46,13 +44,13 @@
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
+            this.cmbMark = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbLine = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -61,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -69,9 +69,9 @@
             this.dataLayoutControl1.Controls.Add(this.txtCode);
             this.dataLayoutControl1.Controls.Add(this.txtName);
             this.dataLayoutControl1.Controls.Add(this.txtPrice);
+            this.dataLayoutControl1.Controls.Add(this.txtDescription);
             this.dataLayoutControl1.Controls.Add(this.cmbMark);
             this.dataLayoutControl1.Controls.Add(this.cmbLine);
-            this.dataLayoutControl1.Controls.Add(this.txtDescription);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(45, 37);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -114,27 +114,6 @@
             this.txtPrice.StyleController = this.dataLayoutControl1;
             this.txtPrice.TabIndex = 6;
             this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
-            // 
-            // cmbMark
-            // 
-            this.cmbMark.Location = new System.Drawing.Point(187, 84);
-            this.cmbMark.Name = "cmbMark";
-            this.cmbMark.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbMark.Size = new System.Drawing.Size(540, 20);
-            this.cmbMark.StyleController = this.dataLayoutControl1;
-            this.cmbMark.TabIndex = 7;
-            this.cmbMark.SelectedValueChanged += new System.EventHandler(this.cmbMark_SelectedValueChanged);
-            // 
-            // cmbLine
-            // 
-            this.cmbLine.Location = new System.Drawing.Point(187, 108);
-            this.cmbLine.Name = "cmbLine";
-            this.cmbLine.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbLine.Size = new System.Drawing.Size(540, 20);
-            this.cmbLine.StyleController = this.dataLayoutControl1;
-            this.cmbLine.TabIndex = 8;
             // 
             // txtDescription
             // 
@@ -264,7 +243,7 @@
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(191)))));
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Nuevo", "AddItem;GrayScaled", DevExpress.XtraBars.Docking2010.ImageLocation.Default, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", true, -1, true, null, true, false, true, null, "btNuevo", -1, false, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Nuevo", "AddItem;GrayScaled", DevExpress.XtraBars.Docking2010.ImageLocation.Default, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", true, -1, true, null, true, false, true, null, "btNew", -1, false, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Guardar", "Save;Size32x32;GrayScaled", DevExpress.XtraBars.Docking2010.ImageLocation.Default, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", true, -1, true, null, true, false, true, null, "btSave", -1, false, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Guardar y cerrar", "SaveAndClose;Size32x32;GrayScaled", DevExpress.XtraBars.Docking2010.ImageLocation.Default, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", true, -1, true, null, true, false, true, null, "btSaveAndClose", -1, false, false),
@@ -286,6 +265,7 @@
             this.windowsUIButtonPanelMain.TabIndex = 3;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
+            this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
             // 
             // labelControl
             // 
@@ -304,6 +284,32 @@
             this.labelControl.Size = new System.Drawing.Size(739, 37);
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Edición de Productos";
+            // 
+            // cmbMark
+            // 
+            this.cmbMark.Location = new System.Drawing.Point(187, 84);
+            this.cmbMark.Name = "cmbMark";
+            this.cmbMark.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbMark.Properties.NullText = "";
+            this.cmbMark.Properties.PopupSizeable = false;
+            this.cmbMark.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbMark.Size = new System.Drawing.Size(540, 20);
+            this.cmbMark.StyleController = this.dataLayoutControl1;
+            this.cmbMark.TabIndex = 7;
+            // 
+            // cmbLine
+            // 
+            this.cmbLine.Location = new System.Drawing.Point(187, 108);
+            this.cmbLine.Name = "cmbLine";
+            this.cmbLine.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbLine.Properties.NullText = "";
+            this.cmbLine.Properties.PopupSizeable = false;
+            this.cmbLine.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbLine.Size = new System.Drawing.Size(540, 20);
+            this.cmbLine.StyleController = this.dataLayoutControl1;
+            this.cmbLine.TabIndex = 8;
             // 
             // Manage
             // 
@@ -327,8 +333,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -337,6 +341,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,12 +360,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.SpinEdit txtPrice;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbMark;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbLine;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.LookUpEdit cmbMark;
+        private DevExpress.XtraEditors.LookUpEdit cmbLine;
     }
 
 }

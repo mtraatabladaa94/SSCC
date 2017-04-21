@@ -22,7 +22,7 @@ namespace SSCC.Controllers
             using (var db = new ModelDb())
             {
                 Product.ProductID = Guid.NewGuid();
-                
+                Product.ProductIsActive = true;
 
                 //guardar producto
                 db.Products.Add(Product);
@@ -56,7 +56,7 @@ namespace SSCC.Controllers
             }
         }
 
-        #region
+#region Busquedas
 
         public Product Find(Guid ProductID)
         {
@@ -76,11 +76,10 @@ namespace SSCC.Controllers
 
         public IEnumerable<Product> List()
         {
-
             return null;
         }
 
-        #endregion
+#endregion
 
         
     }

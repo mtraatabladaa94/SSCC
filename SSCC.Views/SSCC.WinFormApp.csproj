@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\DevExpress.Data.v16.2.dll</HintPath>
@@ -43,6 +44,11 @@
       <HintPath>C:\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\DevExpress.Images.v16.2.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.Map.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v16.2.DataModel, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v16.2.DataModel.EF6, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v16.2.ViewModel, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\DevExpress.Printing.v16.2.Core.dll</HintPath>
@@ -63,10 +69,23 @@
       <HintPath>C:\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\DevExpress.XtraEditors.v16.2.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +103,16 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Message\Msg.cs" />
+    <Compile Include="vProduct\Common\CollectionViewModel.cs" />
+    <Compile Include="vProduct\Common\EntitiesViewModel.cs" />
+    <Compile Include="vProduct\Common\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="vProduct\Common\SingleObjectViewModel.cs" />
+    <Compile Include="vProduct\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vProduct\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
     <Compile Include="vProduct\Manage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +128,153 @@
     <Compile Include="Utilities\Wait\ProgressIndicator.Designer.cs">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </Compile>
+    <Compile Include="vProduct\ModelDbDataModel\IModelDbUnitOfWork.cs" />
+    <Compile Include="vProduct\ModelDbDataModel\ModelDbUnitOfWork.cs" />
+    <Compile Include="vProduct\ModelDbDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="vProduct\PruebaMVVM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vProduct\PruebaMVVM.Designer.cs">
+      <DependentUpon>PruebaMVVM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\ViewModels\Customer\CustomerCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Customer\CustomerViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Line\LineCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Line\LineViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Mark\MarkCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Mark\MarkViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\ModelDbViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Product\ProductCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Product\ProductViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\ReceiptAdvance\ReceiptAdvanceCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\ReceiptAdvance\ReceiptAdvanceViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\ReceiptDetail\ReceiptDetailCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\ReceiptDetail\ReceiptDetailViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Receipt\ReceiptCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Receipt\ReceiptViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\SaleDetail\SaleDetailCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\SaleDetail\SaleDetailViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Sale\SaleCollectionViewModel.cs" />
+    <Compile Include="vProduct\ViewModels\Sale\SaleViewModel.cs" />
+    <Compile Include="vProduct\Views\Customer\CustomerCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Customer\CustomerCollectionView.designer.cs">
+      <DependentUpon>CustomerCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Customer\CustomerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Customer\CustomerView.designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Line\LineCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Line\LineCollectionView.designer.cs">
+      <DependentUpon>LineCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Line\LineView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Line\LineView.designer.cs">
+      <DependentUpon>LineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Mark\MarkCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Mark\MarkCollectionView.designer.cs">
+      <DependentUpon>MarkCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Mark\MarkView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Mark\MarkView.designer.cs">
+      <DependentUpon>MarkView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\ModelDbView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\ModelDbView.designer.cs">
+      <DependentUpon>ModelDbView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Product\ProductCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Product\ProductCollectionView.designer.cs">
+      <DependentUpon>ProductCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Product\ProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Product\ProductView.designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptAdvance\ReceiptAdvanceCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptAdvance\ReceiptAdvanceCollectionView.designer.cs">
+      <DependentUpon>ReceiptAdvanceCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptAdvance\ReceiptAdvanceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptAdvance\ReceiptAdvanceView.designer.cs">
+      <DependentUpon>ReceiptAdvanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptDetail\ReceiptDetailCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptDetail\ReceiptDetailCollectionView.designer.cs">
+      <DependentUpon>ReceiptDetailCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptDetail\ReceiptDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\ReceiptDetail\ReceiptDetailView.designer.cs">
+      <DependentUpon>ReceiptDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Receipt\ReceiptCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Receipt\ReceiptCollectionView.designer.cs">
+      <DependentUpon>ReceiptCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Receipt\ReceiptView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Receipt\ReceiptView.designer.cs">
+      <DependentUpon>ReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\SaleDetail\SaleDetailCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\SaleDetail\SaleDetailCollectionView.designer.cs">
+      <DependentUpon>SaleDetailCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\SaleDetail\SaleDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\SaleDetail\SaleDetailView.designer.cs">
+      <DependentUpon>SaleDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Sale\SaleCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Sale\SaleCollectionView.designer.cs">
+      <DependentUpon>SaleCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vProduct\Views\Sale\SaleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vProduct\Views\Sale\SaleView.designer.cs">
+      <DependentUpon>SaleView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vProduct\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vProduct\Manage.resx">
       <DependentUpon>Manage.cs</DependentUpon>
@@ -119,6 +293,13 @@
     <EmbeddedResource Include="Utilities\Wait\ProgressIndicator.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vProduct\PruebaMVVM.resx">
+      <DependentUpon>PruebaMVVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vProduct\Views\Customer\CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

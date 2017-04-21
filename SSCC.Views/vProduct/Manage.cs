@@ -26,7 +26,7 @@ namespace SSCC.Views.vProduct
     public partial class Manage : DevExpress.XtraEditors.XtraForm
     {
         //creación del objeto producto para encapsular funcionalidades
-        private Product _Product;        
+        private Product _Product;
 
         //bandera para saber si es nuevo o edicion
         private Boolean Exist;
@@ -80,13 +80,32 @@ namespace SSCC.Views.vProduct
             }
         }
 
+        public void MarkList()
+        {
+            try
+            {
+                var mark = new RuleMark();
+                cmbMark.Properties.DataSource = mark.List();
+                cmbMark.Properties.DisplayMember = "MarkName";
+                cmbMark.Properties.ValueMember = "MarkID";
+                
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
         private void Manage_Load(object sender, EventArgs e)
         {
-            
+            this.MarkList();
         }
 
         private void Clear()
         {
+            //crear objeto nuevo
+            this._Product = new Product();
+
             //limpiar campos
             txtCode.Text = "";
             txtName.Text = "";
@@ -101,6 +120,8 @@ namespace SSCC.Views.vProduct
             this.SelectButton(btSaveAndNew).Enabled = true;
             this.SelectButton(btEdit).Enabled = false;
             this.SelectButton(btDelete).Enabled = false;
+
+            txtCode.Focus();
         }
 
         //IMPORTANTE: Modificar código, crear una clase general o una interfaz
@@ -158,6 +179,48 @@ namespace SSCC.Views.vProduct
         private void cmbMark_SelectedValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
+        {
+            if (this.SelectButton(btNew) == e.Button as WindowsUIButton)
+            {
+                this.Clear();
+            }
+
+            switch(e.Button.Properties.Tag.ToString())
+            {
+                case btNew:
+                    this.Clear();
+                    break;
+
+                case btSave:
+                    this.Save();
+                    break;
+
+                case btSaveAndClose:
+
+                    break;
+
+                case btSaveAndNew:
+
+                    break;
+
+                case btEdit:
+
+                    break;
+
+                case btDelete:
+
+                    break;
+
+                case btSearch:
+
+                    break;
+                default:
+
+                    break;
+            }
         }
     }
 }

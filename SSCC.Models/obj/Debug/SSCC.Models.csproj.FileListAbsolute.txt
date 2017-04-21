@@ -5,9 +5,9 @@ D:\GitHub\SSCC\SSCC.Models\bin\Debug\EntityFramework.dll
 D:\GitHub\SSCC\SSCC.Models\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SSCC\SSCC.Models\bin\Debug\EntityFramework.xml
 D:\GitHub\SSCC\SSCC.Models\bin\Debug\EntityFramework.SqlServer.xml
-D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csprojResolveAssemblyReference.cache
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.GenerateDbByModel.resources
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.Properties.Resources.resources
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csproj.GenerateResource.Cache
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.exe
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.pdb
+D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csprojResolveAssemblyReference.cache

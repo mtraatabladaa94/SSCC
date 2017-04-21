@@ -46,3 +46,8 @@ D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.dll
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Controllers.pdb
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Models.pdb
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.xml
+D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.PruebaMVVM.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.Views.CustomerView.CustomerView.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.List.resources
