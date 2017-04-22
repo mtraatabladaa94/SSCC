@@ -38,14 +38,14 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.cmbMark = new DevExpress.XtraEditors.LookUpEdit();
-            this.cmbLine = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbMark = new System.Windows.Forms.ComboBox();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cmbLine = new System.Windows.Forms.ComboBox();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
@@ -56,22 +56,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
+            this.dataLayoutControl1.Controls.Add(this.cmbLine);
+            this.dataLayoutControl1.Controls.Add(this.cmbMark);
             this.dataLayoutControl1.Controls.Add(this.txtCode);
             this.dataLayoutControl1.Controls.Add(this.txtName);
             this.dataLayoutControl1.Controls.Add(this.txtPrice);
             this.dataLayoutControl1.Controls.Add(this.txtDescription);
-            this.dataLayoutControl1.Controls.Add(this.cmbMark);
-            this.dataLayoutControl1.Controls.Add(this.cmbLine);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(45, 37);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -81,18 +79,18 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(187, 12);
+            this.txtCode.Location = new System.Drawing.Point(89, 12);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(540, 20);
+            this.txtCode.Size = new System.Drawing.Size(159, 20);
             this.txtCode.StyleController = this.dataLayoutControl1;
             this.txtCode.TabIndex = 4;
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(187, 36);
+            this.txtName.Location = new System.Drawing.Point(329, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(540, 20);
+            this.txtName.Size = new System.Drawing.Size(159, 20);
             this.txtName.StyleController = this.dataLayoutControl1;
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
@@ -104,22 +102,24 @@
             0,
             0,
             0});
-            this.txtPrice.Location = new System.Drawing.Point(187, 60);
+            this.txtPrice.Location = new System.Drawing.Point(569, 12);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPrice.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtPrice.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPrice.Size = new System.Drawing.Size(540, 20);
+            this.txtPrice.Size = new System.Drawing.Size(158, 20);
             this.txtPrice.StyleController = this.dataLayoutControl1;
             this.txtPrice.TabIndex = 6;
             this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(12, 153);
+            this.txtDescription.Location = new System.Drawing.Point(12, 107);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(715, 299);
+            this.txtDescription.Size = new System.Drawing.Size(715, 345);
             this.txtDescription.StyleController = this.dataLayoutControl1;
             this.txtDescription.TabIndex = 9;
             // 
@@ -129,11 +129,11 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
+            this.layoutControlItem6,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem3,
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(739, 464);
@@ -146,65 +146,43 @@
             this.layoutControlItem1.Control = this.txtCode;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(719, 24);
-            this.layoutControlItem1.Text = "Código Producto";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(172, 18);
+            this.layoutControlItem1.Size = new System.Drawing.Size(240, 24);
+            this.layoutControlItem1.Text = "Código";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtName;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem2.Location = new System.Drawing.Point(240, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem2.Text = "Nombre";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(172, 18);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txtPrice;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem3.Location = new System.Drawing.Point(480, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(239, 24);
             this.layoutControlItem3.Text = "Precio";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(172, 18);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.cmbMark;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(719, 24);
-            this.layoutControlItem4.Text = "Marca";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(172, 18);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.Control = this.cmbLine;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(719, 24);
-            this.layoutControlItem5.Text = "Linea";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(172, 18);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.txtDescription;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 74);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(719, 324);
-            this.layoutControlItem6.Text = "Descripción u Observación";
+            this.layoutControlItem6.Size = new System.Drawing.Size(719, 370);
+            this.layoutControlItem6.Text = "Descripción";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(172, 18);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(74, 18);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -287,29 +265,45 @@
             // 
             // cmbMark
             // 
-            this.cmbMark.Location = new System.Drawing.Point(187, 84);
+            this.cmbMark.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMark.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMark.FormattingEnabled = true;
+            this.cmbMark.Location = new System.Drawing.Point(89, 61);
             this.cmbMark.Name = "cmbMark";
-            this.cmbMark.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbMark.Properties.NullText = "";
-            this.cmbMark.Properties.PopupSizeable = false;
-            this.cmbMark.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbMark.Size = new System.Drawing.Size(540, 20);
-            this.cmbMark.StyleController = this.dataLayoutControl1;
-            this.cmbMark.TabIndex = 7;
+            this.cmbMark.Size = new System.Drawing.Size(638, 21);
+            this.cmbMark.TabIndex = 10;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.cmbMark;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 49);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(719, 25);
+            this.layoutControlItem4.Text = "Marca";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(74, 18);
             // 
             // cmbLine
             // 
-            this.cmbLine.Location = new System.Drawing.Point(187, 108);
+            this.cmbLine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLine.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbLine.FormattingEnabled = true;
+            this.cmbLine.Location = new System.Drawing.Point(89, 36);
             this.cmbLine.Name = "cmbLine";
-            this.cmbLine.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbLine.Properties.NullText = "";
-            this.cmbLine.Properties.PopupSizeable = false;
-            this.cmbLine.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbLine.Size = new System.Drawing.Size(540, 20);
-            this.cmbLine.StyleController = this.dataLayoutControl1;
-            this.cmbLine.TabIndex = 8;
+            this.cmbLine.Size = new System.Drawing.Size(638, 21);
+            this.cmbLine.TabIndex = 11;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.Control = this.cmbLine;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(719, 25);
+            this.layoutControlItem5.Text = "Linea";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(74, 18);
             // 
             // Manage
             // 
@@ -338,11 +332,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbMark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbLine.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,12 +352,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.SpinEdit txtPrice;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.LookUpEdit cmbMark;
-        private DevExpress.XtraEditors.LookUpEdit cmbLine;
+        private System.Windows.Forms.ComboBox cmbMark;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private System.Windows.Forms.ComboBox cmbLine;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 
 }

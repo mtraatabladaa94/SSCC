@@ -10,4 +10,3 @@ D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.Properties.Resources.resources
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csproj.GenerateResource.Cache
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.exe
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.pdb
-D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csprojResolveAssemblyReference.cache

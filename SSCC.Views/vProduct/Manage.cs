@@ -85,10 +85,27 @@ namespace SSCC.Views.vProduct
             try
             {
                 var mark = new RuleMark();
-                cmbMark.Properties.DataSource = mark.List();
-                cmbMark.Properties.DisplayMember = "MarkName";
-                cmbMark.Properties.ValueMember = "MarkID";
+                cmbMark.DataSource = mark.List().ToList();
+                cmbMark.ValueMember = "MarkID";
+                cmbMark.DisplayMember = "MarkName";
                 
+                //cmbMark.Properties.ValueMember = "MarkID";
+                
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
+        public void LineList()
+        {
+            try
+            {
+                var line = new RuleLine();
+                cmbLine.DataSource = line.List();
+                cmbLine.ValueMember = "LineID";
+                cmbLine.DisplayMember = "LineName";
             }
             catch (Exception ex)
             {
