@@ -11,14 +11,46 @@ namespace SSCC.Controllers
 {
     public class RuleLine
     {
-        public IEnumerable<Line> List()
+        public List<Line> List()
         {
             using (var db = new ModelDb())
             {
-                foreach (var item in db.Lines.AsEnumerable())
-                {
-                    yield return item;
-                }
+                return db.Lines
+                    .AsParallel()
+                    .OrderBy(c => c.LineName)
+                    .ToList();
+            }
+        }
+
+        private void Validation(Line Line)
+        {
+
+            //Si es null, se genera una exception por que no se han recibido los datos
+            if (Line == null)
+            {
+                throw new Exception("Error, no se ha enviado ningún dato acerca de la Linea.");
+            }
+
+            //Si la marca no tiene nombre se genera una exception
+            if (String.IsNullOrWhiteSpace(Line.LineName))
+            {
+                throw new Exception("Ingresar el nombre de la Linea.");
+            }
+
+        }
+
+        public Line Save(Line Line)
+        {
+            this.Validation(Line);
+
+            using (var db = new ModelDb())
+            {
+                Line.LineID = Guid.NewGuid();
+
+                db.Lines.Add(Line);
+                db.SaveChanges();
+
+                return Line;
             }
         }
     }

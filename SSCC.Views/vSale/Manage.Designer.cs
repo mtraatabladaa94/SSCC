@@ -1,4 +1,4 @@
-﻿namespace SSCC.Views.vProduct
+﻿namespace SSCC.Views.vSale
 {
     partial class Manage
     {
@@ -312,7 +312,7 @@
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.labelControl.Size = new System.Drawing.Size(739, 37);
             this.labelControl.TabIndex = 1;
-            this.labelControl.Text = "Edición de Productos";
+            this.labelControl.Text = "Gestión de Facturas";
             // 
             // Manage
             // 
@@ -329,7 +329,7 @@
             this.KeyPreview = true;
             this.Name = "Manage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edición de Productos";
+            this.Text = "Gestión de Facturas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Manage_KeyDown);

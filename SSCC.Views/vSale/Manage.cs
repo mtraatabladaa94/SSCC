@@ -21,7 +21,7 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vProduct
+namespace SSCC.Views.vSale
 {
     public partial class Manage : DevExpress.XtraEditors.XtraForm
     {

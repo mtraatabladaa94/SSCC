@@ -11,14 +11,45 @@ namespace SSCC.Controllers
 {
     public class RuleMark
     {
-        public IEnumerable<Mark> List()
+        public List<Mark> List()
         {
             using (var db = new ModelDb())
             {
-                foreach (var item in db.Marks.AsEnumerable())
-                {
-                    yield return item;
-                }
+                return db.Marks
+                    .AsParallel()
+                    .OrderBy(c => c.MarkName)
+                    .ToList();
+            }
+        }
+
+        private void Validation(Mark Mark)
+        {
+            //Si es null, se genera una exception por que no se han recibido los datos
+            if (Mark == null)
+            {
+                throw new Exception("Error, no se ha enviado ningún dato acerca de la Marca.");
+            }
+
+            //Si la marca no tiene nombre se genera una exception
+            if (String.IsNullOrWhiteSpace(Mark.MarkName))
+            {
+                throw new Exception("Ingresar el nombre de la Marca.");
+            }
+
+        }
+
+        public Mark Save(Mark Mark)
+        {
+            this.Validation(Mark);
+
+            using (var db = new ModelDb())
+            {
+                Mark.MarkID = Guid.NewGuid();
+
+                db.Marks.Add(Mark);
+                db.SaveChanges();
+
+                return Mark;
             }
         }
     }

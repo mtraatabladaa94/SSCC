@@ -49,3 +49,4 @@ D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.xml
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.List.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vSale.Manage.resources
