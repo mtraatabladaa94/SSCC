@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.cmbLine = new System.Windows.Forms.ComboBox();
             this.cmbMark = new System.Windows.Forms.ComboBox();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
@@ -43,11 +44,13 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
@@ -59,11 +62,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
+            this.dataLayoutControl1.Controls.Add(this.pivotGridControl1);
             this.dataLayoutControl1.Controls.Add(this.cmbLine);
             this.dataLayoutControl1.Controls.Add(this.cmbMark);
             this.dataLayoutControl1.Controls.Add(this.txtCode);
@@ -76,6 +81,13 @@
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
             this.dataLayoutControl1.Size = new System.Drawing.Size(739, 464);
             this.dataLayoutControl1.TabIndex = 0;
+            // 
+            // pivotGridControl1
+            // 
+            this.pivotGridControl1.Location = new System.Drawing.Point(12, 432);
+            this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.Size = new System.Drawing.Size(715, 20);
+            this.pivotGridControl1.TabIndex = 12;
             // 
             // cmbLine
             // 
@@ -146,7 +158,8 @@
             // 
             this.txtDescription.Location = new System.Drawing.Point(12, 107);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(715, 345);
+            this.txtDescription.Properties.LinesCount = 3;
+            this.txtDescription.Size = new System.Drawing.Size(715, 321);
             this.txtDescription.StyleController = this.dataLayoutControl1;
             this.txtDescription.TabIndex = 9;
             this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescription_KeyDown);
@@ -161,7 +174,8 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem3,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(739, 464);
@@ -184,8 +198,11 @@
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.txtDescription;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(0, 346);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(78, 346);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(719, 370);
+            this.layoutControlItem6.Size = new System.Drawing.Size(719, 346);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.Text = "Descripción";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(74, 18);
@@ -233,6 +250,15 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem2.Text = "Nombre";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(74, 18);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.pivotGridControl1;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 420);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -335,6 +361,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Manage_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
@@ -346,6 +373,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,6 +397,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.ComboBox cmbLine;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 
 }
