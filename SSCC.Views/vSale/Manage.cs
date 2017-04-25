@@ -108,82 +108,21 @@ namespace SSCC.Views.vSale
         private void ShowProductInControls()
         {
             txtCode.Text = this._Product.ProductCode;
-            txtName.Text = this._Product.ProductName;
-            cmbLine.Text = this._Product.LineID != null ? this._Product.Line.LineName : "";
-            cmbMark.Text = this._Product.MarkID != null ? this._Product.Mark.MarkName : "";
+            txtDate.Text = this._Product.ProductName;
+            cmbCliente.Text = this._Product.LineID != null ? this._Product.Line.LineName : "";
             txtDescription.Text = this._Product.ProductDescription;
         }
 
-        public void MarkList()
-        {
-            try
-            {
-                var mark = new RuleMark();
-                cmbMark.DataSource = mark.List();
-                cmbMark.ValueMember = "MarkID";
-                cmbMark.DisplayMember = "MarkName";
-                cmbMark.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
-            }
-        }
-
-        private void MarkSelect()
-        {
-            try
-            {
-                if (!String.IsNullOrWhiteSpace(cmbMark.Text.Trim()))
-                {
-                    if (cmbMark.SelectedValue == null)
-                    {
-                        var MarkName = cmbMark.Text;
-                        this.MarkList();
-                        cmbMark.Text = MarkName;
-                        if (cmbMark.SelectedValue != null)
-                        {
-                            cmbMark.Focus();
-                        }
-                        else
-                        {
-                            if (XtraMessageBox.Show("No se encuentra esta marca ¿Desea agregarla?", "Información del Sistema", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                            {
-                                var mark = new RuleMark();
-                                mark.Save(new Mark()
-                                {
-                                    MarkName = cmbMark.Text
-                                });
-
-                                this.MarkList();
-
-                                cmbMark.Text = MarkName;
-
-                                txtDescription.Focus();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        txtDescription.Focus();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
-            }
-        }
-
+        
         public void LineList()
         {
             try
             {
                 var line = new RuleLine();
-                cmbLine.DataSource = line.List();
-                cmbLine.ValueMember = "LineID";
-                cmbLine.DisplayMember = "LineName";
-                cmbLine.SelectedIndex = -1;
+                cmbCliente.DataSource = line.List();
+                cmbCliente.ValueMember = "LineID";
+                cmbCliente.DisplayMember = "LineName";
+                cmbCliente.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -195,16 +134,16 @@ namespace SSCC.Views.vSale
         {
             try
             {
-                if (!String.IsNullOrWhiteSpace(cmbLine.Text.Trim()))
+                if (!String.IsNullOrWhiteSpace(cmbCliente.Text.Trim()))
                 {
-                    if (cmbLine.SelectedValue == null)
+                    if (cmbCliente.SelectedValue == null)
                     {
-                        var LineName = cmbLine.Text;
+                        var LineName = cmbCliente.Text;
                         this.LineList();
-                        cmbLine.Text = LineName;
-                        if (cmbLine.SelectedValue != null)
+                        cmbCliente.Text = LineName;
+                        if (cmbCliente.SelectedValue != null)
                         {
-                            cmbLine.Focus();
+                            cmbCliente.Focus();
                         }
                         else
                         {
@@ -213,20 +152,20 @@ namespace SSCC.Views.vSale
                                 var line = new RuleLine();
                                 line.Save(new Line()
                                 {
-                                    LineName = cmbLine.Text
+                                    LineName = cmbCliente.Text
                                 });
 
                                 this.LineList();
 
-                                cmbLine.Text = LineName;
+                                cmbCliente.Text = LineName;
 
-                                cmbMark.Focus();
+                                //cmbMark.Focus();
                             }
                         }
                     }
                     else
                     {
-                        cmbMark.Focus();
+                        //cmbMark.Focus();
                     }
                 }
             }
@@ -243,10 +182,8 @@ namespace SSCC.Views.vSale
 
             //limpiar campos
             txtCode.Text = "";
-            txtName.Text = "";
-            txtPrice.Value = 0;
-            cmbMark.SelectedIndex = -1;
-            cmbLine.SelectedIndex = -1;
+            txtDate.Text = "";
+            cmbCliente.SelectedIndex = -1;
             txtDescription.Text = "";
 
             //limpiar botones
@@ -275,19 +212,13 @@ namespace SSCC.Views.vSale
                 return;
             }
 
-            if (String.IsNullOrWhiteSpace(txtName.Text.Trim()))
+            if (String.IsNullOrWhiteSpace(txtDate.Text.Trim()))
             {
                 Msg.Adv("Ingresar el Nombre");
                 txtCode.Focus();
                 return;
             }
 
-            if (txtPrice.Value <= 0)
-            {
-                Msg.Adv("Ingresar el Precio");
-                txtCode.Focus();
-                return;
-            }
 
         }
 
@@ -330,11 +261,8 @@ namespace SSCC.Views.vSale
         private void Manage_Load(object sender, EventArgs e)
         {
 
-            this.MarkList();
-            cmbMark.SelectedIndex = -1;
-
             this.LineList();
-            cmbLine.SelectedIndex = -1;
+            cmbCliente.SelectedIndex = -1;
 
 
             //Cargado completamente
@@ -382,17 +310,9 @@ namespace SSCC.Views.vSale
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (txtName.Text != this._Product.ProductName)
+            if (txtDate.Text != this._Product.ProductName)
             {
-                this._Product.ProductName = txtName.Text;
-            }
-        }
-
-        private void txtPrice_EditValueChanged(object sender, EventArgs e)
-        {
-            if (txtPrice.Value != this._Product.ProductPrice)
-            {
-                this._Product.ProductPrice = txtPrice.Value;
+                this._Product.ProductName = txtDate.Text;
             }
         }
 
@@ -462,13 +382,11 @@ namespace SSCC.Views.vSale
                             var p = this.RuleProduct.Find(txtCode.Text);
                             if (p != null)
                             {
-                                txtName.Text = p.ProductName;
-                                txtPrice.Value = p.ProductPrice;
-                                cmbMark.Text = p.MarkID != null ? p.Mark.MarkName : "";
-                                cmbLine.Text = p.LineID != null ? p.Line.LineName : "";
+                                txtDate.Text = p.ProductName;
+                                cmbCliente.Text = p.LineID != null ? p.Line.LineName : "";
                                 txtDescription.Text = p.ProductDescription;
                             }
-                            txtName.Focus();
+                            txtDate.Focus();
                         }
                         else
                         {
@@ -500,9 +418,9 @@ namespace SSCC.Views.vSale
                     case Keys.Enter:
 
                         //Al presionar tecla ENTER
-                        if (!String.IsNullOrWhiteSpace(txtName.Text))
+                        if (!String.IsNullOrWhiteSpace(txtDate.Text))
                         {
-                            txtPrice.Focus();
+                            //txtPrice.Focus();
                         }
                         else
                         {
@@ -525,39 +443,7 @@ namespace SSCC.Views.vSale
             }
         }
 
-        private void txtPrice_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                switch (e.KeyData)
-                {
-                    case Keys.Enter:
-
-                        //Al presionar tecla ENTER
-                        if (txtPrice.Value > 0)
-                        {
-                            cmbLine.Focus();
-                        }
-                        else
-                        {
-                            Msg.Adv("Ingresar el Precio");
-                        }
-
-                        break;
-
-                    case Keys.Escape:
-
-                        //Al presionar tecla ESCAPE
-                        txtName.Focus();
-
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
-            }
-        }
+        
 
         private void cmbLine_KeyDown(object sender, KeyEventArgs e)
         {
@@ -573,50 +459,20 @@ namespace SSCC.Views.vSale
                 case Keys.Escape:
 
                     //Al presionar tecla ESCAPE
-                    txtPrice.Focus();
+                    //txtPrice.Focus();
 
                     break;
             }
         }
 
-        private void cmbMark_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyData)
-            {
-                case Keys.Enter:
-                    
-                    //Seleccionar Marca
-                    this.MarkSelect();
-
-                    break;
-
-                case Keys.Escape:
-
-                    //Al presionar tecla ESCAPE
-                    cmbLine.Focus();
-
-                    break;
-            }
-        }
 
         private void cmbLine_SelectedValueChanged(object sender, EventArgs e)
         {
             if (this.ObjLoad)
             {
-                if (cmbLine.SelectedValue != null && cmbLine.SelectedIndex != -1)
+                if (cmbCliente.SelectedValue != null && cmbCliente.SelectedIndex != -1)
                 {
-                    this._Product.LineID = Guid.Parse(cmbLine.SelectedValue.ToString());
-                }
-            }
-        }
-
-        private void cmbMark_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (this.ObjLoad)
-            {
-                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex != -1)
-                {
-                    this._Product.MarkID = Guid.Parse(cmbMark.SelectedValue.ToString());
+                    this._Product.LineID = Guid.Parse(cmbCliente.SelectedValue.ToString());
                 }
             }
         }
