@@ -229,11 +229,11 @@ namespace SSCC.Views.vSale
                 this.Validation();
                 if (!this.Exist)
                 {
-                    RuleProduct.Save(this._Product);
+                    
                 }
                 else
                 {
-                    RuleProduct.Edit(this._Product);
+                    
                 }
             }
             catch (Exception ex)
@@ -246,7 +246,7 @@ namespace SSCC.Views.vSale
         {
             try
             {
-                RuleProduct.Delete(this._Product.ProductID);
+                
             }
             catch (Exception ex)
             {

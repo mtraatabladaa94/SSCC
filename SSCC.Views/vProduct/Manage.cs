@@ -72,6 +72,7 @@ namespace SSCC.Views.vProduct
                 {
                     this._Product = p;
                     this.ShowProductInControls();
+                    this.Exist = true;
                 }
                 else
                 {
@@ -93,6 +94,7 @@ namespace SSCC.Views.vProduct
                 {
                     this._Product = p;
                     this.ShowProductInControls();
+                    this.Exist = true;
                 }
                 else
                 {
@@ -109,6 +111,7 @@ namespace SSCC.Views.vProduct
         {
             txtCode.Text = this._Product.ProductCode;
             txtName.Text = this._Product.ProductName;
+            txtPrice.Value = this._Product.ProductPrice;
             cmbLine.Text = this._Product.LineID != null ? this._Product.Line.LineName : "";
             cmbMark.Text = this._Product.MarkID != null ? this._Product.Mark.MarkName : "";
             txtDescription.Text = this._Product.ProductDescription;
@@ -238,10 +241,14 @@ namespace SSCC.Views.vProduct
 
         private void Clear()
         {
-            //crear objeto nuevo
+            //Crear objeto nuevo
             this._Product = new Product();
 
-            //limpiar campos
+            //Al ser un objeto nuevo, no existe.
+            //La bandera se establece en false
+            this.Exist = false;
+
+            //Limpiar campos
             txtCode.Text = "";
             txtName.Text = "";
             txtPrice.Value = 0;
@@ -249,13 +256,14 @@ namespace SSCC.Views.vProduct
             cmbLine.SelectedIndex = -1;
             txtDescription.Text = "";
 
-            //limpiar botones
+            //Limpiar botones
             this.SelectButton(btSave).Enabled = true;
             this.SelectButton(btSaveAndClose).Enabled = true;
             this.SelectButton(btSaveAndNew).Enabled = true;
             this.SelectButton(btEdit).Enabled = false;
             this.SelectButton(btDelete).Enabled = false;
 
+            //Se asigna el foco al código del producto
             txtCode.Focus();
         }
 
@@ -278,14 +286,14 @@ namespace SSCC.Views.vProduct
             if (String.IsNullOrWhiteSpace(txtName.Text.Trim()))
             {
                 Msg.Adv("Ingresar el Nombre");
-                txtCode.Focus();
+                txtName.Focus();
                 return;
             }
 
             if (txtPrice.Value <= 0)
             {
                 Msg.Adv("Ingresar el Precio");
-                txtCode.Focus();
+                txtPrice.Focus();
                 return;
             }
 
@@ -298,7 +306,7 @@ namespace SSCC.Views.vProduct
                 this.Validation();
                 if (!this.Exist)
                 {
-                    RuleProduct.Save(this._Product);
+                    this._Product = RuleProduct.Save(this._Product);
                 }
                 else
                 {
@@ -316,15 +324,13 @@ namespace SSCC.Views.vProduct
             try
             {
                 RuleProduct.Delete(this._Product.ProductID);
+                this.Clear();
             }
             catch (Exception ex)
             {
                 Msg.Err(ex.Message);
             }
         }
-
-
-
 
 
         private void Manage_Load(object sender, EventArgs e)
@@ -462,12 +468,17 @@ namespace SSCC.Views.vProduct
                             var p = this.RuleProduct.Find(txtCode.Text);
                             if (p != null)
                             {
-                                txtName.Text = p.ProductName;
-                                txtPrice.Value = p.ProductPrice;
-                                cmbMark.Text = p.MarkID != null ? p.Mark.MarkName : "";
-                                cmbLine.Text = p.LineID != null ? p.Line.LineName : "";
-                                txtDescription.Text = p.ProductDescription;
+                                //Ya que existe se carga en el objeto
+                                this._Product = p;
+
+                                //Se muestran los datos en los controles
+                                this.ShowProductInControls();
+
+                                //La bandera Exist se establece en true
+                                this.Exist = true;
                             }
+
+                            //El foco se pasa al campo Nombre
                             txtName.Focus();
                         }
                         else

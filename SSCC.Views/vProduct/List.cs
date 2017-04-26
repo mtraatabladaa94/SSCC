@@ -25,12 +25,6 @@ namespace SSCC.Views.vProduct
 {
     public partial class List : DevExpress.XtraEditors.XtraForm
     {
-        //creación del objeto producto para encapsular funcionalidades
-        private Product _Product;        
-
-        //bandera para saber si es nuevo o edicion
-        private Boolean Exist;
-
         //creando regla de negocio
         private RuleProduct RuleProduct;
 
@@ -47,32 +41,23 @@ namespace SSCC.Views.vProduct
 
 #endregion
 
-
         public List()
         {
             InitializeComponent();
 
             //Inicializando objeto
-            this._Product = new Product();
-
-            this.Exist = false;
-
             this.RuleProduct = new RuleProduct();
         }
 
-        public void Find(Guid ProductID)
+        public void MarkList()
         {
             try
             {
-                var p = RuleProduct.Find(ProductID);
-                if (p != null)
-                {
-                    this._Product = p;
-                }
-                else
-                {
-                    Msg.Adv("Producto no encontrado.");
-                }
+                var mark = new RuleMark();
+                cmbMark.DataSource = mark.List();
+                cmbMark.ValueMember = "MarkID";
+                cmbMark.DisplayMember = "MarkName";
+                cmbMark.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -80,27 +65,81 @@ namespace SSCC.Views.vProduct
             }
         }
 
+        public void LineList()
+        {
+            try
+            {
+                var line = new RuleLine();
+                cmbLine.DataSource = line.List();
+                cmbLine.ValueMember = "LineID";
+                cmbLine.DisplayMember = "LineName";
+                cmbLine.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
+        private void UpdateData()
+        {
+            try
+            {
+                dtRegistro.DataSource = (from c in RuleProduct.List(txtCode.Text.Trim(), txtName.Text.Trim(), txtPrice.Value, cmbMark.Text.Trim(), cmbLine.Text.Trim(), tsState.IsOn)
+                                        select new {
+                                            c.ProductID,
+                                            c.ProductCode,
+                                            c.ProductName,
+                                            c.ProductPrice,
+                                            ProductMark = c.MarkID != null ? c.Mark.MarkName : "",
+                                            ProductLine = c.LineID != null ? c.Line.LineName : "",
+                                            c.ProductDescription
+                                        }).ToList();
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+
+            this.Grid();
+        }
+
+        private void Grid()
+        {
+            if (dtRegistro.Columns.Count > 0)
+            {
+                //Ocultando ID
+                dtRegistro.Columns[0].Visible = false;
+
+                //Estilo de Encabezados
+                dtRegistro.Columns[1].HeaderText = "\nCódigo\n"; dtRegistro.Columns[1].Width = 120;
+                dtRegistro.Columns[2].HeaderText = "Nombre"; dtRegistro.Columns[2].Width = 200;
+                dtRegistro.Columns[3].HeaderText = "Precio"; dtRegistro.Columns[3].Width = 150;
+                dtRegistro.Columns[4].HeaderText = "Marca"; dtRegistro.Columns[4].Width = 250;
+                dtRegistro.Columns[5].HeaderText = "Linea"; dtRegistro.Columns[5].Width = 250;
+                dtRegistro.Columns[6].HeaderText = "Descripción"; dtRegistro.Columns[6].Width = 500;
+
+                //Aplicando Formato General al Texto del Encabezado
+                foreach (DataGridViewColumn item in dtRegistro.Columns)
+                {
+                    item.HeaderText = item.HeaderText.ToUpper();
+                    item.HeaderCell.Style.Font = new Font(this.Font.FontFamily, this.Font.Size, FontStyle.Bold);
+                }
+            }
+        }
+
         private void Manage_Load(object sender, EventArgs e)
         {
-            
+            this.MarkList();
+
+            this.LineList();
+
+            this.UpdateData();
         }
 
         private void Clear()
         {
-            //limpiar campos
-            txtCode.Text = "";
-            txtName.Text = "";
-            txtPrice.Value = 0;
-            cmbMark.Text = "";
-            cmbLine.Text = "";
-            txtDescription.Text = "";
-
-            //limpiar botones
-            this.SelectButton(btSave).Enabled = true;
-            this.SelectButton(btSaveAndClose).Enabled = true;
-            this.SelectButton(btSaveAndNew).Enabled = true;
-            this.SelectButton(btEdit).Enabled = false;
-            this.SelectButton(btDelete).Enabled = false;
+            
         }
 
         //IMPORTANTE: Modificar código, crear una clase general o una interfaz
@@ -109,18 +148,11 @@ namespace SSCC.Views.vProduct
             return windowsUIButtonPanelMain.Buttons.Where(c => c.Properties.Tag == name).FirstOrDefault() as WindowsUIButton;
         }
 
-
-        private void Validation()
-        {
-            
-        }
-
-        private void Save()
+        private void Delete(Guid ProductID)
         {
             try
             {
-                this.Validation();
-                RuleProduct.Save(this._Product);
+                RuleProduct.Delete(ProductID);
             }
             catch (Exception ex)
             {
@@ -128,36 +160,17 @@ namespace SSCC.Views.vProduct
             }
         }
 
-        private void Delete()
+        private void txtCode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyData == Keys.Enter)
             {
-                RuleProduct.Delete(this._Product.ProductID);
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
+                this.UpdateData();
             }
         }
 
-        private void txtCode_TextChanged(object sender, EventArgs e)
+        private void tsState_Toggled(object sender, EventArgs e)
         {
-            this._Product.ProductCode = txtCode.Text;
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            this._Product.ProductName = txtName.Text;
-        }
-
-        private void txtPrice_EditValueChanged(object sender, EventArgs e)
-        {
-            this._Product.ProductPrice = txtPrice.Value;
-        }
-
-        private void cmbMark_SelectedValueChanged(object sender, EventArgs e)
-        {
-
+            this.UpdateData();
         }
     }
 }
