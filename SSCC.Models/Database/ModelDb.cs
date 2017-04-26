@@ -14,13 +14,14 @@ namespace SSCC.Models.Database
     /// </summary>
     public partial class ModelDb : DbContext // Características del objeto base de datos
     {
-        public ModelDb() : base(@"Data Source = .\UNANFAREMCH; Initial Catalog = SsccDB; Integrated Security = True;") { } // Establece la conexión de la base de datos
+        public ModelDb() : base(@"Data Source = .\SQLEXPRESS2; Initial Catalog = SsccDB; Integrated Security = False; User ID = sa; Password = admin*123") { } // Establece la conexión de la base de datos
 
         public DbSet<Customer> Customers { get; set; }
         
         public DbSet<Line> Lines { get; set; }
         
         public DbSet<Mark> Marks { get; set; }
+
         
         public DbSet<Product> Products { get; set; }
         

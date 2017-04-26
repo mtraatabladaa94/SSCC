@@ -30,7 +30,7 @@ namespace SSCC.Controllers
 
             using (var db = new ModelDb())
             {
-                Product.ProductID = Guid.NewGuid();
+                Product.ProductID = Guid.NewGuid();                
                 Product.ProductIsActive = true;
 
                 //guardar producto

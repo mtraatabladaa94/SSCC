@@ -34,14 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevComponents.DotNetBar.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevComponents.DotNetBar.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -58,7 +50,6 @@
     <Reference Include="DevExpress.Mvvm.v16.2.DataModel, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Mvvm.v16.2.DataModel.EF6, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Mvvm.v16.2.ViewModel, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\DevExpress.Printing.v16.2.Core.dll</HintPath>
@@ -83,7 +74,6 @@
     <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -121,6 +111,12 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Message\Msg.cs" />
+    <Compile Include="vCustomer\FCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vCustomer\FCustomer.Designer.cs">
+      <DependentUpon>FCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="vProduct\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,20 +138,11 @@
     <Compile Include="Utilities\Wait\ProgressIndicator.Designer.cs">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </Compile>
-    <Compile Include="vSale\Import.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vSale\Import.Designer.cs">
-      <DependentUpon>Import.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vSale\Manage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vSale\Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vCustomer\FCustomer.resx">
+      <DependentUpon>FCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vProduct\List.resx">
       <DependentUpon>List.cs</DependentUpon>
@@ -176,12 +163,6 @@
     </Compile>
     <EmbeddedResource Include="Utilities\Wait\ProgressIndicator.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vSale\Import.resx">
-      <DependentUpon>Import.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vSale\Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -207,7 +188,6 @@
       <Name>SSCC.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

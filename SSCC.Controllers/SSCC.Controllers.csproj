@@ -60,7 +60,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="RuleImportSale.cs" />
+=======
+    <Compile Include="RuleCustomer.cs" />
+>>>>>>> origin/master
     <Compile Include="RuleLine.cs" />
     <Compile Include="RuleMark.cs" />
     <Compile Include="RuleProduct.cs" />
