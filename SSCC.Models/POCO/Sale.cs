@@ -15,6 +15,8 @@ namespace SSCC.Models.POCO
 
         public Guid SaleID { get; set; }
 
+        public string SaleCode { get; set; }
+
         public DateTime SaleDate { get; set; }
 
         public Boolean SaleType { get; set; }

@@ -13,6 +13,8 @@ using System.IO;
 using DevExpress.XtraLayout.Helpers;
 using DevExpress.XtraLayout;
 
+using System.Data.OleDb;
+
 using SSCC.Controllers;
 using SSCC.Models.POCO;
 using SSCC.Models.Database;
@@ -78,7 +80,6 @@ namespace SSCC.Views.vSale
             this.SelectButton(btEdit).Enabled = false;
             this.SelectButton(btDelete).Enabled = false;
 
-            
         }
 
         //IMPORTANTE: Modificar código, crear una clase general o una interfaz
@@ -96,7 +97,6 @@ namespace SSCC.Views.vSale
         {
             try
             {
-                this.Validation();
                 if (!this.Exist)
                 {
                     
@@ -112,26 +112,9 @@ namespace SSCC.Views.vSale
             }
         }
 
-        private void Delete()
-        {
-            try
-            {
-                
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
-            }
-        }
-
-
-
-
-
         private void Manage_Load(object sender, EventArgs e)
         {
 
-            
             //Cargado completamente
             this.ObjLoad = true;
         }
@@ -152,16 +135,8 @@ namespace SSCC.Views.vSale
                         this.Clear();
                         break;
 
-                    case Keys.G: //Guardar
-                        this.Save();
-                        break;
-
-                    case Keys.B: //Buscar
-                        
-                        break;
-
                     case Keys.Delete: // Eliminar
-                        this.Delete();
+                        
                         break;
                 }
             }
@@ -178,44 +153,27 @@ namespace SSCC.Views.vSale
 
                     break;
 
-                case btSave:
-
-                    //Guardar
-                    this.Save();
-
-                    break;
-
-                case btSaveAndClose:
-
-                    //Guardar y cerrar el form
-                    this.Save();
-                    this.Close();
-
-                    break;
-
-                case btSaveAndNew:
-
-                    //Guardar y nuevo
-                    this.Save();
-                    this.Clear();
-
-                    break;
-
-                case btEdit:
-
-                    break;
-
-                case btDelete:
-
-                    //Eliminar
-                    this.Delete();
-                    this.Clear();
-
-                    break;
-
                 case btSearch:
 
                     break;
+            }
+        }
+
+        private void bteImport_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            opFile.ShowDialog();
+        }
+
+        private void opFile_FileOk(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                bteImport.Text = opFile.FileName;
+                txtCellLeft.Focus();
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
             }
         }
 
