@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
-            this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.backstageViewClientControl3 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewButtonItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
@@ -46,7 +46,6 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
@@ -55,11 +54,7 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Skin = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -70,6 +65,9 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.tmTime = new System.Windows.Forms.Timer(this.components);
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -89,19 +87,19 @@
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
             this.barStaticItem1,
-            this.barStaticItem2});
+            this.barStaticItem2,
+            this.barButtonItem13,
+            this.barButtonItem14});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
-            this.ribbonPage2,
             this.ribbonPage3});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbon.ShowToolbarCustomizeItem = false;
@@ -124,19 +122,19 @@
             this.backstageViewControl1.Size = new System.Drawing.Size(634, 267);
             this.backstageViewControl1.TabIndex = 2;
             // 
-            // backstageViewClientControl3
-            // 
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(145, 63);
-            this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(488, 203);
-            this.backstageViewClientControl3.TabIndex = 2;
-            // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(145, 63);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(133, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(488, 203);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(500, 203);
             this.backstageViewClientControl1.TabIndex = 1;
+            // 
+            // backstageViewClientControl3
+            // 
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(133, 63);
+            this.backstageViewClientControl3.Name = "backstageViewClientControl3";
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(500, 203);
+            this.backstageViewClientControl3.TabIndex = 2;
             // 
             // backstageViewButtonItem1
             // 
@@ -219,12 +217,6 @@
             this.barButtonItem7.ImageOptions.ImageUri.Uri = "AlignHorizontalTop";
             this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "barButtonItem8";
-            this.barButtonItem8.Id = 10;
-            this.barButtonItem8.Name = "barButtonItem8";
-            // 
             // barButtonItem9
             // 
             this.barButtonItem9.Caption = "Entregar Anticipo";
@@ -273,8 +265,8 @@
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup2});
             this.ribbonPage1.ImageUri.Uri = "Home";
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Archivo";
@@ -286,42 +278,12 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Datos Básicos";
             // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Importar Facturas";
-            // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Facturas";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup5});
-            this.ribbonPage2.ImageUri.Uri = "Copy";
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Documentos";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Abonos";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem9);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem10);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Anticipos";
             // 
             // ribbonPage3
             // 
@@ -334,7 +296,6 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Informes";
             // 
@@ -383,7 +344,7 @@
             this.toolStripStatusLabel2.Font = new System.Drawing.Font("Arial", 8F);
             this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(529, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(560, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "© Copyright - Petronic 2017. All rights reserved.";
             // 
@@ -400,6 +361,27 @@
             this.tmTime.Enabled = true;
             this.tmTime.Interval = 500;
             this.tmTime.Tick += new System.EventHandler(this.tmTime_Tick);
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Recibos";
+            // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "Recibos o Anticipos";
+            this.barButtonItem13.Id = 21;
+            this.barButtonItem13.ImageOptions.ImageUri.Uri = "BehindText";
+            this.barButtonItem13.Name = "barButtonItem13";
+            // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Listado de Recibos";
+            this.barButtonItem14.Id = 22;
+            this.barButtonItem14.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
+            this.barButtonItem14.Name = "barButtonItem14";
             // 
             // Home
             // 
@@ -431,9 +413,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         internal DevExpress.LookAndFeel.DefaultLookAndFeel Skin;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.BackstageViewControl backstageViewControl1;
@@ -445,9 +424,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
@@ -468,5 +445,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel lblDate;
         private System.Windows.Forms.Timer tmTime;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
     }
 }
