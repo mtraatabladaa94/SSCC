@@ -239,5 +239,10 @@ namespace SSCC.Views.vProduct
                     break;
             }
         }
+
+        private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

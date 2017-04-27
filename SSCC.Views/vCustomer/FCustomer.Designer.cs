@@ -1,6 +1,6 @@
-﻿namespace SSCC.Views.vProduct
+﻿namespace SSCC.Views.vCustomer
 {
-    partial class Manage
+    partial class FCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -30,46 +30,53 @@
         private void InitializeComponent()
         {
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.cmbLine = new System.Windows.Forms.ComboBox();
-            this.cmbMark = new System.Windows.Forms.ComboBox();
-            this.txtCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
-            this.txtPrice = new DevExpress.XtraEditors.SpinEdit();
-            this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.txtCodeCustomer = new DevExpress.XtraEditors.TextEdit();
+            this.txtNameCustomer = new DevExpress.XtraEditors.TextEdit();
+            this.txtLastNameCustomer = new DevExpress.XtraEditors.TextEdit();
+            this.txtCompanyNameCustomer = new DevExpress.XtraEditors.TextEdit();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.txtTelefonoCustomer = new DevExpress.XtraEditors.TextEdit();
+            this.txtAddressCustomer = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodeCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastNameCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyNameCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddressCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
-            this.dataLayoutControl1.Controls.Add(this.cmbLine);
-            this.dataLayoutControl1.Controls.Add(this.cmbMark);
-            this.dataLayoutControl1.Controls.Add(this.txtCode);
-            this.dataLayoutControl1.Controls.Add(this.txtName);
-            this.dataLayoutControl1.Controls.Add(this.txtPrice);
-            this.dataLayoutControl1.Controls.Add(this.txtDescription);
+            this.dataLayoutControl1.Controls.Add(this.txtCodeCustomer);
+            this.dataLayoutControl1.Controls.Add(this.txtNameCustomer);
+            this.dataLayoutControl1.Controls.Add(this.txtLastNameCustomer);
+            this.dataLayoutControl1.Controls.Add(this.txtCompanyNameCustomer);
+            this.dataLayoutControl1.Controls.Add(this.radioGroup1);
+            this.dataLayoutControl1.Controls.Add(this.txtTelefonoCustomer);
+            this.dataLayoutControl1.Controls.Add(this.txtAddressCustomer);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(45, 37);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -77,71 +84,75 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(739, 464);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // cmbLine
+            // txtCodeCustomer
             // 
-            this.cmbLine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbLine.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbLine.FormattingEnabled = true;
-            this.cmbLine.Location = new System.Drawing.Point(87, 36);
-            this.cmbLine.Name = "cmbLine";
-            this.cmbLine.Size = new System.Drawing.Size(640, 21);
-            this.cmbLine.TabIndex = 11;
+            this.txtCodeCustomer.Location = new System.Drawing.Point(121, 12);
+            this.txtCodeCustomer.Name = "txtCodeCustomer";
+            this.txtCodeCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtCodeCustomer.StyleController = this.dataLayoutControl1;
+            this.txtCodeCustomer.TabIndex = 4;
+            this.txtCodeCustomer.TextChanged += new System.EventHandler(this.txtCodeCustomer_TextChanged);
+            this.txtCodeCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodeCustomer_KeyDown);
             // 
-            // cmbMark
+            // txtNameCustomer
             // 
-            this.cmbMark.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbMark.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbMark.FormattingEnabled = true;
-            this.cmbMark.Location = new System.Drawing.Point(87, 61);
-            this.cmbMark.Name = "cmbMark";
-            this.cmbMark.Size = new System.Drawing.Size(640, 21);
-            this.cmbMark.TabIndex = 10;
+            this.txtNameCustomer.Location = new System.Drawing.Point(121, 36);
+            this.txtNameCustomer.Name = "txtNameCustomer";
+            this.txtNameCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtNameCustomer.StyleController = this.dataLayoutControl1;
+            this.txtNameCustomer.TabIndex = 5;
+            this.txtNameCustomer.TextChanged += new System.EventHandler(this.txtNameCustomer_TextChanged);
             // 
-            // txtCode
+            // txtLastNameCustomer
             // 
-            this.txtCode.Location = new System.Drawing.Point(87, 12);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 20);
-            this.txtCode.StyleController = this.dataLayoutControl1;
-            this.txtCode.TabIndex = 4;
-            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
+            this.txtLastNameCustomer.Location = new System.Drawing.Point(121, 60);
+            this.txtLastNameCustomer.Name = "txtLastNameCustomer";
+            this.txtLastNameCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtLastNameCustomer.StyleController = this.dataLayoutControl1;
+            this.txtLastNameCustomer.TabIndex = 10;
+            this.txtLastNameCustomer.TextChanged += new System.EventHandler(this.txtLastNameCustomer_TextChanged);
             // 
-            // txtName
+            // txtCompanyNameCustomer
             // 
-            this.txtName.Location = new System.Drawing.Point(327, 12);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(161, 20);
-            this.txtName.StyleController = this.dataLayoutControl1;
-            this.txtName.TabIndex = 5;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtCompanyNameCustomer.Location = new System.Drawing.Point(121, 113);
+            this.txtCompanyNameCustomer.Name = "txtCompanyNameCustomer";
+            this.txtCompanyNameCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtCompanyNameCustomer.StyleController = this.dataLayoutControl1;
+            this.txtCompanyNameCustomer.TabIndex = 11;
+            this.txtCompanyNameCustomer.TextChanged += new System.EventHandler(this.txtCompanyNameCustomer_TextChanged);
             // 
-            // txtPrice
+            // radioGroup1
             // 
-            this.txtPrice.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtPrice.Location = new System.Drawing.Point(567, 12);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtPrice.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.txtPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPrice.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPrice.Size = new System.Drawing.Size(160, 20);
-            this.txtPrice.StyleController = this.dataLayoutControl1;
-            this.txtPrice.TabIndex = 6;
-            this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
+            this.radioGroup1.AutoSizeInLayoutControl = true;
+            this.radioGroup1.Location = new System.Drawing.Point(121, 84);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Columns = 2;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Natural", true, true),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Juridica", true, false)});
+            this.radioGroup1.Size = new System.Drawing.Size(606, 25);
+            this.radioGroup1.StyleController = this.dataLayoutControl1;
+            this.radioGroup1.TabIndex = 12;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
-            // txtDescription
+            // txtTelefonoCustomer
             // 
-            this.txtDescription.Location = new System.Drawing.Point(12, 107);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(715, 345);
-            this.txtDescription.StyleController = this.dataLayoutControl1;
-            this.txtDescription.TabIndex = 9;
+            this.txtTelefonoCustomer.EditValue = "";
+            this.txtTelefonoCustomer.Location = new System.Drawing.Point(121, 137);
+            this.txtTelefonoCustomer.Name = "txtTelefonoCustomer";
+            this.txtTelefonoCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtTelefonoCustomer.StyleController = this.dataLayoutControl1;
+            this.txtTelefonoCustomer.TabIndex = 6;
+            this.txtTelefonoCustomer.TextChanged += new System.EventHandler(this.txtTelefonoCustomer_TextChanged);
+            // 
+            // txtAddressCustomer
+            // 
+            this.txtAddressCustomer.Location = new System.Drawing.Point(121, 161);
+            this.txtAddressCustomer.Name = "txtAddressCustomer";
+            this.txtAddressCustomer.Size = new System.Drawing.Size(606, 20);
+            this.txtAddressCustomer.StyleController = this.dataLayoutControl1;
+            this.txtAddressCustomer.TabIndex = 8;
+            this.txtAddressCustomer.TextChanged += new System.EventHandler(this.txtAddressCustomer_TextChanged);
             // 
             // layoutControlGroup1
             // 
@@ -149,11 +160,12 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem6,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
+            this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem2});
+            this.layoutControlItem5,
+            this.layoutControlItem7,
+            this.layoutControlItem6,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(739, 464);
@@ -163,68 +175,81 @@
             // 
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.Control = this.txtCode;
+            this.layoutControlItem1.Control = this.txtCodeCustomer;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(240, 24);
-            this.layoutControlItem1.Text = "Código";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(72, 18);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem6.Control = this.txtDescription;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 74);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(719, 370);
-            this.layoutControlItem6.Text = "Descripción";
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 18);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.cmbMark;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 49);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(719, 25);
-            this.layoutControlItem4.Text = "Marca";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 18);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.Control = this.cmbLine;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(719, 25);
-            this.layoutControlItem5.Text = "Linea";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem3.Control = this.txtPrice;
-            this.layoutControlItem3.Location = new System.Drawing.Point(480, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(239, 24);
-            this.layoutControlItem3.Text = "Precio";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem1.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem1.Text = "Código Cliente";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(106, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.txtName;
-            this.layoutControlItem2.Location = new System.Drawing.Point(240, 0);
+            this.layoutControlItem2.Control = this.txtNameCustomer;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(240, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(719, 24);
             this.layoutControlItem2.Text = "Nombre";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(106, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.txtTelefonoCustomer;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 125);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem3.Text = "Teléfono";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(106, 18);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.Control = this.txtAddressCustomer;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 149);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(719, 295);
+            this.layoutControlItem5.Text = "Dirección";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(106, 18);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem7.Control = this.txtLastNameCustomer;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem7.Text = "Apellidos";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(106, 18);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.Control = this.txtCompanyNameCustomer;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(719, 24);
+            this.layoutControlItem6.Text = "Compañia";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(106, 18);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem8.BestFitWeight = 60;
+            this.layoutControlItem8.Control = this.radioGroup1;
+            this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(719, 29);
+            this.layoutControlItem8.Text = "Tipo de Persona";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Left;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(106, 18);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -286,7 +311,6 @@
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
-            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.windowsUIButtonPanelMain_Click);
             // 
             // labelControl
             // 
@@ -306,7 +330,7 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Edición de Productos";
             // 
-            // Manage
+            // FCustomer
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -318,24 +342,28 @@
             this.Controls.Add(this.labelControl);
             this.Controls.Add(this.windowsUIButtonPanelCloseButton);
             this.Controls.Add(this.windowsUIButtonPanelMain);
-            this.Name = "Manage";
+            this.Name = "FCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de Productos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodeCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastNameCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyNameCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddressCustomer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,18 +375,20 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelCloseButton;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraEditors.LabelControl labelControl;
-        private DevExpress.XtraEditors.TextEdit txtCode;
+        private DevExpress.XtraEditors.TextEdit txtCodeCustomer;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtNameCustomer;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.SpinEdit txtPrice;
-        private DevExpress.XtraEditors.MemoEdit txtDescription;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private System.Windows.Forms.ComboBox cmbMark;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private System.Windows.Forms.ComboBox cmbLine;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.TextEdit txtLastNameCustomer;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.TextEdit txtCompanyNameCustomer;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.TextEdit txtTelefonoCustomer;
+        private DevExpress.XtraEditors.TextEdit txtAddressCustomer;
     }
 
 }

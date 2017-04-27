@@ -12,3 +12,17 @@ D:\GitHub\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.Properties.Resources.
 D:\GitHub\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.csproj.GenerateResource.Cache
 D:\GitHub\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.exe
 D:\GitHub\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\SSCC.Controllers.exe.config
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\SSCC.Controllers.exe
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\SSCC.Controllers.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\EntityFramework.dll
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\SSCC.Models.exe
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\SSCC.Models.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\EntityFramework.xml
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.csprojResolveAssemblyReference.cache
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.Properties.Resources.resources
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.csproj.GenerateResource.Cache
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.exe
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Controllers\obj\Debug\SSCC.Controllers.pdb

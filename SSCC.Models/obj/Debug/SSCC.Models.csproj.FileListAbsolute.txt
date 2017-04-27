@@ -10,3 +10,15 @@ D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.Properties.Resources.resources
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csproj.GenerateResource.Cache
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.exe
 D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\SSCC.Models.exe.config
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.exe
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\SSCC.Models.exe
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\SSCC.Models.pdb
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\EntityFramework.dll
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\EntityFramework.xml
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.GenerateDbByModel.resources
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.Properties.Resources.resources
+C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csproj.GenerateResource.Cache

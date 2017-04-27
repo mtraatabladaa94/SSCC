@@ -16,7 +16,7 @@ namespace SSCC.Views
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SSCC.Views.vProduct.Manage());
+            Application.Run(new SSCC.Views.vCustomer.FCustomer());
         }
     }
 }
