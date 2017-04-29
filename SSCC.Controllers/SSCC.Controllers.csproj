@@ -61,14 +61,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="RuleImportSale.cs" />
 =======
     <Compile Include="RuleCustomer.cs" />
 >>>>>>> origin/master
+=======
+>>>>>>> parent of e95430d... Diseño de la importación de facturas
     <Compile Include="RuleLine.cs" />
     <Compile Include="RuleMark.cs" />
     <Compile Include="RuleProduct.cs" />
-    <Compile Include="RuleSale.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
