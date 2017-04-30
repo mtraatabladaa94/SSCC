@@ -62,10 +62,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="RuleImportSale.cs" />
 =======
     <Compile Include="RuleCustomer.cs" />
 >>>>>>> origin/master
+=======
+>>>>>>> parent of e95430d... Diseño de la importación de facturas
 =======
 >>>>>>> parent of e95430d... Diseño de la importación de facturas
     <Compile Include="RuleLine.cs" />
