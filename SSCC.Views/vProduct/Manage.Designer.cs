@@ -82,9 +82,9 @@
             this.cmbLine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbLine.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbLine.FormattingEnabled = true;
-            this.cmbLine.Location = new System.Drawing.Point(87, 36);
+            this.cmbLine.Location = new System.Drawing.Point(89, 36);
             this.cmbLine.Name = "cmbLine";
-            this.cmbLine.Size = new System.Drawing.Size(640, 21);
+            this.cmbLine.Size = new System.Drawing.Size(638, 21);
             this.cmbLine.TabIndex = 11;
             // 
             // cmbMark
@@ -92,25 +92,25 @@
             this.cmbMark.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbMark.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbMark.FormattingEnabled = true;
-            this.cmbMark.Location = new System.Drawing.Point(87, 61);
+            this.cmbMark.Location = new System.Drawing.Point(89, 61);
             this.cmbMark.Name = "cmbMark";
-            this.cmbMark.Size = new System.Drawing.Size(640, 21);
+            this.cmbMark.Size = new System.Drawing.Size(638, 21);
             this.cmbMark.TabIndex = 10;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(87, 12);
+            this.txtCode.Location = new System.Drawing.Point(89, 12);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 20);
+            this.txtCode.Size = new System.Drawing.Size(159, 20);
             this.txtCode.StyleController = this.dataLayoutControl1;
             this.txtCode.TabIndex = 4;
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(327, 12);
+            this.txtName.Location = new System.Drawing.Point(329, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(161, 20);
+            this.txtName.Size = new System.Drawing.Size(159, 20);
             this.txtName.StyleController = this.dataLayoutControl1;
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
@@ -122,7 +122,7 @@
             0,
             0,
             0});
-            this.txtPrice.Location = new System.Drawing.Point(567, 12);
+            this.txtPrice.Location = new System.Drawing.Point(569, 12);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPrice.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -130,7 +130,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtPrice.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPrice.Size = new System.Drawing.Size(160, 20);
+            this.txtPrice.Size = new System.Drawing.Size(158, 20);
             this.txtPrice.StyleController = this.dataLayoutControl1;
             this.txtPrice.TabIndex = 6;
             this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
@@ -168,7 +168,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem1.Text = "Código";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem6
             // 
@@ -180,7 +180,7 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(719, 370);
             this.layoutControlItem6.Text = "Descripción";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem4
             // 
@@ -191,7 +191,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(719, 25);
             this.layoutControlItem4.Text = "Marca";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem5
             // 
@@ -202,7 +202,7 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(719, 25);
             this.layoutControlItem5.Text = "Linea";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem3
             // 
@@ -213,7 +213,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(239, 24);
             this.layoutControlItem3.Text = "Precio";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(74, 18);
             // 
             // layoutControlItem2
             // 
@@ -224,7 +224,7 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem2.Text = "Nombre";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(72, 18);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(74, 18);
             // 
             // windowsUIButtonPanelCloseButton
             // 

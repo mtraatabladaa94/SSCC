@@ -138,6 +138,18 @@
     <Compile Include="Utilities\Wait\ProgressIndicator.Designer.cs">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </Compile>
+    <Compile Include="vSale\Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vSale\Import.Designer.cs">
+      <DependentUpon>Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vSale\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vSale\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +175,12 @@
     </Compile>
     <EmbeddedResource Include="Utilities\Wait\ProgressIndicator.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vSale\Import.resx">
+      <DependentUpon>Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vSale\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -25,6 +25,10 @@ namespace SSCC.Views.vProduct
 {
     public partial class Manage : DevExpress.XtraEditors.XtraForm
     {
+        
+
+#region Variables Privadas
+
         //creación del objeto producto para encapsular funcionalidades
         private Product _Product;
 
@@ -34,7 +38,12 @@ namespace SSCC.Views.vProduct
         //creando regla de negocio
         private RuleProduct RuleProduct;
 
-        //constantes para botones
+        //bandera para saber si ya cargo el form
+        private Boolean FormLoad = false;
+
+#endregion
+
+        
 #region Constantes de Botones
 
         public const string btNew = "btNew";
@@ -46,7 +55,9 @@ namespace SSCC.Views.vProduct
         public const string btSearch = "btSearch";
 
 #endregion
-        
+
+
+#region Constructores
 
         public Manage()
         {
@@ -58,29 +69,36 @@ namespace SSCC.Views.vProduct
             this.Exist = false;
 
             this.RuleProduct = new RuleProduct();
+
+            this.LineList();
+
+            this.MarkList();
+
         }
 
-        public void Find(Guid ProductID)
+#endregion
+
+
+#region Métodos Privados
+
+        private void ShowDataInControls()
         {
-            try
-            {
-                var p = RuleProduct.Find(ProductID);
-                if (p != null)
-                {
-                    this._Product = p;
-                }
-                else
-                {
-                    Msg.Adv("Producto no encontrado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Msg.Err(ex.Message);
-            }
+
+            txtCode.Text = this._Product.ProductCode;
+
+            txtName.Text = this._Product.ProductName;
+
+            txtPrice.Value = this._Product.ProductPrice;
+
+            cmbMark.Text = this._Product.MarkID != null ? this._Product.Mark.MarkName : "";
+
+            cmbLine.Text = this._Product.LineID != null ? this._Product.Line.LineName : "";
+
+            txtDescription.Text = this._Product.ProductDescription;
+
         }
 
-        public void MarkList()
+        private void MarkList()
         {
             try
             {
@@ -88,9 +106,9 @@ namespace SSCC.Views.vProduct
                 cmbMark.DataSource = mark.List().ToList();
                 cmbMark.ValueMember = "MarkID";
                 cmbMark.DisplayMember = "MarkName";
-                
+
                 //cmbMark.Properties.ValueMember = "MarkID";
-                
+
             }
             catch (Exception ex)
             {
@@ -98,7 +116,22 @@ namespace SSCC.Views.vProduct
             }
         }
 
-        public void LineList()
+        private void MarkSelect()
+        {
+            try
+            {
+                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex != -1)
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
+        private void LineList()
         {
             try
             {
@@ -113,9 +146,9 @@ namespace SSCC.Views.vProduct
             }
         }
 
-        private void Manage_Load(object sender, EventArgs e)
+        private void LineSelect()
         {
-            this.MarkList();
+
         }
 
         private void Clear()
@@ -141,16 +174,88 @@ namespace SSCC.Views.vProduct
             txtCode.Focus();
         }
 
-        //IMPORTANTE: Modificar código, crear una clase general o una interfaz
-        private WindowsUIButton SelectButton(object name)
+        private void Find(string ProductCode)
         {
-            return windowsUIButtonPanelMain.Buttons.Where(c => c.Properties.Tag == name).FirstOrDefault() as WindowsUIButton;
+            try
+            {
+                var p = RuleProduct.Find(ProductCode);
+                if (p != null)
+                {
+                    this._Product = p;
+                    this.ShowDataInControls();
+                }
+                else
+                {
+                    Msg.Adv("Producto no encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
         }
 
+#endregion
 
-        private void Validation()
+
+#region Métodos públicos
+
+        public void Find(Guid ProductID)
         {
-            
+            try
+            {
+                var p = RuleProduct.Find(ProductID);
+                if (p != null)
+                {
+                    this._Product = p;
+                    this.ShowDataInControls();
+                }
+                else
+                {
+                    Msg.Adv("Producto no encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
+#endregion
+
+
+#region Operaciones con las bases de datos
+
+        private Boolean Validation()
+        {
+            if (String.IsNullOrWhiteSpace(_Product.ProductCode))
+            {
+                Msg.Err("Ingresar código");
+
+                txtCode.Focus();
+
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(_Product.ProductName))
+            {
+                Msg.Err("Ingresar nombre");
+
+                txtName.Focus();
+
+                return false;
+            }
+
+            if (_Product.ProductPrice <= 0)
+            {
+                Msg.Err("Ingresar precio mayor que 0");
+
+                txtPrice.Focus();
+
+                return false;
+            }
+
+            return true;
         }
 
         private void Save()
@@ -176,6 +281,22 @@ namespace SSCC.Views.vProduct
             {
                 Msg.Err(ex.Message);
             }
+        }
+
+#endregion
+
+
+#region Manejo de Eventos
+
+        private void Manage_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        //IMPORTANTE: Modificar código, crear una clase general o una interfaz
+        private WindowsUIButton SelectButton(object name)
+        {
+            return windowsUIButtonPanelMain.Buttons.Where(c => c.Properties.Tag == name).FirstOrDefault() as WindowsUIButton;
         }
 
         private void txtCode_TextChanged(object sender, EventArgs e)
@@ -242,7 +363,11 @@ namespace SSCC.Views.vProduct
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+#endregion
+
+
     }
 }

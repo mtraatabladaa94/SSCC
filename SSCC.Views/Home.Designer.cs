@@ -52,9 +52,12 @@
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Skin = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -65,9 +68,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.tmTime = new System.Windows.Forms.Timer(this.components);
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -261,6 +261,20 @@
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "Recibos o Anticipos";
+            this.barButtonItem13.Id = 21;
+            this.barButtonItem13.ImageOptions.ImageUri.Uri = "BehindText";
+            this.barButtonItem13.Name = "barButtonItem13";
+            // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Listado de Recibos";
+            this.barButtonItem14.Id = 22;
+            this.barButtonItem14.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
+            this.barButtonItem14.Name = "barButtonItem14";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -284,6 +298,13 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Facturas";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Recibos";
             // 
             // ribbonPage3
             // 
@@ -361,27 +382,6 @@
             this.tmTime.Enabled = true;
             this.tmTime.Interval = 500;
             this.tmTime.Tick += new System.EventHandler(this.tmTime_Tick);
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem14);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Recibos";
-            // 
-            // barButtonItem13
-            // 
-            this.barButtonItem13.Caption = "Recibos o Anticipos";
-            this.barButtonItem13.Id = 21;
-            this.barButtonItem13.ImageOptions.ImageUri.Uri = "BehindText";
-            this.barButtonItem13.Name = "barButtonItem13";
-            // 
-            // barButtonItem14
-            // 
-            this.barButtonItem14.Caption = "Listado de Recibos";
-            this.barButtonItem14.Id = 22;
-            this.barButtonItem14.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
-            this.barButtonItem14.Name = "barButtonItem14";
             // 
             // Home
             // 
