@@ -337,11 +337,13 @@ namespace SSCC.Views.vProduct
                     break;
 
                 case btSaveAndClose:
-
+                    this.Save();
+                    this.Close();
                     break;
 
                 case btSaveAndNew:
-
+                    this.Save();
+                    this.Clear();
                     break;
 
                 case btEdit:
@@ -367,6 +369,49 @@ namespace SSCC.Views.vProduct
         }
 
 #endregion
+
+        private void txtCode_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtPrice_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void cmbLine_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void cmbMark_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Manage_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyData)
+            {
+                case Keys.N:
+                    this.Clear();
+                    break;
+
+                case Keys.G:
+                    this.Save();
+                    break;
+
+                case Keys.Delete:
+                    this.Delete();
+                    break;
+            }
+        }
 
 
     }

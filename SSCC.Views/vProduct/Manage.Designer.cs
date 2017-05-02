@@ -86,6 +86,7 @@
             this.cmbLine.Name = "cmbLine";
             this.cmbLine.Size = new System.Drawing.Size(638, 21);
             this.cmbLine.TabIndex = 11;
+            this.cmbLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbLine_KeyDown);
             // 
             // cmbMark
             // 
@@ -96,6 +97,7 @@
             this.cmbMark.Name = "cmbMark";
             this.cmbMark.Size = new System.Drawing.Size(638, 21);
             this.cmbMark.TabIndex = 10;
+            this.cmbMark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbMark_KeyDown);
             // 
             // txtCode
             // 
@@ -105,6 +107,7 @@
             this.txtCode.StyleController = this.dataLayoutControl1;
             this.txtCode.TabIndex = 4;
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
+            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtName
             // 
@@ -114,6 +117,7 @@
             this.txtName.StyleController = this.dataLayoutControl1;
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // txtPrice
             // 
@@ -134,6 +138,7 @@
             this.txtPrice.StyleController = this.dataLayoutControl1;
             this.txtPrice.TabIndex = 6;
             this.txtPrice.EditValueChanged += new System.EventHandler(this.txtPrice_EditValueChanged);
+            this.txtPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrice_KeyDown);
             // 
             // txtDescription
             // 
@@ -318,11 +323,13 @@
             this.Controls.Add(this.labelControl);
             this.Controls.Add(this.windowsUIButtonPanelCloseButton);
             this.Controls.Add(this.windowsUIButtonPanelMain);
+            this.KeyPreview = true;
             this.Name = "Manage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de Productos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manage_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Manage_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
