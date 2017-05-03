@@ -120,9 +120,22 @@ namespace SSCC.Views.vProduct
         {
             try
             {
-                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex != -1)
+                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
                 {
-
+                    txtDescription.Focus();
+                }
+                else
+                {
+                    if (cmbMark.Text.Trim() != "")
+                    {
+                        var marcaName = cmbMark.Text;
+                        this.MarkList();
+                        cmbMark.Text = marcaName;
+                    }
+                    else
+                    {
+                        Msg.Err("Ingresar marca");
+                    }
                 }
             }
             catch (Exception ex)
