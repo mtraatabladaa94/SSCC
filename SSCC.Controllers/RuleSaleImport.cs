@@ -11,7 +11,7 @@ using SSCC.Models.POCO;
 
 namespace SSCC.Controllers
 {
-    public class RuleImportSale
+    public class RuleSaleImport
     {
         public List<SaleImport> Imports()
         {

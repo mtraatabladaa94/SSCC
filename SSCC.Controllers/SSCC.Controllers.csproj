@@ -60,7 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleImportSale.cs" />
+    <Compile Include="RuleSaleImport.cs" />
     <Compile Include="RuleCustomer.cs" />
     <Compile Include="RuleLine.cs" />
     <Compile Include="RuleMark.cs" />

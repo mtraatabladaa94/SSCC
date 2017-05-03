@@ -68,6 +68,7 @@
     <Compile Include="POCO\ReceiptDetail.cs" />
     <Compile Include="POCO\Sale.cs" />
     <Compile Include="POCO\SaleDetail.cs" />
+    <Compile Include="POCO\SaleImport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="POCO\User.cs" />

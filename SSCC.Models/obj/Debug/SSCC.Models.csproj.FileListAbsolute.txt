@@ -22,3 +22,4 @@ C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\bin\Debug\EntityFramew
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.GenerateDbByModel.resources
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.Properties.Resources.resources
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csproj.GenerateResource.Cache
+D:\GitHub\SSCC\SSCC.Models\obj\Debug\SSCC.Models.csprojResolveAssemblyReference.cache

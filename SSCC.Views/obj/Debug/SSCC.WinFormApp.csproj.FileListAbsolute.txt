@@ -101,3 +101,6 @@ C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Ut
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.WinFormApp.csproj.GenerateResource.Cache
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe.licenses
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vCustomer.FCustomer.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vCustomer.FCustomer.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vSale.Import.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vSale.Manage.resources

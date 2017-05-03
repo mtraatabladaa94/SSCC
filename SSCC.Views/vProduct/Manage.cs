@@ -184,10 +184,6 @@ namespace SSCC.Views.vProduct
                     this._Product = p;
                     this.ShowDataInControls();
                 }
-                else
-                {
-                    Msg.Adv("Producto no encontrado.");
-                }
             }
             catch (Exception ex)
             {
@@ -291,6 +287,9 @@ namespace SSCC.Views.vProduct
         private void Manage_Load(object sender, EventArgs e)
         {
             
+
+            //cargado
+            this.FormLoad = true;
         }
 
         //IMPORTANTE: Modificar código, crear una clase general o una interfaz
@@ -301,31 +300,59 @@ namespace SSCC.Views.vProduct
 
         private void txtCode_TextChanged(object sender, EventArgs e)
         {
-            this._Product.ProductCode = txtCode.Text;
+            if (this._Product.ProductCode != txtCode.Text)
+            {
+                this._Product.ProductCode = txtCode.Text;
+            }
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            this._Product.ProductName = txtName.Text;
+            if (this._Product.ProductName != txtName.Text)
+            {
+                this._Product.ProductName = txtName.Text;
+            }
         }
 
         private void txtPrice_EditValueChanged(object sender, EventArgs e)
         {
-            this._Product.ProductPrice = txtPrice.Value;
+            if (this._Product.ProductPrice != txtPrice.Value)
+            {
+                this._Product.ProductPrice = txtPrice.Value;
+            }
+        }
+
+        private void cmbLine_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.FormLoad)
+            {
+                if (cmbLine.SelectedValue != null && cmbLine.SelectedIndex > -1)
+                {
+                    if (this._Product.LineID != Guid.Parse(cmbLine.SelectedValue.ToString()))
+                    {
+                        this._Product.LineID = Guid.Parse(cmbLine.SelectedValue.ToString());
+                    }
+                }
+            }
         }
 
         private void cmbMark_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            if (this.FormLoad)
+            {
+                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
+                {
+                    if (this._Product.MarkID != Guid.Parse(cmbMark.SelectedValue.ToString()))
+                    {
+                        this._Product.MarkID = Guid.Parse(cmbMark.SelectedValue.ToString());
+                    }
+                }
+            }
         }
 
         private void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
         {
-            if (this.SelectButton(btNew) == e.Button as WindowsUIButton)
-            {
-                this.Clear();
-            }
-
+            
             switch(e.Button.Properties.Tag.ToString())
             {
                 case btNew:
@@ -361,6 +388,7 @@ namespace SSCC.Views.vProduct
 
                     break;
             }
+
         }
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
@@ -372,27 +400,64 @@ namespace SSCC.Views.vProduct
 
         private void txtCode_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtCode.Text.Trim() != "")
+                {
+                    this.Find(txtCode.Text);
+                    txtName.Focus();
+                }
+                else
+                {
+                    Msg.Err("Ingresar código");
+                }
+            }
         }
 
         private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtName.Text.Trim() != "")
+                {
+                    txtPrice.Focus();
+                }
+                else
+                {
+                    Msg.Err("Ingrsear nombre");
+                }
+            }
         }
 
         private void txtPrice_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtPrice.Value > 0)
+                {
+                    cmbLine.Focus();
+                }
+                else
+                {
+                    Msg.Err("Ingresar precio");
+                }
+            }
         }
 
         private void cmbLine_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.LineList();
+            }
         }
 
         private void cmbMark_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.MarkList();
+            }
         }
 
         private void Manage_KeyDown(object sender, KeyEventArgs e)
@@ -412,6 +477,10 @@ namespace SSCC.Views.vProduct
                     break;
             }
         }
+
+        
+
+        
 
 
     }

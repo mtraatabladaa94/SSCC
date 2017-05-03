@@ -86,6 +86,7 @@
             this.cmbLine.Name = "cmbLine";
             this.cmbLine.Size = new System.Drawing.Size(638, 21);
             this.cmbLine.TabIndex = 11;
+            this.cmbLine.SelectedValueChanged += new System.EventHandler(this.cmbLine_SelectedValueChanged);
             this.cmbLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbLine_KeyDown);
             // 
             // cmbMark
@@ -97,6 +98,7 @@
             this.cmbMark.Name = "cmbMark";
             this.cmbMark.Size = new System.Drawing.Size(638, 21);
             this.cmbMark.TabIndex = 10;
+            this.cmbMark.SelectedValueChanged += new System.EventHandler(this.cmbMark_SelectedValueChanged);
             this.cmbMark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbMark_KeyDown);
             // 
             // txtCode
