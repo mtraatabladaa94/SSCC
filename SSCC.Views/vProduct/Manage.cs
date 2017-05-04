@@ -25,9 +25,9 @@ namespace SSCC.Views.vProduct
 {
     public partial class Manage : DevExpress.XtraEditors.XtraForm
     {
-        
 
-#region Variables Privadas
+
+        #region Variables Privadas
 
         //creación del objeto producto para encapsular funcionalidades
         private Product _Product;
@@ -41,10 +41,10 @@ namespace SSCC.Views.vProduct
         //bandera para saber si ya cargo el form
         private Boolean FormLoad = false;
 
-#endregion
+        #endregion
 
-        
-#region Constantes de Botones
+
+        #region Constantes de Botones
 
         public const string btNew = "btNew";
         public const string btSave = "btSave";
@@ -54,10 +54,10 @@ namespace SSCC.Views.vProduct
         public const string btDelete = "btDelete";
         public const string btSearch = "btSearch";
 
-#endregion
+        #endregion
 
 
-#region Constructores
+        #region Constructores
 
         public Manage()
         {
@@ -76,10 +76,10 @@ namespace SSCC.Views.vProduct
 
         }
 
-#endregion
+        #endregion
 
 
-#region Métodos Privados
+        #region Métodos Privados
 
         private void ShowDataInControls()
         {
@@ -106,6 +106,7 @@ namespace SSCC.Views.vProduct
                 cmbMark.DataSource = mark.List().ToList();
                 cmbMark.ValueMember = "MarkID";
                 cmbMark.DisplayMember = "MarkName";
+                cmbMark.SelectedIndex = -1;
 
                 //cmbMark.Properties.ValueMember = "MarkID";
 
@@ -118,49 +119,165 @@ namespace SSCC.Views.vProduct
 
         private void MarkSelect()
         {
+
             try
             {
-                if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
+
+                if (!String.IsNullOrWhiteSpace(cmbMark.Text))
                 {
-                    txtDescription.Focus();
-                }
-                else
-                {
-                    if (cmbMark.Text.Trim() != "")
+
+                    if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
                     {
-                        var marcaName = cmbMark.Text;
-                        this.MarkList();
-                        cmbMark.Text = marcaName;
+
+                        txtDescription.Focus();
+
                     }
                     else
                     {
-                        Msg.Err("Ingresar marca");
+
+                        var markName = cmbMark.Text.Trim();
+                        this.MarkList();
+                        cmbMark.Text = markName;
+
+                        if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
+                        {
+
+                            txtDescription.Focus();
+
+                        }
+                        else
+                        {
+
+                            if (XtraMessageBox.Show("No se encuentra esta marca ¿Desea crearla?", "Pregunta de seguridad", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                            {
+
+                                var mark = new RuleMark();
+                                mark.Save(new Mark()
+                                {
+                                    MarkID = Guid.NewGuid(),
+                                    MarkName = markName
+                                });
+
+                                this.MarkList();
+
+                                cmbMark.Text = markName;
+
+                                txtDescription.Focus();
+
+                            }
+
+                        }
+
                     }
+
                 }
+                else
+                {
+
+                    cmbMark.SelectedIndex = -1;
+                    txtDescription.Focus();
+                }
+
             }
             catch (Exception ex)
             {
+
                 Msg.Err(ex.Message);
+
             }
+
         }
 
         private void LineList()
         {
+
             try
             {
+
                 var line = new RuleLine();
                 cmbLine.DataSource = line.List();
                 cmbLine.ValueMember = "LineID";
                 cmbLine.DisplayMember = "LineName";
+                cmbLine.SelectedIndex = -1;
+
             }
             catch (Exception ex)
             {
+
                 Msg.Err(ex.Message);
+
             }
+
         }
 
         private void LineSelect()
         {
+
+            try
+            {
+
+                if (!String.IsNullOrWhiteSpace(cmbLine.Text))
+                {
+
+                    if (cmbLine.SelectedValue != null && cmbLine.SelectedIndex > -1)
+                    {
+
+                        cmbMark.Focus();
+
+                    }
+                    else
+                    {
+
+                        var lineName = cmbLine.Text.Trim();
+                        this.LineList();
+                        cmbLine.Text = lineName;
+
+                        if (cmbLine.SelectedValue != null && cmbLine.SelectedIndex > -1)
+                        {
+
+                            cmbMark.Focus();
+
+                        }
+                        else
+                        {
+
+                            if (XtraMessageBox.Show("No se encuentra esta Linea ¿Desea crearla?", "Pregunta de seguridad", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                            {
+
+                                var line = new RuleLine();
+                                line.Save(new Line()
+                                {
+                                    LineID = Guid.NewGuid(),
+                                    LineName = lineName
+                                });
+
+                                this.LineList();
+
+                                cmbLine.Text = lineName;
+
+                                cmbMark.Focus();
+
+                            }
+
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    cmbLine.SelectedIndex = -1;
+                    cmbMark.Focus();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                Msg.Err(ex.Message);
+
+            }
 
         }
 
@@ -204,10 +321,10 @@ namespace SSCC.Views.vProduct
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Métodos públicos
+        #region Métodos públicos
 
         public void Find(Guid ProductID)
         {
@@ -230,10 +347,10 @@ namespace SSCC.Views.vProduct
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Operaciones con las bases de datos
+        #region Operaciones con el modelo
 
         private Boolean Validation()
         {
@@ -292,14 +409,14 @@ namespace SSCC.Views.vProduct
             }
         }
 
-#endregion
+        #endregion
 
 
-#region Manejo de Eventos
+        #region Manejo de Eventos
 
         private void Manage_Load(object sender, EventArgs e)
         {
-            
+
 
             //cargado
             this.FormLoad = true;
@@ -346,28 +463,46 @@ namespace SSCC.Views.vProduct
                         this._Product.LineID = Guid.Parse(cmbLine.SelectedValue.ToString());
                     }
                 }
+                else
+                {
+                    this._Product.LineID = null;
+                }
             }
         }
 
         private void cmbMark_SelectedValueChanged(object sender, EventArgs e)
         {
+
             if (this.FormLoad)
             {
+
                 if (cmbMark.SelectedValue != null && cmbMark.SelectedIndex > -1)
                 {
+
                     if (this._Product.MarkID != Guid.Parse(cmbMark.SelectedValue.ToString()))
                     {
+
                         this._Product.MarkID = Guid.Parse(cmbMark.SelectedValue.ToString());
+
                     }
+
                 }
+                else
+                {
+
+                    this._Product.MarkID = null;
+
+                }
+
             }
+
         }
 
         private void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
         {
-            
-            switch(e.Button.Properties.Tag.ToString())
+            switch (e.Button.Properties.Tag.ToString())
             {
+
                 case btNew:
                     this.Clear();
                     break;
@@ -386,18 +521,11 @@ namespace SSCC.Views.vProduct
                     this.Clear();
                     break;
 
-                case btEdit:
-
-                    break;
-
                 case btDelete:
-
+                    this.Delete();
                     break;
 
                 case btSearch:
-
-                    break;
-                default:
 
                     break;
             }
@@ -408,8 +536,6 @@ namespace SSCC.Views.vProduct
         {
             this.Close();
         }
-
-#endregion
 
         private void txtCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -461,7 +587,7 @@ namespace SSCC.Views.vProduct
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.LineList();
+                this.LineSelect();
             }
         }
 
@@ -469,32 +595,33 @@ namespace SSCC.Views.vProduct
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.MarkList();
+                this.MarkSelect();
             }
         }
 
         private void Manage_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyData)
+
+            if (e.Control)
             {
-                case Keys.N:
-                    this.Clear();
-                    break;
+                switch (e.KeyData)
+                {
+                    case Keys.N:
+                        this.Clear();
+                        break;
 
-                case Keys.G:
-                    this.Save();
-                    break;
+                    case Keys.G:
+                        this.Save();
+                        break;
 
-                case Keys.Delete:
-                    this.Delete();
-                    break;
+                    case Keys.Delete:
+                        this.Delete();
+                        break;
+                }
             }
         }
 
-        
-
-        
-
+        #endregion
 
     }
 }
