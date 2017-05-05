@@ -41,19 +41,19 @@
             this.backstageViewButtonItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btProduct = new DevExpress.XtraBars.BarButtonItem();
+            this.btCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.btSale = new DevExpress.XtraBars.BarButtonItem();
+            this.btSaleList = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.btReceipt = new DevExpress.XtraBars.BarButtonItem();
+            this.btReceiptList = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -82,19 +82,19 @@
             this.ribbon.ExpandCollapseItem,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.barButtonItem3,
-            this.barButtonItem4,
+            this.btProduct,
+            this.btCustomer,
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.barButtonItem11,
-            this.barButtonItem12,
+            this.btSale,
+            this.btSaleList,
             this.barStaticItem1,
             this.barStaticItem2,
-            this.barButtonItem13,
-            this.barButtonItem14});
+            this.btReceipt,
+            this.btReceiptList});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
@@ -182,19 +182,21 @@
             this.barButtonItem2.ImageOptions.ImageUri.Uri = "SendXLSX";
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // barButtonItem3
+            // btProduct
             // 
-            this.barButtonItem3.Caption = "Administrar Producto";
-            this.barButtonItem3.Id = 5;
-            this.barButtonItem3.ImageOptions.ImageUri.Uri = "BringToFrontOfText";
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btProduct.Caption = "Administrar Producto";
+            this.btProduct.Id = 5;
+            this.btProduct.ImageOptions.ImageUri.Uri = "BringToFrontOfText";
+            this.btProduct.Name = "btProduct";
+            this.btProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btProduct_ItemClick);
             // 
-            // barButtonItem4
+            // btCustomer
             // 
-            this.barButtonItem4.Caption = "Administrar Clientes";
-            this.barButtonItem4.Id = 6;
-            this.barButtonItem4.ImageOptions.ImageUri.Uri = "CustomizeGrid";
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.btCustomer.Caption = "Administrar Clientes";
+            this.btCustomer.Id = 6;
+            this.btCustomer.ImageOptions.ImageUri.Uri = "CustomizeGrid";
+            this.btCustomer.Name = "btCustomer";
+            this.btCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btCustomer_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -231,19 +233,21 @@
             this.barButtonItem10.ImageOptions.ImageUri.Uri = "ListNumbers";
             this.barButtonItem10.Name = "barButtonItem10";
             // 
-            // barButtonItem11
+            // btSale
             // 
-            this.barButtonItem11.Caption = "Administrar Ventas";
-            this.barButtonItem11.Id = 14;
-            this.barButtonItem11.ImageOptions.ImageUri.Uri = "AlignVerticalLeft";
-            this.barButtonItem11.Name = "barButtonItem11";
+            this.btSale.Caption = "Administrar Ventas";
+            this.btSale.Id = 14;
+            this.btSale.ImageOptions.ImageUri.Uri = "AlignVerticalLeft";
+            this.btSale.Name = "btSale";
+            this.btSale.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btSale_ItemClick);
             // 
-            // barButtonItem12
+            // btSaleList
             // 
-            this.barButtonItem12.Caption = "Listado de Ventas";
-            this.barButtonItem12.Id = 15;
-            this.barButtonItem12.ImageOptions.ImageUri.Uri = "AlignJustify";
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.btSaleList.Caption = "Listado de Ventas";
+            this.btSaleList.Id = 15;
+            this.btSaleList.ImageOptions.ImageUri.Uri = "AlignJustify";
+            this.btSaleList.Name = "btSaleList";
+            this.btSaleList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btSaleList_ItemClick);
             // 
             // barStaticItem1
             // 
@@ -261,19 +265,21 @@
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barButtonItem13
+            // btReceipt
             // 
-            this.barButtonItem13.Caption = "Recibos o Anticipos";
-            this.barButtonItem13.Id = 21;
-            this.barButtonItem13.ImageOptions.ImageUri.Uri = "BehindText";
-            this.barButtonItem13.Name = "barButtonItem13";
+            this.btReceipt.Caption = "Recibos o Anticipos";
+            this.btReceipt.Id = 21;
+            this.btReceipt.ImageOptions.ImageUri.Uri = "BehindText";
+            this.btReceipt.Name = "btReceipt";
+            this.btReceipt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btReceipt_ItemClick);
             // 
-            // barButtonItem14
+            // btReceiptList
             // 
-            this.barButtonItem14.Caption = "Listado de Recibos";
-            this.barButtonItem14.Id = 22;
-            this.barButtonItem14.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
-            this.barButtonItem14.Name = "barButtonItem14";
+            this.btReceiptList.Caption = "Listado de Recibos";
+            this.btReceiptList.Id = 22;
+            this.btReceiptList.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo";
+            this.btReceiptList.Name = "btReceiptList";
+            this.btReceiptList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btReceiptList_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -287,22 +293,22 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btProduct);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btCustomer);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Datos Básicos";
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem11);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btSale);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btSaleList);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Facturas";
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btReceipt);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btReceiptList);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Recibos";
             // 
@@ -419,16 +425,16 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewButtonItem backstageViewButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btProduct;
+        private DevExpress.XtraBars.BarButtonItem btCustomer;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem btSale;
+        private DevExpress.XtraBars.BarButtonItem btSaleList;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
@@ -446,7 +452,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblDate;
         private System.Windows.Forms.Timer tmTime;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem btReceipt;
+        private DevExpress.XtraBars.BarButtonItem btReceiptList;
     }
 }

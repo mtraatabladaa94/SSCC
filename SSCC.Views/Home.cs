@@ -39,5 +39,35 @@ namespace SSCC.Views
         {
             this.LoadDate();
         }
+
+        private void btProduct_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btCustomer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btSale_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btSaleList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btReceipt_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btReceiptList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

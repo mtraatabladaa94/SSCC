@@ -118,6 +118,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfacez\ISearch.cs" />
     <Compile Include="Utilities\Message\Msg.cs" />
     <Compile Include="vCustomer\FCustomer.cs">
       <SubType>Form</SubType>
