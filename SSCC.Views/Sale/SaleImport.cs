@@ -21,15 +21,15 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vSale
+namespace SSCC.Views.Sale
 {
-    public partial class Import : DevExpress.XtraEditors.XtraForm
+    public partial class SaleImport : DevExpress.XtraEditors.XtraForm
     {
         //variable bandera cuando termino de cargarse completamente el objeto
         private Boolean ObjLoad = false;
 
         //creación del objeto producto para encapsular funcionalidades
-        private Product _Product;
+        private ProductEntity _Product;
 
         //bandera para saber si es nuevo o edicion
         private Boolean Exist = false;
@@ -51,12 +51,12 @@ namespace SSCC.Views.vSale
 #endregion
         
 
-        public Import()
+        public SaleImport()
         {
             InitializeComponent();
 
             //Inicializando objeto
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             this.Exist = false;
 
@@ -66,7 +66,7 @@ namespace SSCC.Views.vSale
         private void Clear()
         {
             //crear objeto nuevo
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             //limpiar campos
             

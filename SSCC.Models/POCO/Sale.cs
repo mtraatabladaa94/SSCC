@@ -10,7 +10,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto venta
     /// </summary>
-    public partial class Sale // Características del objeto Venta
+    public partial class SaleEntity // Características del objeto Venta
     {
 
         public Guid SaleID { get; set; }
@@ -33,18 +33,18 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class Sale // Navegación del objeto Venta
+    public partial class SaleEntity // Navegación del objeto Venta
     {
 
-        public Customer Customer { get; set; }
+        public CustomerEntity Customer { get; set; }
 
-        public virtual ICollection<SaleDetail> SalesDetails { get; set; }
+        public virtual ICollection<SaleDetailEntity> SalesDetails { get; set; }
 
     }
 
-    public class SaleMapping : EntityTypeConfiguration<Sale>
+    public class SaleEntityMapping : EntityTypeConfiguration<SaleEntity>
     {
-        public SaleMapping()
+        public SaleEntityMapping()
         {
             ToTable("tblSales");
 

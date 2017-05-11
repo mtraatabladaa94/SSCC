@@ -39,7 +39,6 @@ D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe.licenses
 D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe
 D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.pdb
 D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.WinFormApp.csprojResolveAssemblyReference.cache
-D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.Manage.resources
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Controllers.exe
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Models.exe
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.dll
@@ -48,7 +47,6 @@ D:\GitHub\SSCC\SSCC.Views\bin\Debug\SSCC.Models.pdb
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.xml
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SSCC\SSCC.Views\bin\Debug\EntityFramework.SqlServer.xml
-D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vProduct.List.resources
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\bin\Debug\SSCC.Views.exe.config
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.pdb
@@ -101,6 +99,8 @@ C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Ut
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.WinFormApp.csproj.GenerateResource.Cache
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.exe.licenses
 C:\Users\Microsoft\Documents\GitHub\SSCC\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vCustomer.FCustomer.resources
-D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vCustomer.FCustomer.resources
-D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vSale.Import.resources
-D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.vSale.Manage.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Customer.CustomerManage.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Product.ProductList.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Product.ProductManage.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Sale.SaleImport.resources
+D:\GitHub\SSCC\SSCC.Views\obj\Debug\SSCC.Views.Sale.SaleManage.resources

@@ -10,7 +10,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Marca
     /// </summary>
-    public partial class Mark // Características del objeto Marca
+    public partial class MarkEntity // Características del objeto Marca
     {
         
         public Guid MarkID { get; set; }
@@ -22,13 +22,13 @@ namespace SSCC.Models.POCO
     public partial class Marca // Navegación del objeto Marca
     {
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductEntity> Products { get; set; }
 
     }
 
-    public partial class MarkMapping : EntityTypeConfiguration<Mark>
+    public partial class MarkEntityMapping : EntityTypeConfiguration<MarkEntity>
     {
-        public MarkMapping()
+        public MarkEntityMapping()
         {
             ToTable("tblMarks");
 

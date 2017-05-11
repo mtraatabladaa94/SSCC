@@ -11,7 +11,7 @@ namespace SSCC.Controllers
 {
     public class RuleMark
     {
-        public List<Mark> List()
+        public List<MarkEntity> List()
         {
             using (var db = new ModelDb())
             {
@@ -22,7 +22,7 @@ namespace SSCC.Controllers
             }
         }
 
-        private void Validation(Mark Mark)
+        private void Validation(MarkEntity Mark)
         {
             //Si es null, se genera una exception por que no se han recibido los datos
             if (Mark == null)
@@ -38,7 +38,7 @@ namespace SSCC.Controllers
 
         }
 
-        public Mark Save(Mark Mark)
+        public MarkEntity Save(MarkEntity Mark)
         {
             this.Validation(Mark);
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSCC.Models.POCO
 {
-    public class SaleImport
+    public class SaleImportEntity
     {
 
         public string SaleCode { get; set; }

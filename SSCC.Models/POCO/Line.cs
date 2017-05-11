@@ -10,7 +10,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Linea
     /// </summary>
-    public partial class Line // Características del objeto Línea
+    public partial class LineEntity // Características del objeto Línea
     {
 
         public Guid LineID { get; set; }
@@ -19,16 +19,16 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class Line // Navegación del objeto Línea
+    public partial class LineEntity // Navegación del objeto Línea
     {
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductEntity> Products { get; set; }
 
     }
 
-    public partial class LineMapping : EntityTypeConfiguration<Line>
+    public partial class LineMappingEntity : EntityTypeConfiguration<LineEntity>
     {
-        public LineMapping()
+        public LineMappingEntity()
         {
             ToTable("tblLines");
 

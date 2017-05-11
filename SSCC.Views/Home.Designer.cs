@@ -54,6 +54,7 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.btReceipt = new DevExpress.XtraBars.BarButtonItem();
             this.btReceiptList = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -94,16 +95,17 @@
             this.barStaticItem1,
             this.barStaticItem2,
             this.btReceipt,
-            this.btReceiptList});
+            this.btReceiptList,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(658, 149);
+            this.ribbon.Size = new System.Drawing.Size(660, 149);
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
             // backstageViewControl1
@@ -116,24 +118,24 @@
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem3);
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator2);
             this.backstageViewControl1.Items.Add(this.backstageViewButtonItem2);
-            this.backstageViewControl1.Location = new System.Drawing.Point(12, 155);
+            this.backstageViewControl1.Location = new System.Drawing.Point(503, 159);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.OwnerControl = this.ribbon;
-            this.backstageViewControl1.Size = new System.Drawing.Size(634, 267);
+            this.backstageViewControl1.Size = new System.Drawing.Size(634, 256);
             this.backstageViewControl1.TabIndex = 2;
             // 
             // backstageViewClientControl1
             // 
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(133, 63);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(145, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(500, 203);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(488, 192);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // backstageViewClientControl3
             // 
-            this.backstageViewClientControl3.Location = new System.Drawing.Point(133, 63);
+            this.backstageViewClientControl3.Location = new System.Drawing.Point(145, 63);
             this.backstageViewClientControl3.Name = "backstageViewClientControl3";
-            this.backstageViewClientControl3.Size = new System.Drawing.Size(500, 203);
+            this.backstageViewClientControl3.Size = new System.Drawing.Size(488, 192);
             this.backstageViewClientControl3.TabIndex = 2;
             // 
             // backstageViewButtonItem1
@@ -281,6 +283,13 @@
             this.btReceiptList.Name = "btReceiptList";
             this.btReceiptList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btReceiptList_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Importar Ventas";
+            this.barButtonItem3.Id = 23;
+            this.barButtonItem3.ImageOptions.ImageUri.Uri = "Up";
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -302,6 +311,7 @@
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.btSale);
             this.ribbonPageGroup6.ItemLinks.Add(this.btSaleList);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Facturas";
             // 
@@ -346,15 +356,15 @@
             // 
             // stState
             // 
-            this.stState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(191)))));
+            this.stState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
             this.stState.Font = new System.Drawing.Font("Arial", 9F);
             this.stState.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.lblDate});
-            this.stState.Location = new System.Drawing.Point(0, 427);
+            this.stState.Location = new System.Drawing.Point(0, 428);
             this.stState.Name = "stState";
-            this.stState.Size = new System.Drawing.Size(658, 22);
+            this.stState.Size = new System.Drawing.Size(660, 22);
             this.stState.TabIndex = 4;
             this.stState.Text = "statusStrip1";
             // 
@@ -371,7 +381,7 @@
             this.toolStripStatusLabel2.Font = new System.Drawing.Font("Arial", 8F);
             this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(560, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(562, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "© Copyright - Petronic 2017. All rights reserved.";
             // 
@@ -393,10 +403,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 449);
+            this.ClientSize = new System.Drawing.Size(660, 450);
             this.Controls.Add(this.stState);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbon);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IsMdiContainer = true;
             this.Name = "Home";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -454,5 +467,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btReceipt;
         private DevExpress.XtraBars.BarButtonItem btReceiptList;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

@@ -16,7 +16,7 @@ namespace SSCC.Controllers
         /// </summary>
         /// <param name="Product">Objeto producto con sus datos</param>
         /// <returns>Si no hay ningún problema al guardar, este retorna el UNIQUEID generado al producto.</returns>
-        public Product Save(Product Product)
+        public ProductEntity Save(ProductEntity Product)
         {
             //Validando datos
             this.Validation(Product);
@@ -43,7 +43,7 @@ namespace SSCC.Controllers
 
         }
 
-        public void Edit(Product Product)
+        public void Edit(ProductEntity Product)
         {
             //Validando datos
             this.Validation(Product);
@@ -103,7 +103,7 @@ namespace SSCC.Controllers
 
 #region Busquedas
 
-        public Product Find(Guid ProductID)
+        public ProductEntity Find(Guid ProductID)
         {
             using (var db = new ModelDb())
             {
@@ -111,7 +111,7 @@ namespace SSCC.Controllers
             }
         }
 
-        public Product Find(String ProductCode)
+        public ProductEntity Find(String ProductCode)
         {
             using (var db = new ModelDb())
             {
@@ -119,7 +119,7 @@ namespace SSCC.Controllers
             }
         }
 
-        public List<Product> List(string ProductCode = "", string ProductName = "", decimal ProductPrice = 0, string ProductMark = "", string ProductLine = "", Boolean ProductState = true)
+        public List<ProductEntity> List(string ProductCode = "", string ProductName = "", decimal ProductPrice = 0, string ProductMark = "", string ProductLine = "", Boolean ProductState = true)
         {
             var db = new ModelDb();
 
@@ -180,7 +180,7 @@ namespace SSCC.Controllers
 
     public partial class RuleProduct // Métodos privados
     {
-        private void Validation(Product Product)
+        private void Validation(ProductEntity Product)
         {
             if (Product == null)
             {

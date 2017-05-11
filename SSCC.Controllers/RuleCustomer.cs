@@ -18,7 +18,7 @@ namespace SSCC.Controllers
         /// <returns>Si no hay ningún problema al guardar, este retorna el UNIQUEID generado al cliente.</returns>
         
 
-        public Guid Save(Customer Customer)
+        public Guid Save(CustomerEntity Customer)
         {
             using (var db = new ModelDb())
             {
@@ -35,7 +35,7 @@ namespace SSCC.Controllers
 
         #region Busquedas
 
-        public Customer Find(Guid CustomerID)
+        public CustomerEntity Find(Guid CustomerID)
         {
             using (var db = new ModelDb())
             {
@@ -43,7 +43,7 @@ namespace SSCC.Controllers
             }
         }
 
-        public Customer Find(String CustomerCode)
+        public CustomerEntity Find(String CustomerCode)
         {
             using (var db = new ModelDb())
             {
@@ -51,7 +51,7 @@ namespace SSCC.Controllers
             }
         }
 
-        public IEnumerable<Customer> List()
+        public IEnumerable<CustomerEntity> List()
         {
             return null;
         }

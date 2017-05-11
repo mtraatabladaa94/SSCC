@@ -14,7 +14,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Recibo detalle
     /// </summary>
-    public partial class ReceiptDetail // Características del objeto Recibo Detalle
+    public partial class ReceiptDetailEntity // Características del objeto Recibo Detalle
     {
 
         [Column(Order = 0), Key, ForeignKey("Sale")]
@@ -27,18 +27,18 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class ReceiptDetail // Navegación del objeto Recibo Detalle
+    public partial class ReceiptDetailEntity // Navegación del objeto Recibo Detalle
     {
 
-        public virtual Sale Sale { get; set; }
+        public virtual SaleEntity Sale { get; set; }
 
-        public virtual Receipt Receipt { get; set; }
+        public virtual ReceiptEntity Receipt { get; set; }
         
     }
 
-    public partial class ReceiptDetailMapping : EntityTypeConfiguration<ReceiptDetail>
+    public partial class ReceiptDetailEntityMapping : EntityTypeConfiguration<ReceiptDetailEntity>
     {
-        public ReceiptDetailMapping()
+        public ReceiptDetailEntityMapping()
         {
             ToTable("tblReceiptsDetails");
 

@@ -21,15 +21,15 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vSale
+namespace SSCC.Views.Sale
 {
-    public partial class Manage : DevExpress.XtraEditors.XtraForm
+    public partial class SaleManage : DevExpress.XtraEditors.XtraForm
     {
         //variable bandera cuando termino de cargarse completamente el objeto
         private Boolean ObjLoad = false;
 
         //creación del objeto producto para encapsular funcionalidades
-        private Product _Product;
+        private ProductEntity _Product;
 
         //bandera para saber si es nuevo o edicion
         private Boolean Exist = false;
@@ -51,12 +51,12 @@ namespace SSCC.Views.vSale
 #endregion
         
 
-        public Manage()
+        public SaleManage()
         {
             InitializeComponent();
 
             //Inicializando objeto
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             this.Exist = false;
 
@@ -150,7 +150,7 @@ namespace SSCC.Views.vSale
                             if (XtraMessageBox.Show("No se encuentra esta linea ¿Desea agregarla?", "Información del Sistema", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                             {
                                 var line = new RuleLine();
-                                line.Save(new Line()
+                                line.Save(new LineEntity()
                                 {
                                     LineName = cmbCliente.Text
                                 });
@@ -178,7 +178,7 @@ namespace SSCC.Views.vSale
         private void Clear()
         {
             //crear objeto nuevo
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             //limpiar campos
             txtCode.Text = "";

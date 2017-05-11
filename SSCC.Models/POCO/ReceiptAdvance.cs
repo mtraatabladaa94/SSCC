@@ -14,7 +14,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Anticipos
     /// </summary>
-    public partial class ReceiptAdvance // Características del objeto Anticipos
+    public partial class ReceiptAdvanceEntity // Características del objeto Anticipos
     {
 
         [Column(Order = 0), Key, ForeignKey("SaleDetail")]
@@ -30,17 +30,17 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class ReceiptAdvance
+    public partial class ReceiptAdvanceEntity
     {
-        public virtual SaleDetail SaleDetail { get; set; }
+        public virtual SaleDetailEntity SaleDetail { get; set; }
 
-        public virtual Receipt Receipt { get; set; }
+        public virtual ReceiptEntity Receipt { get; set; }
 
     }
 
-    public partial class ReceiptAdvanceMapping : EntityTypeConfiguration<ReceiptAdvance>
+    public partial class ReceiptAdvanceEntityMapping : EntityTypeConfiguration<ReceiptAdvanceEntity>
     {
-        public ReceiptAdvanceMapping()
+        public ReceiptAdvanceEntityMapping()
         {
             ToTable("tblReceiptsAdvances");
 

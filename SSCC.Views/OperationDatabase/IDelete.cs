@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SSCC.Views.Interface
+namespace SSCC.Views.OperationDatabase
 {
-    interface ISave
+    interface IDelete
     {
-        void Save();
+        
     }
 }

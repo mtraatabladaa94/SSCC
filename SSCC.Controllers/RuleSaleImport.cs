@@ -13,7 +13,7 @@ namespace SSCC.Controllers
 {
     public class RuleSaleImport
     {
-        public List<SaleImport> Imports()
+        public List<SaleImportEntity> Imports()
         {
             
 

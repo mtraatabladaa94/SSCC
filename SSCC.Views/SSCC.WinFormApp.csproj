@@ -118,28 +118,31 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfacez\ISearch.cs" />
+    <Compile Include="OperationDatabase\IDelete.cs" />
+    <Compile Include="OperationDatabase\ISave.cs" />
+    <Compile Include="OperationDatabase\ISearch.cs" />
     <Compile Include="Utilities\Message\Msg.cs" />
-    <Compile Include="vCustomer\FCustomer.cs">
+    <Compile Include="Customer\CustomerManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vCustomer\FCustomer.Designer.cs">
-      <DependentUpon>FCustomer.cs</DependentUpon>
+    <Compile Include="Customer\CustomerManage.Designer.cs">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="vProduct\List.cs">
+    <Compile Include="Product\ProductList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vProduct\List.Designer.cs">
-      <DependentUpon>List.cs</DependentUpon>
+    <Compile Include="Product\ProductList.Designer.cs">
+      <DependentUpon>ProductList.cs</DependentUpon>
     </Compile>
-    <Compile Include="vProduct\Manage.cs">
+    <Compile Include="Product\ProductManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vProduct\Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
+    <Compile Include="Product\ProductManage.Designer.cs">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ShowForm.cs" />
     <Compile Include="Utilities\Wait\IWaitForm.cs" />
     <Compile Include="Utilities\Wait\ProgressIndicator.cs">
       <SubType>Form</SubType>
@@ -147,29 +150,35 @@
     <Compile Include="Utilities\Wait\ProgressIndicator.Designer.cs">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </Compile>
-    <Compile Include="vSale\Import.cs">
+    <Compile Include="Sale\SaleImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vSale\Import.Designer.cs">
-      <DependentUpon>Import.cs</DependentUpon>
+    <Compile Include="Sale\SaleImport.Designer.cs">
+      <DependentUpon>SaleImport.cs</DependentUpon>
     </Compile>
-    <Compile Include="vSale\Manage.cs">
+    <Compile Include="Sale\SaleManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vSale\Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
+    <Compile Include="Sale\SaleManage.Designer.cs">
+      <DependentUpon>SaleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vCustomer\FCustomer.resx">
-      <DependentUpon>FCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Customer\CustomerManage.resx">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vProduct\List.resx">
-      <DependentUpon>List.cs</DependentUpon>
+    <EmbeddedResource Include="Product\ProductList.resx">
+      <DependentUpon>ProductList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vProduct\Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
+    <EmbeddedResource Include="Product\ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -185,11 +194,11 @@
     <EmbeddedResource Include="Utilities\Wait\ProgressIndicator.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vSale\Import.resx">
-      <DependentUpon>Import.cs</DependentUpon>
+    <EmbeddedResource Include="Sale\SaleImport.resx">
+      <DependentUpon>SaleImport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vSale\Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
+    <EmbeddedResource Include="Sale\SaleManage.resx">
+      <DependentUpon>SaleManage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

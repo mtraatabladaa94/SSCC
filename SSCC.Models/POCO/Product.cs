@@ -11,7 +11,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto producto
     /// </summary>
-    public partial class Product //Características del objeto
+    public partial class ProductEntity //Características del objeto
     {
         public Guid ProductID { get; set; }
         
@@ -31,20 +31,20 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class Product //Navegación
+    public partial class ProductEntity //Navegación
     {
 
-        public virtual Mark Mark { get; set; }
+        public virtual MarkEntity Mark { get; set; }
 
-        public virtual Line Line { get; set; }
+        public virtual LineEntity Line { get; set; }
 
-        public virtual ICollection<SaleDetail> SalesDetails { get; set; }
+        public virtual ICollection<SaleDetailEntity> SalesDetails { get; set; }
 
     }
 
-    public partial class ProductMapping : EntityTypeConfiguration<Product>
+    public partial class ProductEntityMapping : EntityTypeConfiguration<ProductEntity>
     {
-        public ProductMapping()
+        public ProductEntityMapping()
         {
             ToTable("tblProducts");
 

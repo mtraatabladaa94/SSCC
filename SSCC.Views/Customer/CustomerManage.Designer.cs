@@ -1,6 +1,6 @@
-﻿namespace SSCC.Views.vCustomer
+﻿namespace SSCC.Views.Customer
 {
-    partial class FCustomer
+    partial class CustomerManage
     {
         /// <summary>
         /// Required designer variable.

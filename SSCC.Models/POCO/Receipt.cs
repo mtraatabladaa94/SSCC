@@ -11,7 +11,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Recibo
     /// </summary>
-    public partial class Receipt // Características del objeto Recibo
+    public partial class ReceiptEntity // Características del objeto Recibo
     {
         
         public Guid ReceiptID { get; set; }
@@ -28,18 +28,18 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class Receipt // Navegación del objeto Recibo
+    public partial class ReceiptEntity // Navegación del objeto Recibo
     {
         
-        public virtual ICollection<ReceiptDetail> ReceiptsDetails { get; set; }
+        public virtual ICollection<ReceiptDetailEntity> ReceiptsDetails { get; set; }
 
-        public virtual ICollection<ReceiptAdvance> ReceiptsAvances { get; set; }
+        public virtual ICollection<ReceiptAdvanceEntity> ReceiptsAvances { get; set; }
 
     }
 
-    public partial class ReceiptMapping : EntityTypeConfiguration<Receipt>
+    public partial class ReceiptEntityMapping : EntityTypeConfiguration<ReceiptEntity>
     {
-        public ReceiptMapping()
+        public ReceiptEntityMapping()
         {
             ToTable("tblReceipts");
 

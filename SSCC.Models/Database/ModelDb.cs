@@ -16,24 +16,24 @@ namespace SSCC.Models.Database
     {
         public ModelDb() : base(@"Data Source = .\UNANFAREMCH; Initial Catalog = SsccDB; Integrated Security = True;") { } // Establece la conexión de la base de datos
 
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<CustomerEntity> Customers { get; set; }
         
-        public DbSet<Line> Lines { get; set; }
+        public DbSet<LineEntity> Lines { get; set; }
         
-        public DbSet<Mark> Marks { get; set; }
+        public DbSet<MarkEntity> Marks { get; set; }
 
         
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductEntity> Products { get; set; }
         
-        public DbSet<Receipt> Receipts { get; set; }
+        public DbSet<ReceiptEntity> Receipts { get; set; }
         
-        public DbSet<ReceiptDetail> ReceiptsDetails { get; set; }
+        public DbSet<ReceiptDetailEntity> ReceiptsDetails { get; set; }
         
-        public DbSet<ReceiptAdvance> ReceiptsAdvances { get; set; }
+        public DbSet<ReceiptAdvanceEntity> ReceiptsAdvances { get; set; }
         
-        public DbSet<Sale> Sales { get; set; }
+        public DbSet<SaleEntity> Sales { get; set; }
         
-        public DbSet<SaleDetail> SalesDetails { get; set; }
+        public DbSet<SaleDetailEntity> SalesDetails { get; set; }
         
         //public DbSet<User> Users { get; set; }
 
@@ -48,15 +48,15 @@ namespace SSCC.Models.Database
             modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
 
             //Añadiendo configuración de entidades
-            modelBuilder.Configurations.Add(new CustomerMapping());
-            modelBuilder.Configurations.Add(new LineMapping());
-            modelBuilder.Configurations.Add(new MarkMapping());
-            modelBuilder.Configurations.Add(new ProductMapping());
-            modelBuilder.Configurations.Add(new ReceiptMapping());
-            modelBuilder.Configurations.Add(new ReceiptAdvanceMapping());
-            modelBuilder.Configurations.Add(new ReceiptDetailMapping());
-            modelBuilder.Configurations.Add(new SaleMapping());
-            modelBuilder.Configurations.Add(new SaleDetailMapping());
+            modelBuilder.Configurations.Add(new CustomerEntityMapping());
+            modelBuilder.Configurations.Add(new LineMappingEntity());
+            modelBuilder.Configurations.Add(new MarkEntityMapping());
+            modelBuilder.Configurations.Add(new ProductEntityMapping());
+            modelBuilder.Configurations.Add(new ReceiptEntityMapping());
+            modelBuilder.Configurations.Add(new ReceiptAdvanceEntityMapping());
+            modelBuilder.Configurations.Add(new ReceiptDetailEntityMapping());
+            modelBuilder.Configurations.Add(new SaleEntityMapping());
+            modelBuilder.Configurations.Add(new SaleDetailEntityMapping());
 
             //Se llama al método sobrecargado de la superclase OnModelCreating
             base.OnModelCreating(modelBuilder);

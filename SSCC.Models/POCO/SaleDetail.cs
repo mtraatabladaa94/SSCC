@@ -12,7 +12,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto detalle de venta
     /// </summary>
-    public partial class SaleDetail // Características del objeto Venta Detalle
+    public partial class SaleDetailEntity // Características del objeto Venta Detalle
     {
 
         [Column(Order= 0), Key, ForeignKey("Sale")]
@@ -35,18 +35,18 @@ namespace SSCC.Models.POCO
 
     }
     
-    public partial class SaleDetail // Navegación del objeto Venta Detalle
+    public partial class SaleDetailEntity // Navegación del objeto Venta Detalle
     {
         
-        public virtual Sale Sale { get; set; }
+        public virtual SaleEntity Sale { get; set; }
 
-        public virtual Product Product { set; get; }
+        public virtual ProductEntity Product { set; get; }
 
     }
 
-    public class SaleDetailMapping : EntityTypeConfiguration<SaleDetail>
+    public class SaleDetailEntityMapping : EntityTypeConfiguration<SaleDetailEntity>
     {
-        public SaleDetailMapping()
+        public SaleDetailEntityMapping()
         {
             ToTable("tblSalesDetails");
 

@@ -11,7 +11,7 @@ namespace SSCC.Controllers
 {
     public class RuleLine
     {
-        public List<Line> List()
+        public List<LineEntity> List()
         {
             using (var db = new ModelDb())
             {
@@ -22,7 +22,7 @@ namespace SSCC.Controllers
             }
         }
 
-        private void Validation(Line Line)
+        private void Validation(LineEntity Line)
         {
 
             //Si es null, se genera una exception por que no se han recibido los datos
@@ -39,7 +39,7 @@ namespace SSCC.Controllers
 
         }
 
-        public Line Save(Line Line)
+        public LineEntity Save(LineEntity Line)
         {
             this.Validation(Line);
 

@@ -21,9 +21,9 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vProduct
+namespace SSCC.Views.Product
 {
-    public partial class List : DevExpress.XtraEditors.XtraForm
+    public partial class ProductList : DevExpress.XtraEditors.XtraForm
     {
         //creando regla de negocio
         private RuleProduct RuleProduct;
@@ -41,7 +41,7 @@ namespace SSCC.Views.vProduct
 
 #endregion
 
-        public List()
+        public ProductList()
         {
             InitializeComponent();
 

@@ -10,7 +10,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto cliente
     /// </summary>
-    public partial class Customer //Características de la entidad cliente
+    public partial class CustomerEntity //Características de la entidad cliente
     {
 
         public Guid CustomerID { get; set; }
@@ -33,16 +33,16 @@ namespace SSCC.Models.POCO
 
     }
 
-    public partial class Customer //Variables de navegación
+    public partial class CustomerEntity //Variables de navegación
     {
 
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<SaleEntity> Sales { get; set; }
 
     }
 
-    public class CustomerMapping : EntityTypeConfiguration<Customer>
+    public class CustomerEntityMapping : EntityTypeConfiguration<CustomerEntity>
     {
-        public CustomerMapping()
+        public CustomerEntityMapping()
         {
             ToTable("tblCustomers");
 

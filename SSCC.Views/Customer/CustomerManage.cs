@@ -21,12 +21,12 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vCustomer
+namespace SSCC.Views.Customer
 {
-    public partial class FCustomer : DevExpress.XtraEditors.XtraForm
+    public partial class CustomerManage : DevExpress.XtraEditors.XtraForm
     {
         //creación del objeto producto para encapsular funcionalidades
-        private Customer _Customer;        
+        private CustomerEntity _Customer;        
 
         //bandera para saber si es nuevo o edicion
         private Boolean Exist;
@@ -48,12 +48,12 @@ namespace SSCC.Views.vCustomer
 #endregion
 
 
-        public FCustomer()
+        public CustomerManage()
         {
             InitializeComponent();
 
             //Inicializando objeto
-            this._Customer= new Customer();
+            this._Customer= new CustomerEntity();
 
             this.Exist = false;
 

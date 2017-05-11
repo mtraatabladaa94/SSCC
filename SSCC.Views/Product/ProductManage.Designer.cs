@@ -1,6 +1,6 @@
-﻿namespace SSCC.Views.vProduct
+﻿namespace SSCC.Views.Product
 {
-    partial class Manage
+    partial class ProductManage
     {
         /// <summary>
         /// Required designer variable.

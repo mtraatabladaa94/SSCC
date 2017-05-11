@@ -13,7 +13,7 @@ namespace SSCC.Models.POCO
     /// <summary>
     /// Objeto Usuario
     /// </summary>
-    public partial class User //Características del objeto Usuario
+    public partial class UserEntity //Características del objeto Usuario
     {
         public Guid UserID { get; set; }
 
@@ -28,14 +28,14 @@ namespace SSCC.Models.POCO
         public Boolean UserIsActive { get; set; }
     }
 
-    public partial class User // Navegación del objeto Usuario
+    public partial class UserEntity // Navegación del objeto Usuario
     {
 
     }
 
-    public class UserMapping :EntityTypeConfiguration<User>
+    public class UserEntityMapping :EntityTypeConfiguration<UserEntity>
     {
-        public UserMapping()
+        public UserEntityMapping()
         {
             HasKey(c => c.UserID);
 

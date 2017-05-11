@@ -21,16 +21,16 @@ using SSCC.Views.Utilities.Message;
 
 using DevExpress.XtraBars.Docking2010;
 
-namespace SSCC.Views.vProduct
+namespace SSCC.Views.Product
 {
-    public partial class Manage : DevExpress.XtraEditors.XtraForm
+    public partial class ProductManage : DevExpress.XtraEditors.XtraForm
     {
 
 
         #region Variables Privadas
 
         //creación del objeto producto para encapsular funcionalidades
-        private Product _Product;
+        private ProductEntity _Product;
 
         //bandera para saber si es nuevo o edicion
         private Boolean Exist;
@@ -59,12 +59,12 @@ namespace SSCC.Views.vProduct
 
         #region Constructores
 
-        public Manage()
+        public ProductManage()
         {
             InitializeComponent();
 
             //Inicializando objeto
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             this.Exist = false;
 
@@ -152,7 +152,7 @@ namespace SSCC.Views.vProduct
                             {
 
                                 var mark = new RuleMark();
-                                mark.Save(new Mark()
+                                mark.Save(new MarkEntity()
                                 {
                                     MarkID = Guid.NewGuid(),
                                     MarkName = markName
@@ -245,7 +245,7 @@ namespace SSCC.Views.vProduct
                             {
 
                                 var line = new RuleLine();
-                                line.Save(new Line()
+                                line.Save(new LineEntity()
                                 {
                                     LineID = Guid.NewGuid(),
                                     LineName = lineName
@@ -284,7 +284,7 @@ namespace SSCC.Views.vProduct
         private void Clear()
         {
             //crear objeto nuevo
-            this._Product = new Product();
+            this._Product = new ProductEntity();
 
             //limpiar campos
             txtCode.Text = "";
