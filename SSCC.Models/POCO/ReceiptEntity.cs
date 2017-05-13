@@ -30,7 +30,7 @@ namespace SSCC.Models.POCO
 
     public partial class ReceiptEntity // Navegación del objeto Recibo
     {
-        
+
         public virtual ICollection<ReceiptDetailEntity> ReceiptsDetails { get; set; }
 
         public virtual ICollection<ReceiptAdvanceEntity> ReceiptsAvances { get; set; }

@@ -35,7 +35,7 @@
             this.cmbMark = new System.Windows.Forms.ComboBox();
             this.txtPrice = new DevExpress.XtraEditors.SpinEdit();
             this.cmbLine = new System.Windows.Forms.ComboBox();
-            this.dtRegistro = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dtReg = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -56,7 +56,7 @@
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tsState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -79,7 +79,7 @@
             this.dataLayoutControl1.Controls.Add(this.cmbMark);
             this.dataLayoutControl1.Controls.Add(this.txtPrice);
             this.dataLayoutControl1.Controls.Add(this.cmbLine);
-            this.dataLayoutControl1.Controls.Add(this.dtRegistro);
+            this.dataLayoutControl1.Controls.Add(this.dtReg);
             this.dataLayoutControl1.Controls.Add(this.txtCode);
             this.dataLayoutControl1.Controls.Add(this.txtName);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -135,26 +135,26 @@
             this.cmbLine.TabIndex = 79;
             this.cmbLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
-            // dtRegistro
+            // dtReg
             // 
-            this.dtRegistro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dtRegistro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtReg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtReg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtReg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtRegistro.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dtRegistro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtRegistro.Location = new System.Drawing.Point(12, 87);
-            this.dtRegistro.MultiSelect = false;
-            this.dtRegistro.Name = "dtRegistro";
-            this.dtRegistro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtRegistro.Size = new System.Drawing.Size(715, 365);
-            this.dtRegistro.TabIndex = 76;
+            this.dtReg.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtReg.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dtReg.Location = new System.Drawing.Point(12, 87);
+            this.dtReg.MultiSelect = false;
+            this.dtReg.Name = "dtReg";
+            this.dtReg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtReg.Size = new System.Drawing.Size(715, 365);
+            this.dtReg.TabIndex = 76;
             // 
             // txtCode
             // 
@@ -188,7 +188,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.dtRegistro;
+            this.layoutControlItem1.Control = this.dtReg;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(719, 369);
@@ -356,7 +356,7 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Catálogo de Productos";
             // 
-            // List
+            // ProductList
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -368,7 +368,7 @@
             this.Controls.Add(this.labelControl);
             this.Controls.Add(this.windowsUIButtonPanelCloseButton);
             this.Controls.Add(this.windowsUIButtonPanelMain);
-            this.Name = "List";
+            this.Name = "ProductList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo de Productos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -377,7 +377,7 @@
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tsState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -402,7 +402,7 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelCloseButton;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraEditors.LabelControl labelControl;
-        internal DevComponents.DotNetBar.Controls.DataGridViewX dtRegistro;
+        internal DevComponents.DotNetBar.Controls.DataGridViewX dtReg;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.TextEdit txtCode;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;

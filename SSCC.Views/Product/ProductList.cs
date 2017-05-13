@@ -85,7 +85,7 @@ namespace SSCC.Views.Product
         {
             try
             {
-                dtRegistro.DataSource = (from c in RuleProduct.List(txtCode.Text.Trim(), txtName.Text.Trim(), txtPrice.Value, cmbMark.Text.Trim(), cmbLine.Text.Trim(), tsState.IsOn)
+                dtReg.DataSource = (from c in RuleProduct.List(txtCode.Text.Trim(), txtName.Text.Trim(), txtPrice.Value, cmbMark.Text.Trim(), cmbLine.Text.Trim(), tsState.IsOn)
                                         select new {
                                             c.ProductID,
                                             c.ProductCode,
@@ -106,21 +106,21 @@ namespace SSCC.Views.Product
 
         private void Grid()
         {
-            if (dtRegistro.Columns.Count > 0)
+            if (dtReg.Columns.Count > 0)
             {
                 //Ocultando ID
-                dtRegistro.Columns[0].Visible = false;
+                dtReg.Columns[0].Visible = false;
 
                 //Estilo de Encabezados
-                dtRegistro.Columns[1].HeaderText = "\nCódigo\n"; dtRegistro.Columns[1].Width = 120;
-                dtRegistro.Columns[2].HeaderText = "Nombre"; dtRegistro.Columns[2].Width = 200;
-                dtRegistro.Columns[3].HeaderText = "Precio"; dtRegistro.Columns[3].Width = 150;
-                dtRegistro.Columns[4].HeaderText = "Marca"; dtRegistro.Columns[4].Width = 250;
-                dtRegistro.Columns[5].HeaderText = "Linea"; dtRegistro.Columns[5].Width = 250;
-                dtRegistro.Columns[6].HeaderText = "Descripción"; dtRegistro.Columns[6].Width = 500;
+                dtReg.Columns[1].HeaderText = "\nCódigo\n"; dtReg.Columns[1].Width = 120;
+                dtReg.Columns[2].HeaderText = "Nombre"; dtReg.Columns[2].Width = 200;
+                dtReg.Columns[3].HeaderText = "Precio"; dtReg.Columns[3].Width = 150;
+                dtReg.Columns[4].HeaderText = "Marca"; dtReg.Columns[4].Width = 250;
+                dtReg.Columns[5].HeaderText = "Linea"; dtReg.Columns[5].Width = 250;
+                dtReg.Columns[6].HeaderText = "Descripción"; dtReg.Columns[6].Width = 500;
 
                 //Aplicando Formato General al Texto del Encabezado
-                foreach (DataGridViewColumn item in dtRegistro.Columns)
+                foreach (DataGridViewColumn item in dtReg.Columns)
                 {
                     item.HeaderText = item.HeaderText.ToUpper();
                     item.HeaderCell.Style.Font = new Font(this.Font.FontFamily, this.Font.Size, FontStyle.Bold);

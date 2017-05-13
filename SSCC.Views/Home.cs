@@ -27,7 +27,7 @@ namespace SSCC.Views
         private void LoadSale()
         {
             var sale = new SaleManage();
-            ShowForm.Show(sale, this);
+            ShowForm.Show(sale, Dialog: true);
         }
         private void LoadProduct()
         {
@@ -38,6 +38,11 @@ namespace SSCC.Views
         {
             var customer = new CustomerManage();
             ShowForm.Show(customer, Dialog: true);
+        }
+        private void LoadImport()
+        {
+            var import = new SaleImport();
+            ShowForm.Show(import, Dialog: true);
         }
 #endregion
 
@@ -56,7 +61,7 @@ namespace SSCC.Views
             //se carga la venta si así se desea
             if (this._LoadSale)
             {
-                this.LoadSale();
+                //this.LoadSale();
             }
 
             //se termina de cargar el form
@@ -104,6 +109,11 @@ namespace SSCC.Views
         private void btReceiptList_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+
+        private void btImportar_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.LoadImport();
         }
     }
 }

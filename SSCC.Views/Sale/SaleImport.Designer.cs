@@ -29,39 +29,76 @@
         ///
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.dtReg = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txtFinalCell = new DevExpress.XtraEditors.TextEdit();
+            this.txtInitialCell = new DevExpress.XtraEditors.TextEdit();
             this.bteImport = new DevExpress.XtraEditors.ButtonEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.txtNFactura = new DevExpress.XtraEditors.TextEdit();
+            this.txtFecha = new DevExpress.XtraEditors.TextEdit();
+            this.txtCliente = new DevExpress.XtraEditors.TextEdit();
+            this.txtProducto = new DevExpress.XtraEditors.TextEdit();
+            this.txtCantidad = new DevExpress.XtraEditors.TextEdit();
+            this.txtPrecio = new DevExpress.XtraEditors.TextEdit();
+            this.chkIVA = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
+            this.opImport = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtReg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalCell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInitialCell.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bteImport.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
-            this.dataLayoutControl1.Controls.Add(this.textEdit2);
-            this.dataLayoutControl1.Controls.Add(this.textEdit1);
+            this.dataLayoutControl1.Controls.Add(this.dtReg);
+            this.dataLayoutControl1.Controls.Add(this.txtFinalCell);
+            this.dataLayoutControl1.Controls.Add(this.txtInitialCell);
             this.dataLayoutControl1.Controls.Add(this.bteImport);
-            this.dataLayoutControl1.Controls.Add(this.pictureEdit1);
+            this.dataLayoutControl1.Controls.Add(this.txtNFactura);
+            this.dataLayoutControl1.Controls.Add(this.txtFecha);
+            this.dataLayoutControl1.Controls.Add(this.txtCliente);
+            this.dataLayoutControl1.Controls.Add(this.txtProducto);
+            this.dataLayoutControl1.Controls.Add(this.txtCantidad);
+            this.dataLayoutControl1.Controls.Add(this.txtPrecio);
+            this.dataLayoutControl1.Controls.Add(this.chkIVA);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(45, 37);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -69,25 +106,48 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(739, 464);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // textEdit2
+            // dtReg
             // 
-            this.textEdit2.Location = new System.Drawing.Point(467, 432);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(260, 20);
-            this.textEdit2.StyleController = this.dataLayoutControl1;
-            this.textEdit2.TabIndex = 7;
+            this.dtReg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtReg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtReg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtReg.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtReg.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dtReg.Location = new System.Drawing.Point(12, 60);
+            this.dtReg.MultiSelect = false;
+            this.dtReg.Name = "dtReg";
+            this.dtReg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtReg.Size = new System.Drawing.Size(715, 352);
+            this.dtReg.TabIndex = 76;
             // 
-            // textEdit1
+            // txtFinalCell
             // 
-            this.textEdit1.Location = new System.Drawing.Point(108, 432);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(259, 20);
-            this.textEdit1.StyleController = this.dataLayoutControl1;
-            this.textEdit1.TabIndex = 6;
+            this.txtFinalCell.Location = new System.Drawing.Point(468, 36);
+            this.txtFinalCell.Name = "txtFinalCell";
+            this.txtFinalCell.Size = new System.Drawing.Size(259, 20);
+            this.txtFinalCell.StyleController = this.dataLayoutControl1;
+            this.txtFinalCell.TabIndex = 7;
+            this.txtFinalCell.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFinalCell_KeyDown);
+            // 
+            // txtInitialCell
+            // 
+            this.txtInitialCell.Location = new System.Drawing.Point(108, 36);
+            this.txtInitialCell.Name = "txtInitialCell";
+            this.txtInitialCell.Size = new System.Drawing.Size(260, 20);
+            this.txtInitialCell.StyleController = this.dataLayoutControl1;
+            this.txtInitialCell.TabIndex = 6;
+            this.txtInitialCell.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInitialCell_KeyDown);
             // 
             // bteImport
             // 
-            this.bteImport.Location = new System.Drawing.Point(108, 408);
+            this.bteImport.Location = new System.Drawing.Point(108, 12);
             this.bteImport.Name = "bteImport";
             this.bteImport.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.bteImport.Properties.Appearance.Options.UseBackColor = true;
@@ -97,45 +157,91 @@
             this.bteImport.Size = new System.Drawing.Size(619, 20);
             this.bteImport.StyleController = this.dataLayoutControl1;
             this.bteImport.TabIndex = 5;
+            this.bteImport.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bteImport_ButtonClick);
+            this.bteImport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bteImport_KeyDown);
             // 
-            // pictureEdit1
+            // txtNFactura
             // 
-            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 12);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(715, 392);
-            this.pictureEdit1.StyleController = this.dataLayoutControl1;
-            this.pictureEdit1.TabIndex = 4;
+            this.txtNFactura.Location = new System.Drawing.Point(12, 432);
+            this.txtNFactura.Name = "txtNFactura";
+            this.txtNFactura.Size = new System.Drawing.Size(99, 20);
+            this.txtNFactura.StyleController = this.dataLayoutControl1;
+            this.txtNFactura.TabIndex = 8;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(115, 432);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(99, 20);
+            this.txtFecha.StyleController = this.dataLayoutControl1;
+            this.txtFecha.TabIndex = 9;
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(218, 432);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(99, 20);
+            this.txtCliente.StyleController = this.dataLayoutControl1;
+            this.txtCliente.TabIndex = 10;
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Location = new System.Drawing.Point(321, 432);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(98, 20);
+            this.txtProducto.StyleController = this.dataLayoutControl1;
+            this.txtProducto.TabIndex = 11;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(423, 432);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(99, 20);
+            this.txtCantidad.StyleController = this.dataLayoutControl1;
+            this.txtCantidad.TabIndex = 12;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(526, 432);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(98, 20);
+            this.txtPrecio.StyleController = this.dataLayoutControl1;
+            this.txtPrecio.TabIndex = 13;
+            // 
+            // chkIVA
+            // 
+            this.chkIVA.Location = new System.Drawing.Point(628, 432);
+            this.chkIVA.Name = "chkIVA";
+            this.chkIVA.Properties.Caption = "Impuesto";
+            this.chkIVA.Size = new System.Drawing.Size(99, 19);
+            this.chkIVA.StyleController = this.dataLayoutControl1;
+            this.chkIVA.TabIndex = 77;
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem8,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem11,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(739, 464);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.pictureEdit1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(719, 396);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.bteImport;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 396);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(719, 24);
             this.layoutControlItem2.Text = "Seleccionar Archivo";
@@ -143,21 +249,100 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 420);
+            this.layoutControlItem3.Control = this.txtInitialCell;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(359, 24);
-            this.layoutControlItem3.Text = "Celda Izquierda";
+            this.layoutControlItem3.Size = new System.Drawing.Size(360, 24);
+            this.layoutControlItem3.Text = "Celda Inicial";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 13);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.textEdit2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(359, 420);
+            this.layoutControlItem4.Control = this.txtFinalCell;
+            this.layoutControlItem4.Location = new System.Drawing.Point(360, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(360, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(359, 24);
             this.layoutControlItem4.Text = "Celda Final";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.txtNFactura;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 404);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(103, 40);
+            this.layoutControlItem5.Text = "Nº Factura (*)";
+            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txtProducto;
+            this.layoutControlItem8.Location = new System.Drawing.Point(309, 404);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(102, 40);
+            this.layoutControlItem8.Text = "Nº Producto (*)";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txtFecha;
+            this.layoutControlItem6.Location = new System.Drawing.Point(103, 404);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(103, 40);
+            this.layoutControlItem6.Text = "Fecha (*)";
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.txtCliente;
+            this.layoutControlItem7.Location = new System.Drawing.Point(206, 404);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(103, 40);
+            this.layoutControlItem7.Text = "Nº Cliente (*)";
+            this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.txtCantidad;
+            this.layoutControlItem9.Location = new System.Drawing.Point(411, 404);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(103, 40);
+            this.layoutControlItem9.Text = "Cantidad (*)";
+            this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.txtPrecio;
+            this.layoutControlItem10.Location = new System.Drawing.Point(514, 404);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(102, 40);
+            this.layoutControlItem10.Text = "Precio (*)";
+            this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(93, 13);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.dtReg;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(719, 356);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.chkIVA;
+            this.layoutControlItem1.Location = new System.Drawing.Point(616, 404);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(103, 40);
+            this.layoutControlItem1.Text = "I.V.A";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 13);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -231,7 +416,12 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Importar Facturas de Excel";
             // 
-            // Import
+            // opImport
+            // 
+            this.opImport.Filter = "Archivos de Excel (*.xls, *.xlsx)|*.xls;*.xlsx";
+            this.opImport.FileOk += new System.ComponentModel.CancelEventHandler(this.opAbrir_FileOk);
+            // 
+            // SaleImport
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -246,22 +436,36 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Import";
+            this.Name = "SaleImport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar Facturas de Excel";
             this.Load += new System.EventHandler(this.Manage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Manage_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtReg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalCell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInitialCell.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bteImport.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,14 +477,29 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelCloseButton;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraEditors.LabelControl labelControl;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.ButtonEdit bteImport;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtInitialCell;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtFinalCell;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.TextEdit txtNFactura;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.TextEdit txtFecha;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.TextEdit txtCliente;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.TextEdit txtProducto;
+        private DevExpress.XtraEditors.TextEdit txtCantidad;
+        private DevExpress.XtraEditors.TextEdit txtPrecio;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        internal DevComponents.DotNetBar.Controls.DataGridViewX dtReg;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.CheckEdit chkIVA;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private System.Windows.Forms.OpenFileDialog opImport;
     }
 
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -54,7 +55,7 @@
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.btReceipt = new DevExpress.XtraBars.BarButtonItem();
             this.btReceiptList = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btImportar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -96,7 +97,7 @@
             this.barStaticItem2,
             this.btReceipt,
             this.btReceiptList,
-            this.barButtonItem3});
+            this.btImportar});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
@@ -283,12 +284,13 @@
             this.btReceiptList.Name = "btReceiptList";
             this.btReceiptList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btReceiptList_ItemClick);
             // 
-            // barButtonItem3
+            // btImportar
             // 
-            this.barButtonItem3.Caption = "Importar Ventas";
-            this.barButtonItem3.Id = 23;
-            this.barButtonItem3.ImageOptions.ImageUri.Uri = "Up";
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btImportar.Caption = "Importar Ventas";
+            this.btImportar.Id = 23;
+            this.btImportar.ImageOptions.ImageUri.Uri = "Up";
+            this.btImportar.Name = "btImportar";
+            this.btImportar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btImportar_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -311,7 +313,7 @@
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.btSale);
             this.ribbonPageGroup6.ItemLinks.Add(this.btSaleList);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btImportar);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Facturas";
             // 
@@ -362,7 +364,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.lblDate});
-            this.stState.Location = new System.Drawing.Point(0, 428);
+            this.stState.Location = new System.Drawing.Point(0, 543);
             this.stState.Name = "stState";
             this.stState.Size = new System.Drawing.Size(660, 22);
             this.stState.TabIndex = 4;
@@ -401,15 +403,18 @@
             // 
             // Home
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 450);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
+            this.ClientSize = new System.Drawing.Size(660, 565);
             this.Controls.Add(this.stState);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(662, 566);
             this.Name = "Home";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -467,6 +472,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btReceipt;
         private DevExpress.XtraBars.BarButtonItem btReceiptList;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btImportar;
     }
 }

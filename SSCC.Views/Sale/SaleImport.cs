@@ -28,14 +28,10 @@ namespace SSCC.Views.Sale
         //variable bandera cuando termino de cargarse completamente el objeto
         private Boolean ObjLoad = false;
 
-        //creación del objeto producto para encapsular funcionalidades
-        private ProductEntity _Product;
-
-        //bandera para saber si es nuevo o edicion
-        private Boolean Exist = false;
+        private List<SaleImportEntity> SalesImports;
 
         //creando regla de negocio
-        private RuleProduct RuleProduct;
+        private RuleSaleImport RuleSaleImport;
 
         //constantes para botones
 #region Constantes de Botones
@@ -56,17 +52,16 @@ namespace SSCC.Views.Sale
             InitializeComponent();
 
             //Inicializando objeto
-            this._Product = new ProductEntity();
+            this.SalesImports = new List<SaleImportEntity>();
 
-            this.Exist = false;
-
-            this.RuleProduct = new RuleProduct();
+            this.RuleSaleImport = new RuleSaleImport();
         }
 
         private void Clear()
         {
+
             //crear objeto nuevo
-            this._Product = new ProductEntity();
+            this.SalesImports = new List<SaleImportEntity>();
 
             //limpiar campos
             
@@ -78,7 +73,60 @@ namespace SSCC.Views.Sale
             this.SelectButton(btEdit).Enabled = false;
             this.SelectButton(btDelete).Enabled = false;
 
-            
+        }
+
+        private void List()
+        {
+            try
+            {
+                dtReg.DataSource = (from c in this.SalesImports
+                                    select new
+                                    {
+                                        c.SaleCode,
+                                        c.SaleDate,
+                                        c.CustomerCode,
+                                        c.CustomerName,
+                                        c.ProductCode,
+                                        c.ProductName,
+                                        c.ProductQuantity,
+                                        c.ProductPrice,
+                                        c.ProductIVA
+                                    }).ToList();
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+
+            this.Grid();
+        }
+
+        private void Grid()
+        {
+
+            if (dtReg.Columns.Count > 0)
+            {
+
+                //Estilo de Encabezados
+                dtReg.Columns[0].HeaderText = "\nNº Factura\n"; dtReg.Columns[0].Width = 120;
+                dtReg.Columns[1].HeaderText = "Fecha"; dtReg.Columns[1].Width = 120;
+                dtReg.Columns[2].HeaderText = "Nº Cliente"; dtReg.Columns[2].Width = 120;
+                dtReg.Columns[3].HeaderText = "Nombres y Apellidos"; dtReg.Columns[3].Width = 200;
+                dtReg.Columns[4].HeaderText = "Nº Producto"; dtReg.Columns[4].Width = 120;
+                dtReg.Columns[5].HeaderText = "Nombre del Producto"; dtReg.Columns[5].Width = 200;
+                dtReg.Columns[6].HeaderText = "Cantidad"; dtReg.Columns[6].Width = 100;
+                dtReg.Columns[7].HeaderText = "Precio"; dtReg.Columns[7].Width = 100;
+                dtReg.Columns[8].HeaderText = "I.V.A"; dtReg.Columns[8].Width = 100;
+
+                //Aplicando Formato General al Texto del Encabezado
+                foreach (DataGridViewColumn item in dtReg.Columns)
+                {
+                    item.HeaderText = item.HeaderText.ToUpper();
+                    item.HeaderCell.Style.Font = new Font(this.Font.FontFamily, this.Font.Size, FontStyle.Bold);
+                }
+
+            }
+
         }
 
         //IMPORTANTE: Modificar código, crear una clase general o una interfaz
@@ -87,24 +135,49 @@ namespace SSCC.Views.Sale
             return windowsUIButtonPanelMain.Buttons.Where(c => c.Properties.Tag == name).FirstOrDefault() as WindowsUIButton;
         }
 
+        private void DialogImport()
+        {
+            opImport.ShowDialog();
+        }
+
         private void Validation()
         {
 
+            if (String.IsNullOrWhiteSpace(bteImport.Text))
+            {
+                Msg.Err("Seleccionar archivo de Excel.");
+                bteImport.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+            {
+                Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Inicial).");
+                txtInitialCell.Focus();
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+            {
+                Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Final).");
+                txtFinalCell.Focus();
+                return;
+            }
+
+            if (this.SalesImports.Count > 0)
+            {
+                Msg.Err("No hay registros, para importar");
+                bteImport.Focus();
+                return;
+            }
         }
 
-        private void Save()
+        private void Import()
         {
             try
             {
                 this.Validation();
-                if (!this.Exist)
-                {
-                    
-                }
-                else
-                {
-                    
-                }
+                
             }
             catch (Exception ex)
             {
@@ -130,7 +203,7 @@ namespace SSCC.Views.Sale
 
         private void Manage_Load(object sender, EventArgs e)
         {
-
+            this.List();
             
             //Cargado completamente
             this.ObjLoad = true;
@@ -153,7 +226,7 @@ namespace SSCC.Views.Sale
                         break;
 
                     case Keys.G: //Guardar
-                        this.Save();
+                        this.Import();
                         break;
 
                     case Keys.B: //Buscar
@@ -181,14 +254,14 @@ namespace SSCC.Views.Sale
                 case btSave:
 
                     //Guardar
-                    this.Save();
+                    this.Import();
 
                     break;
 
                 case btSaveAndClose:
 
                     //Guardar y cerrar el form
-                    this.Save();
+                    this.Import();
                     this.Close();
 
                     break;
@@ -196,7 +269,7 @@ namespace SSCC.Views.Sale
                 case btSaveAndNew:
 
                     //Guardar y nuevo
-                    this.Save();
+                    this.Import();
                     this.Clear();
 
                     break;
@@ -216,6 +289,62 @@ namespace SSCC.Views.Sale
                 case btSearch:
 
                     break;
+            }
+        }
+
+        private void bteImport_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.DialogImport();
+        }
+
+        private void opAbrir_FileOk(object sender, CancelEventArgs e)
+        {
+            bteImport.EditValue = opImport.FileName;
+            txtInitialCell.Focus();
+        }
+
+        private void bteImport_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (String.IsNullOrWhiteSpace(bteImport.Text))
+                {
+                    this.DialogImport();
+                }
+                else
+                {
+                    txtInitialCell.Focus();
+                }
+            }
+        }
+
+        private void txtInitialCell_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                {
+                    txtFinalCell.Focus();
+                }
+                else
+                {
+                    Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Inicial).");
+                }
+            }
+        }
+
+        private void txtFinalCell_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                {
+                    
+                }
+                else
+                {
+                    Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Final).");
+                }
             }
         }
 

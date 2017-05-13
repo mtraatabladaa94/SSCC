@@ -15,7 +15,11 @@ namespace SSCC.Models.POCO
 
         public string CustomerCode { get; set; }
 
+        public string CustomerName { get; set; }
+
         public string ProductCode { get; set; }
+
+        public string ProductName { get; set; }
 
         public decimal ProductPrice { get; set; }
 
