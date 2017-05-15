@@ -177,6 +177,8 @@ namespace SSCC.Views.Sale
             try
             {
                 this.Validation();
+
+                
                 
             }
             catch (Exception ex)
@@ -300,7 +302,7 @@ namespace SSCC.Views.Sale
         private void opAbrir_FileOk(object sender, CancelEventArgs e)
         {
             bteImport.EditValue = opImport.FileName;
-            txtInitialCell.Focus();
+            txtSheet.Focus();
         }
 
         private void bteImport_KeyDown(object sender, KeyEventArgs e)
@@ -314,6 +316,21 @@ namespace SSCC.Views.Sale
                 else
                 {
                     txtInitialCell.Focus();
+                }
+            }
+        }
+
+        private void txtSheet_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                {
+                    txtFinalCell.Focus();
+                }
+                else
+                {
+                    Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Inicial).");
                 }
             }
         }
