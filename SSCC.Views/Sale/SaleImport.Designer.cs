@@ -44,8 +44,6 @@
             this.chkIVA = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -54,12 +52,14 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.opImport = new System.Windows.Forms.OpenFileDialog();
-            this.txtSheet = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtSheet = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtReg)).BeginInit();
@@ -75,8 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -85,8 +83,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -253,24 +253,6 @@
             this.layoutControlItem2.Text = "Seleccionar";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(75, 13);
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txtInitialCell;
-            this.layoutControlItem3.Location = new System.Drawing.Point(393, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(196, 24);
-            this.layoutControlItem3.Text = "C. Inicial";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(75, 13);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.txtFinalCell;
-            this.layoutControlItem4.Location = new System.Drawing.Point(589, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(197, 24);
-            this.layoutControlItem4.Text = "C. Final";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtNFactura;
@@ -349,6 +331,33 @@
             this.layoutControlItem1.Text = "I.V.A";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(75, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtInitialCell;
+            this.layoutControlItem3.Location = new System.Drawing.Point(393, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(196, 24);
+            this.layoutControlItem3.Text = "C. Inicial";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(75, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txtFinalCell;
+            this.layoutControlItem4.Location = new System.Drawing.Point(589, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(197, 24);
+            this.layoutControlItem4.Text = "C. Final";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.txtSheet;
+            this.layoutControlItem12.Location = new System.Drawing.Point(196, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(197, 24);
+            this.layoutControlItem12.Text = "Nº Hoja";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(75, 13);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -431,19 +440,14 @@
             // 
             this.txtSheet.Location = new System.Drawing.Point(286, 12);
             this.txtSheet.Name = "txtSheet";
+            this.txtSheet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSheet.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtSheet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.txtSheet.Size = new System.Drawing.Size(115, 20);
             this.txtSheet.StyleController = this.dataLayoutControl1;
             this.txtSheet.TabIndex = 78;
             this.txtSheet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSheet_KeyDown);
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.txtSheet;
-            this.layoutControlItem12.Location = new System.Drawing.Point(196, 0);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(197, 24);
-            this.layoutControlItem12.Text = "Hoja";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(75, 13);
             // 
             // SaleImport
             // 
@@ -480,8 +484,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -490,8 +492,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,8 +530,8 @@
         private DevExpress.XtraEditors.CheckEdit chkIVA;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.OpenFileDialog opImport;
-        private DevExpress.XtraEditors.TextEdit txtSheet;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.SpinEdit txtSheet;
     }
 
 }
