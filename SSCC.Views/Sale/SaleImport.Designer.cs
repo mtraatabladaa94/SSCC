@@ -134,6 +134,7 @@
             // 
             // txtFinalCell
             // 
+            this.txtFinalCell.EditValue = "G10";
             this.txtFinalCell.Location = new System.Drawing.Point(679, 12);
             this.txtFinalCell.Name = "txtFinalCell";
             this.txtFinalCell.Size = new System.Drawing.Size(115, 20);
@@ -143,6 +144,7 @@
             // 
             // txtInitialCell
             // 
+            this.txtInitialCell.EditValue = "A1";
             this.txtInitialCell.Location = new System.Drawing.Point(483, 12);
             this.txtInitialCell.Name = "txtInitialCell";
             this.txtInitialCell.Size = new System.Drawing.Size(114, 20);
@@ -438,12 +440,27 @@
             // 
             // txtSheet
             // 
+            this.txtSheet.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txtSheet.Location = new System.Drawing.Point(286, 12);
             this.txtSheet.Name = "txtSheet";
             this.txtSheet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSheet.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtSheet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtSheet.Properties.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.txtSheet.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txtSheet.Size = new System.Drawing.Size(115, 20);
             this.txtSheet.StyleController = this.dataLayoutControl1;
             this.txtSheet.TabIndex = 78;

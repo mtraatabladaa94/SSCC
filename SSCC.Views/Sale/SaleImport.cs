@@ -324,7 +324,7 @@ namespace SSCC.Views.Sale
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                if (!String.IsNullOrWhiteSpace(txtInitialCell.Text))
                 {
                     txtFinalCell.Focus();
                 }
@@ -339,7 +339,7 @@ namespace SSCC.Views.Sale
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                if (!String.IsNullOrWhiteSpace(txtInitialCell.Text))
                 {
                     txtFinalCell.Focus();
                 }
@@ -354,9 +354,9 @@ namespace SSCC.Views.Sale
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (String.IsNullOrWhiteSpace(txtInitialCell.Text))
+                if (!String.IsNullOrWhiteSpace(txtInitialCell.Text))
                 {
-                    
+                    RuleSaleImport.Imports(bteImport.Text, int.Parse(txtSheet.Value.ToString()), txtInitialCell.Text, txtFinalCell.Text, txtNFactura.Text, txtFecha.Text, txtCliente.Text, txtProducto.Text, txtCantidad.Text, txtPrecio.Text);
                 }
                 else
                 {

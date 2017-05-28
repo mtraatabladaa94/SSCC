@@ -37,12 +37,12 @@ namespace SSCC.Controllers
         private Excel.Worksheet xlWorkSheet;
         private Excel.Range range;
 
+        //jet connection
+
         private Boolean Exist(string FilePath)
         {
             return File.Exists(FilePath);
         }
-
-        
 
         private Excel.Range ReadFile(string FilePath, int SheetNumber)
         {
@@ -59,6 +59,8 @@ namespace SSCC.Controllers
                 misValue, misValue, misValue, misValue, misValue, misValue,
                 misValue, misValue, misValue, misValue, misValue, misValue);
 
+
+
             // seleccion de la hoja de calculo
             // get_item() devuelve object y numera las hojas a partir de 1
             if (xlWorkBook.Worksheets.Count > 0 && xlWorkBook.Worksheets.Count <= SheetNumber)
@@ -67,7 +69,7 @@ namespace SSCC.Controllers
             }
             else
             {
-                throw new Exception("No existe la hoja " + SheetNumber.ToString() + " en el Libro de Excel.");
+                throw new Exception("No existe la hoja '" + SheetNumber.ToString() + "' en el Libro de Excel.");
             }
 
             // seleccion rango activo
@@ -78,15 +80,28 @@ namespace SSCC.Controllers
 
         public List<SaleImportEntity> Imports(string FilePath, int SheetNumber, string CellLeft, string CellFinal, string SaleN = "", string SaleDate = "", string Customer = "", string ProductN = "", string Quanty = "", string Price = "", string IVA = "")
         {
-            var lst = new List<SaleImportEntity>();
-            //recorriendo celdas
-
-            foreach (var item in this.ReadFile(FilePath, SheetNumber))
+            if (!this.Exist(FilePath))
             {
-                
+                throw new Exception("No se encuestra el archivo: " + FilePath);
             }
 
-            return lst;
+            var saleImportEntityList = new List<SaleImportEntity>();
+
+            //conectando con excel
+            var dataValues = this.ReadFile(FilePath, SheetNumber).Range[CellLeft, CellFinal];
+            Object[,] array = new Object[dataValues.Rows.Count, dataValues.Columns.Count];
+            for (int column = 1; column < dataValues.Columns.Count; column++)
+            {
+                for (int row = 1; row < dataValues.Rows.Count; row++)
+                {
+                    array[row, column] = (dataValues.Cells[row, column] as Excel.Range).Value2;
+                }
+            }
+            
+            //recorriendo celdas
+            
+
+            return saleImportEntityList;
         }
     }
 }
