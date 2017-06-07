@@ -29,19 +29,14 @@
         ///
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.dtReg = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.txtFinalCell = new DevExpress.XtraEditors.TextEdit();
             this.txtInitialCell = new DevExpress.XtraEditors.TextEdit();
             this.bteImport = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtNFactura = new DevExpress.XtraEditors.TextEdit();
-            this.txtFecha = new DevExpress.XtraEditors.TextEdit();
-            this.txtCliente = new DevExpress.XtraEditors.TextEdit();
-            this.txtProducto = new DevExpress.XtraEditors.TextEdit();
-            this.txtCantidad = new DevExpress.XtraEditors.TextEdit();
-            this.txtPrecio = new DevExpress.XtraEditors.TextEdit();
             this.chkIVA = new DevExpress.XtraEditors.CheckEdit();
+            this.txtSheet = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -59,20 +54,20 @@
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.opImport = new System.Windows.Forms.OpenFileDialog();
-            this.txtSheet = new DevExpress.XtraEditors.SpinEdit();
+            this.txtNFactura = new DevExpress.XtraEditors.SpinEdit();
+            this.txtFecha = new DevExpress.XtraEditors.SpinEdit();
+            this.txtCliente = new DevExpress.XtraEditors.SpinEdit();
+            this.txtProducto = new DevExpress.XtraEditors.SpinEdit();
+            this.txtCantidad = new DevExpress.XtraEditors.SpinEdit();
+            this.txtPrecio = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalCell.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInitialCell.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bteImport.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -86,7 +81,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -96,14 +96,14 @@
             this.dataLayoutControl1.Controls.Add(this.txtFinalCell);
             this.dataLayoutControl1.Controls.Add(this.txtInitialCell);
             this.dataLayoutControl1.Controls.Add(this.bteImport);
+            this.dataLayoutControl1.Controls.Add(this.chkIVA);
+            this.dataLayoutControl1.Controls.Add(this.txtSheet);
             this.dataLayoutControl1.Controls.Add(this.txtNFactura);
             this.dataLayoutControl1.Controls.Add(this.txtFecha);
             this.dataLayoutControl1.Controls.Add(this.txtCliente);
             this.dataLayoutControl1.Controls.Add(this.txtProducto);
             this.dataLayoutControl1.Controls.Add(this.txtCantidad);
             this.dataLayoutControl1.Controls.Add(this.txtPrecio);
-            this.dataLayoutControl1.Controls.Add(this.chkIVA);
-            this.dataLayoutControl1.Controls.Add(this.txtSheet);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(45, 37);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -116,28 +116,28 @@
             this.dtReg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtReg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtReg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtReg.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtReg.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtReg.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtReg.Location = new System.Drawing.Point(12, 36);
+            this.dtReg.Location = new System.Drawing.Point(12, 60);
             this.dtReg.MultiSelect = false;
             this.dtReg.Name = "dtReg";
             this.dtReg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtReg.Size = new System.Drawing.Size(782, 376);
+            this.dtReg.Size = new System.Drawing.Size(782, 352);
             this.dtReg.TabIndex = 76;
             // 
             // txtFinalCell
             // 
             this.txtFinalCell.EditValue = "G10";
-            this.txtFinalCell.Location = new System.Drawing.Point(679, 12);
+            this.txtFinalCell.Location = new System.Drawing.Point(483, 36);
             this.txtFinalCell.Name = "txtFinalCell";
-            this.txtFinalCell.Size = new System.Drawing.Size(115, 20);
+            this.txtFinalCell.Size = new System.Drawing.Size(114, 20);
             this.txtFinalCell.StyleController = this.dataLayoutControl1;
             this.txtFinalCell.TabIndex = 7;
             this.txtFinalCell.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFinalCell_KeyDown);
@@ -145,9 +145,9 @@
             // txtInitialCell
             // 
             this.txtInitialCell.EditValue = "A1";
-            this.txtInitialCell.Location = new System.Drawing.Point(483, 12);
+            this.txtInitialCell.Location = new System.Drawing.Point(286, 36);
             this.txtInitialCell.Name = "txtInitialCell";
-            this.txtInitialCell.Size = new System.Drawing.Size(114, 20);
+            this.txtInitialCell.Size = new System.Drawing.Size(115, 20);
             this.txtInitialCell.StyleController = this.dataLayoutControl1;
             this.txtInitialCell.TabIndex = 6;
             this.txtInitialCell.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInitialCell_KeyDown);
@@ -161,68 +161,48 @@
             this.bteImport.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.bteImport.Properties.ReadOnly = true;
-            this.bteImport.Size = new System.Drawing.Size(114, 20);
+            this.bteImport.Size = new System.Drawing.Size(704, 20);
             this.bteImport.StyleController = this.dataLayoutControl1;
             this.bteImport.TabIndex = 5;
             this.bteImport.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bteImport_ButtonClick);
             this.bteImport.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bteImport_KeyDown);
             // 
-            // txtNFactura
-            // 
-            this.txtNFactura.Location = new System.Drawing.Point(12, 432);
-            this.txtNFactura.Name = "txtNFactura";
-            this.txtNFactura.Size = new System.Drawing.Size(108, 20);
-            this.txtNFactura.StyleController = this.dataLayoutControl1;
-            this.txtNFactura.TabIndex = 8;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(124, 432);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(108, 20);
-            this.txtFecha.StyleController = this.dataLayoutControl1;
-            this.txtFecha.TabIndex = 9;
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(236, 432);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(108, 20);
-            this.txtCliente.StyleController = this.dataLayoutControl1;
-            this.txtCliente.TabIndex = 10;
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Location = new System.Drawing.Point(348, 432);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(108, 20);
-            this.txtProducto.StyleController = this.dataLayoutControl1;
-            this.txtProducto.TabIndex = 11;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(460, 432);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(109, 20);
-            this.txtCantidad.StyleController = this.dataLayoutControl1;
-            this.txtCantidad.TabIndex = 12;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(573, 432);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(108, 20);
-            this.txtPrecio.StyleController = this.dataLayoutControl1;
-            this.txtPrecio.TabIndex = 13;
-            // 
             // chkIVA
             // 
-            this.chkIVA.Location = new System.Drawing.Point(685, 432);
+            this.chkIVA.Location = new System.Drawing.Point(679, 36);
             this.chkIVA.Name = "chkIVA";
             this.chkIVA.Properties.Caption = "Impuesto";
-            this.chkIVA.Size = new System.Drawing.Size(109, 19);
+            this.chkIVA.Size = new System.Drawing.Size(115, 19);
             this.chkIVA.StyleController = this.dataLayoutControl1;
             this.chkIVA.TabIndex = 77;
+            // 
+            // txtSheet
+            // 
+            this.txtSheet.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtSheet.Location = new System.Drawing.Point(90, 36);
+            this.txtSheet.Name = "txtSheet";
+            this.txtSheet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSheet.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtSheet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtSheet.Properties.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.txtSheet.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtSheet.Size = new System.Drawing.Size(114, 20);
+            this.txtSheet.StyleController = this.dataLayoutControl1;
+            this.txtSheet.TabIndex = 78;
+            this.txtSheet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSheet_KeyDown);
             // 
             // layoutControlGroup1
             // 
@@ -236,11 +216,11 @@
             this.layoutControlItem7,
             this.layoutControlItem9,
             this.layoutControlItem10,
+            this.layoutControlItem12,
             this.layoutControlItem11,
-            this.layoutControlItem1,
-            this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem12});
+            this.layoutControlItem3,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(806, 464);
@@ -251,7 +231,7 @@
             this.layoutControlItem2.Control = this.bteImport;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(196, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(786, 24);
             this.layoutControlItem2.Text = "Seleccionar";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -260,7 +240,7 @@
             this.layoutControlItem5.Control = this.txtNFactura;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 404);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(112, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem5.Text = "Nº Factura (*)";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(75, 13);
@@ -268,9 +248,9 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.txtProducto;
-            this.layoutControlItem8.Location = new System.Drawing.Point(336, 404);
+            this.layoutControlItem8.Location = new System.Drawing.Point(393, 404);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(112, 40);
+            this.layoutControlItem8.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem8.Text = "Nº Producto (*)";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(75, 13);
@@ -278,9 +258,9 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtFecha;
-            this.layoutControlItem6.Location = new System.Drawing.Point(112, 404);
+            this.layoutControlItem6.Location = new System.Drawing.Point(131, 404);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(112, 40);
+            this.layoutControlItem6.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem6.Text = "Fecha (*)";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(75, 13);
@@ -288,9 +268,9 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtCliente;
-            this.layoutControlItem7.Location = new System.Drawing.Point(224, 404);
+            this.layoutControlItem7.Location = new System.Drawing.Point(262, 404);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(112, 40);
+            this.layoutControlItem7.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem7.Text = "Nº Cliente (*)";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(75, 13);
@@ -298,9 +278,9 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtCantidad;
-            this.layoutControlItem9.Location = new System.Drawing.Point(448, 404);
+            this.layoutControlItem9.Location = new System.Drawing.Point(524, 404);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(113, 40);
+            this.layoutControlItem9.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem9.Text = "Cantidad (*)";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(75, 13);
@@ -308,9 +288,9 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtPrecio;
-            this.layoutControlItem10.Location = new System.Drawing.Point(561, 404);
+            this.layoutControlItem10.Location = new System.Drawing.Point(655, 404);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(112, 40);
+            this.layoutControlItem10.Size = new System.Drawing.Size(131, 40);
             this.layoutControlItem10.Text = "Precio (*)";
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(75, 13);
@@ -318,46 +298,46 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.dtReg;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(786, 380);
+            this.layoutControlItem11.Size = new System.Drawing.Size(786, 356);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.chkIVA;
-            this.layoutControlItem1.Location = new System.Drawing.Point(673, 404);
+            this.layoutControlItem1.Location = new System.Drawing.Point(589, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(113, 40);
+            this.layoutControlItem1.Size = new System.Drawing.Size(197, 24);
             this.layoutControlItem1.Text = "I.V.A";
-            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(75, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtInitialCell;
-            this.layoutControlItem3.Location = new System.Drawing.Point(393, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(196, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(196, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(197, 24);
             this.layoutControlItem3.Text = "C. Inicial";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(75, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtFinalCell;
-            this.layoutControlItem4.Location = new System.Drawing.Point(589, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(393, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(197, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem4.Text = "C. Final";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(75, 13);
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.txtSheet;
-            this.layoutControlItem12.Location = new System.Drawing.Point(196, 0);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(197, 24);
+            this.layoutControlItem12.Size = new System.Drawing.Size(196, 24);
             this.layoutControlItem12.Text = "Nº Hoja";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(75, 13);
             // 
@@ -438,33 +418,111 @@
             this.opImport.Filter = "Archivos de Excel (*.xls, *.xlsx)|*.xls;*.xlsx";
             this.opImport.FileOk += new System.ComponentModel.CancelEventHandler(this.opAbrir_FileOk);
             // 
-            // txtSheet
+            // txtNFactura
             // 
-            this.txtSheet.EditValue = new decimal(new int[] {
+            this.txtNFactura.EditValue = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.txtSheet.Location = new System.Drawing.Point(286, 12);
-            this.txtSheet.Name = "txtSheet";
-            this.txtSheet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtNFactura.Location = new System.Drawing.Point(12, 432);
+            this.txtNFactura.Name = "txtNFactura";
+            this.txtNFactura.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSheet.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtSheet.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtSheet.Properties.MaxValue = new decimal(new int[] {
-            100,
+            this.txtNFactura.Properties.DisplayFormat.FormatString = "0";
+            this.txtNFactura.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtNFactura.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtNFactura.Properties.IsFloatValue = false;
+            this.txtNFactura.Properties.Mask.EditMask = "N00";
+            this.txtNFactura.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtNFactura.Size = new System.Drawing.Size(127, 20);
+            this.txtNFactura.StyleController = this.dataLayoutControl1;
+            this.txtNFactura.TabIndex = 8;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.EditValue = new decimal(new int[] {
+            2,
             0,
             0,
             0});
-            this.txtSheet.Properties.MinValue = new decimal(new int[] {
-            1,
+            this.txtFecha.Location = new System.Drawing.Point(143, 432);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFecha.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtFecha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtFecha.Size = new System.Drawing.Size(127, 20);
+            this.txtFecha.StyleController = this.dataLayoutControl1;
+            this.txtFecha.TabIndex = 9;
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.EditValue = new decimal(new int[] {
+            3,
             0,
             0,
             0});
-            this.txtSheet.Size = new System.Drawing.Size(115, 20);
-            this.txtSheet.StyleController = this.dataLayoutControl1;
-            this.txtSheet.TabIndex = 78;
-            this.txtSheet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSheet_KeyDown);
+            this.txtCliente.Location = new System.Drawing.Point(274, 432);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtCliente.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtCliente.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtCliente.Size = new System.Drawing.Size(127, 20);
+            this.txtCliente.StyleController = this.dataLayoutControl1;
+            this.txtCliente.TabIndex = 10;
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.EditValue = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.txtProducto.Location = new System.Drawing.Point(405, 432);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtProducto.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtProducto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtProducto.Size = new System.Drawing.Size(127, 20);
+            this.txtProducto.StyleController = this.dataLayoutControl1;
+            this.txtProducto.TabIndex = 11;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.EditValue = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.txtCantidad.Location = new System.Drawing.Point(536, 432);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtCantidad.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtCantidad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtCantidad.Size = new System.Drawing.Size(127, 20);
+            this.txtCantidad.StyleController = this.dataLayoutControl1;
+            this.txtCantidad.TabIndex = 12;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.EditValue = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.txtPrecio.Location = new System.Drawing.Point(667, 432);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtPrecio.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtPrecio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtPrecio.Size = new System.Drawing.Size(127, 20);
+            this.txtPrecio.StyleController = this.dataLayoutControl1;
+            this.txtPrecio.TabIndex = 13;
             // 
             // SaleImport
             // 
@@ -492,13 +550,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalCell.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInitialCell.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bteImport.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIVA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -512,7 +565,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSheet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNFactura.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProducto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,15 +588,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.TextEdit txtFinalCell;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.TextEdit txtNFactura;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.TextEdit txtFecha;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.TextEdit txtCliente;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraEditors.TextEdit txtProducto;
-        private DevExpress.XtraEditors.TextEdit txtCantidad;
-        private DevExpress.XtraEditors.TextEdit txtPrecio;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
@@ -549,6 +601,12 @@
         private System.Windows.Forms.OpenFileDialog opImport;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraEditors.SpinEdit txtSheet;
+        private DevExpress.XtraEditors.SpinEdit txtNFactura;
+        private DevExpress.XtraEditors.SpinEdit txtFecha;
+        private DevExpress.XtraEditors.SpinEdit txtCliente;
+        private DevExpress.XtraEditors.SpinEdit txtProducto;
+        private DevExpress.XtraEditors.SpinEdit txtCantidad;
+        private DevExpress.XtraEditors.SpinEdit txtPrecio;
     }
 
 }

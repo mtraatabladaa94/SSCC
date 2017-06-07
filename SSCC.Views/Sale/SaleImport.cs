@@ -187,6 +187,18 @@ namespace SSCC.Views.Sale
             }
         }
 
+        private void GetData()
+        {
+            try
+            {
+                RuleSaleImport.Imports(bteImport.Text, int.Parse(txtSheet.Value.ToString()), txtInitialCell.Text, txtFinalCell.Text, int.Parse(txtNFactura.Value.ToString()), int.Parse(txtFecha.Value.ToString()), int.Parse(txtCliente.Value.ToString()), int.Parse(txtProducto.Value.ToString()), int.Parse(txtCantidad.Value.ToString()), int.Parse(txtPrecio.Value.ToString()));
+            }
+            catch (Exception ex)
+            {
+                Msg.Err(ex.Message);
+            }
+        }
+
         private void Delete()
         {
             try
@@ -198,8 +210,6 @@ namespace SSCC.Views.Sale
                 Msg.Err(ex.Message);
             }
         }
-
-
 
 
 
@@ -354,16 +364,20 @@ namespace SSCC.Views.Sale
         {
             if (e.KeyCode == Keys.Enter)
             {
+
                 if (!String.IsNullOrWhiteSpace(txtInitialCell.Text))
                 {
-                    RuleSaleImport.Imports(bteImport.Text, int.Parse(txtSheet.Value.ToString()), txtInitialCell.Text, txtFinalCell.Text, txtNFactura.Text, txtFecha.Text, txtCliente.Text, txtProducto.Text, txtCantidad.Text, txtPrecio.Text);
+                    this.GetData();
                 }
                 else
                 {
                     Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Final).");
                 }
+
             }
+
         }
 
     }
+
 }

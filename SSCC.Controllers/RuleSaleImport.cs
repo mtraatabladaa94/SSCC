@@ -44,7 +44,7 @@ namespace SSCC.Controllers
             return File.Exists(FilePath);
         }
 
-        private Excel.Range ReadFile(string FilePath, int SheetNumber)
+        private Excel.Range ReadFile(string FilePath, int SheetNumber, string CellLeft, string CellFinal)
         {
             if (!this.Exist(FilePath))
             {
@@ -73,12 +73,12 @@ namespace SSCC.Controllers
             }
 
             // seleccion rango activo
-            range = xlWorkSheet.UsedRange;
+            range = xlWorkSheet.get_Range(CellLeft, CellFinal);
 
             return range;
         }
 
-        public List<SaleImportEntity> Imports(string FilePath, int SheetNumber, string CellLeft, string CellFinal, string SaleN = "", string SaleDate = "", string Customer = "", string ProductN = "", string Quanty = "", string Price = "", string IVA = "")
+        public List<SaleImportEntity> Imports(string FilePath, int SheetNumber, string CellLeft, string CellFinal, int SaleN = 1, int SaleDate = 2, int CustomerN = 3, int ProductN = 4, int Quanty = 5, int Price = 6, int IVA = 7)
         {
             if (!this.Exist(FilePath))
             {
@@ -88,19 +88,68 @@ namespace SSCC.Controllers
             var saleImportEntityList = new List<SaleImportEntity>();
 
             //conectando con excel
-            var dataValues = this.ReadFile(FilePath, SheetNumber).Range[CellLeft, CellFinal];
+            var dataValues = this.ReadFile(FilePath, SheetNumber, CellLeft, CellFinal);
+            
+            //objeto array de pruebas
             Object[,] array = new Object[dataValues.Rows.Count, dataValues.Columns.Count];
-            for (int column = 1; column < dataValues.Columns.Count; column++)
+
+            //objeto del listado
+            var saleImportEntity = new SaleImportEntity();
+
+            for (int row = 0; row < dataValues.Rows.Count; row++)
             {
-                for (int row = 1; row < dataValues.Rows.Count; row++)
+                for (int column = 0; column < dataValues.Columns.Count; column++)
                 {
-                    array[row, column] = (dataValues.Cells[row, column] as Excel.Range).Value2;
+
+                    //valor obtenido de la celda de excel
+                    object value = (dataValues.Cells[row, column] as Excel.Range).Value;
+
+                    //llenando array para pruebas
+                    array[row, column] = value;
+
+                    //si es la columna nº factura
+                    if (column == SaleN)
+                    {
+                        saleImportEntity.SaleCode = value.ToString();
+                    }
+                    //si es la columna fecha
+                    if (column == SaleDate)
+                    {
+                        saleImportEntity.SaleDate = DateTime.Parse(value.ToString());
+                    }
+                    //si es la columna código cliente
+                    if (column == CustomerN)
+                    {
+                        saleImportEntity.CustomerCode = value.ToString();
+                    }
+                    //si es la columna código producto
+                    if (column == ProductN)
+                    {
+                        saleImportEntity.ProductCode = value.ToString();
+                    }
+                    //si es la columna cantidad
+                    if (column == Quanty)
+                    {
+                        saleImportEntity.ProductQuantity = decimal.Parse(value.ToString());
+                    }
+                    //si es la columna precio
+                    if (column == Price)
+                    {
+                        saleImportEntity.ProductPrice = decimal.Parse(value.ToString());
+                    }
+                    //si es la columna iva
+                    if (column == IVA)
+                    {
+                        saleImportEntity.ProductIVA = decimal.Parse(value.ToString());
+                    }
                 }
+
+                //agregando objeto al listado
+                saleImportEntityList.Add(saleImportEntity);
+
             }
             
-            //recorriendo celdas
-            
-
+            //retornando listado de datos
             return saleImportEntityList;
         }
     }
