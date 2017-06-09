@@ -98,55 +98,69 @@ namespace SSCC.Controllers
 
             for (int row = 0; row < dataValues.Rows.Count; row++)
             {
-                for (int column = 0; column < dataValues.Columns.Count; column++)
+                //objeto de base de datos
+                using (var db = new Models.Database.ModelDb())
                 {
 
-                    //valor obtenido de la celda de excel
-                    object value = (dataValues.Cells[row, column] as Excel.Range).Value;
+                    //aplicando probador para validar que los datos sean los debidos
+                    try
+                    {
+                        for (int column = 0; column < dataValues.Columns.Count; column++)
+                        {
 
-                    //llenando array para pruebas
-                    array[row, column] = value;
+                            //valor obtenido de la celda de excel
+                            object value = (dataValues.Cells[row, column] as Excel.Range).Value;
 
-                    //si es la columna nº factura
-                    if (column == SaleN)
-                    {
-                        saleImportEntity.SaleCode = value.ToString();
+                            //llenando array para pruebas
+                            array[row, column] = value;
+
+                            //si es la columna nº factura
+                            if (column == SaleN - 1)
+                            {
+                                saleImportEntity.SaleCode = value.ToString();
+                            }
+                            //si es la columna fecha
+                            if (column == SaleDate - 1)
+                            {
+                                saleImportEntity.SaleDate = DateTime.Parse(value.ToString());
+                            }
+                            //si es la columna código cliente
+                            if (column == CustomerN - 1)
+                            {
+                                saleImportEntity.CustomerCode = value.ToString();
+                            }
+                            //si es la columna código producto
+                            if (column == ProductN - 1)
+                            {
+                                saleImportEntity.ProductCode = value.ToString();
+                            }
+                            //si es la columna cantidad
+                            if (column == Quanty - 1)
+                            {
+                                saleImportEntity.ProductQuantity = decimal.Parse(value.ToString());
+                            }
+                            //si es la columna precio
+                            if (column == Price - 1)
+                            {
+                                saleImportEntity.ProductPrice = decimal.Parse(value.ToString());
+                            }
+                            //si es la columna iva
+                            if (column == IVA - 1)
+                            {
+                                //saleImportEntity.ProductIVA = decimal.Parse(value.ToString());
+                            }
+                        }
+
+                        //calcular total
+                        saleImportEntity.SaleTotal = saleImportEntity.ProductQuantity + saleImportEntity.ProductPrice + saleImportEntity.ProductIVA;
+
+                        //agregando objeto al listado
+                        saleImportEntityList.Add(saleImportEntity);
                     }
-                    //si es la columna fecha
-                    if (column == SaleDate)
-                    {
-                        saleImportEntity.SaleDate = DateTime.Parse(value.ToString());
-                    }
-                    //si es la columna código cliente
-                    if (column == CustomerN)
-                    {
-                        saleImportEntity.CustomerCode = value.ToString();
-                    }
-                    //si es la columna código producto
-                    if (column == ProductN)
-                    {
-                        saleImportEntity.ProductCode = value.ToString();
-                    }
-                    //si es la columna cantidad
-                    if (column == Quanty)
-                    {
-                        saleImportEntity.ProductQuantity = decimal.Parse(value.ToString());
-                    }
-                    //si es la columna precio
-                    if (column == Price)
-                    {
-                        saleImportEntity.ProductPrice = decimal.Parse(value.ToString());
-                    }
-                    //si es la columna iva
-                    if (column == IVA)
-                    {
-                        saleImportEntity.ProductIVA = decimal.Parse(value.ToString());
-                    }
+                    catch
+                    { }
+
                 }
-
-                //agregando objeto al listado
-                saleImportEntityList.Add(saleImportEntity);
-
             }
             
             //retornando listado de datos

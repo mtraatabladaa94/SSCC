@@ -27,5 +27,7 @@ namespace SSCC.Models.POCO
 
         public decimal ProductIVA { get; set; }
 
+        public decimal SaleTotal { get; set; }
+
     }
 }

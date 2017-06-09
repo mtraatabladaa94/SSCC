@@ -191,7 +191,7 @@ namespace SSCC.Views.Sale
         {
             try
             {
-                RuleSaleImport.Imports(bteImport.Text, int.Parse(txtSheet.Value.ToString()), txtInitialCell.Text, txtFinalCell.Text, int.Parse(txtNFactura.Value.ToString()), int.Parse(txtFecha.Value.ToString()), int.Parse(txtCliente.Value.ToString()), int.Parse(txtProducto.Value.ToString()), int.Parse(txtCantidad.Value.ToString()), int.Parse(txtPrecio.Value.ToString()));
+                RuleSaleImport.Imports(bteImport.Text, int.Parse(txtSheet.Value.ToString()), txtInitialCell.Text, txtFinalCell.Text, int.Parse(txtSaleCode.Value.ToString()), int.Parse(txtSaleDate.Value.ToString()), int.Parse(txtCustomerCode.Value.ToString()), int.Parse(txtProductCode.Value.ToString()), int.Parse(txtQuantity.Value.ToString()), int.Parse(txtPrice.Value.ToString()));
             }
             catch (Exception ex)
             {
@@ -372,6 +372,144 @@ namespace SSCC.Views.Sale
                 else
                 {
                     Msg.Err("Para importar datos debe ingresar el rango de celdas (Celda Final).");
+                }
+
+            }
+
+        }
+
+        private void txtSaleCode_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtSaleCode.Value > 0)
+                {
+
+                    txtSaleDate.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna del Nº Factura.");
+
+                }
+
+            }
+
+        }
+
+        private void txtSaleDate_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtSaleCode.Value > 0)
+                {
+
+                    txtCustomerCode.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna de Fecha.");
+
+                }
+
+            }
+
+        }
+
+        private void txtCustomerCode_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtCustomerCode.Value > 0)
+                {
+
+                    txtProductCode.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna del Nº Cliente.");
+
+                }
+
+            }
+
+        }
+
+        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtProductCode.Value > 0)
+                {
+
+                    txtQuantity.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna de Nº Producto.");
+
+                }
+
+            }
+
+        }
+
+        private void txtQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtQuantity.Value > 0)
+                {
+
+                    txtPrice.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna de Cantidad de Productos.");
+
+                }
+
+            }
+
+        }
+
+        private void txtPrice_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                if (txtQuantity.Value > 0)
+                {
+
+                    txtPrice.Focus();
+
+                }
+                else
+                {
+
+                    Msg.Err("Ingresar la columna de Precio de Productos.");
+
                 }
 
             }
