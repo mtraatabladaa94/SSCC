@@ -157,8 +157,10 @@ namespace SSCC.Controllers
                         //agregando objeto al listado
                         saleImportEntityList.Add(saleImportEntity);
                     }
-                    catch
-                    { }
+                    catch(Exception ex)
+                    {
+                        throw new Exception("Ha ocurrido un error al extraer los datos de excel. Descripción: " + ex.Message + ". El error ocurrio en la fila ");
+                    }
 
                 }
             }

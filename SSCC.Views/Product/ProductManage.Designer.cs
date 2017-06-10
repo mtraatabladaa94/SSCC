@@ -149,6 +149,7 @@
             this.txtDescription.Size = new System.Drawing.Size(715, 345);
             this.txtDescription.StyleController = this.dataLayoutControl1;
             this.txtDescription.TabIndex = 9;
+            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // layoutControlGroup1
             // 
@@ -313,7 +314,7 @@
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Edición de Productos";
             // 
-            // Manage
+            // ProductManage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -326,10 +327,11 @@
             this.Controls.Add(this.windowsUIButtonPanelCloseButton);
             this.Controls.Add(this.windowsUIButtonPanelMain);
             this.KeyPreview = true;
-            this.Name = "Manage";
+            this.Name = "ProductManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de Productos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductManage_FormClosing);
             this.Load += new System.EventHandler(this.Manage_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Manage_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();

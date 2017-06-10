@@ -311,8 +311,12 @@ namespace SSCC.Views.Product
                 var p = RuleProduct.Find(ProductCode);
                 if (p != null)
                 {
+                    this.Exist = true;
                     this._Product = p;
                     this.ShowDataInControls();
+
+                    //Habilitando botones
+                    this.SelectButton(btDelete).Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -389,7 +393,14 @@ namespace SSCC.Views.Product
             try
             {
                 this.Validation();
-                RuleProduct.Save(this._Product);
+                if (this.Exist)
+                {
+                    RuleProduct.Edit(this._Product);
+                }
+                else
+                {
+                    RuleProduct.Save(this._Product);
+                }
             }
             catch (Exception ex)
             {
@@ -401,7 +412,15 @@ namespace SSCC.Views.Product
         {
             try
             {
-                RuleProduct.Delete(this._Product.ProductID);
+                if (this.Exist)
+                {
+                    RuleProduct.Delete(this._Product.ProductID);
+                }
+                else
+                {
+                    Msg.Adv("Seleccione un producto para eliminarlo.");
+                }
+                this.Clear();
             }
             catch (Exception ex)
             {
@@ -498,37 +517,52 @@ namespace SSCC.Views.Product
 
         }
 
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+            if (this._Product.ProductDescription != txtDescription.Text)
+            {
+                this._Product.ProductDescription = txtDescription.Text;
+            }
+        }
+
         private void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
         {
-            switch (e.Button.Properties.Tag.ToString())
+            
+            var _buttonSelect = e.Button.Properties.Tag.ToString();
+            if (_buttonSelect == btNew)
             {
-
-                case btNew:
-                    this.Clear();
-                    break;
-
-                case btSave:
-                    this.Save();
-                    break;
-
-                case btSaveAndClose:
-                    this.Save();
-                    this.Close();
-                    break;
-
-                case btSaveAndNew:
-                    this.Save();
-                    this.Clear();
-                    break;
-
-                case btDelete:
-                    this.Delete();
-                    break;
-
-                case btSearch:
-
-                    break;
+                this.Clear();
             }
+
+            ////switch (e.Button.Properties.Tag.ToString())
+            ////{
+
+            ////    case btNew:
+            ////        this.Clear();
+            ////        break;
+
+            ////    case btSave:
+            ////        this.Save();
+            ////        break;
+
+            ////    case btSaveAndClose:
+            ////        this.Save();
+            ////        this.Close();
+            ////        break;
+
+            ////    case btSaveAndNew:
+            ////        this.Save();
+            ////        this.Clear();
+            ////        break;
+
+            ////    case btDelete:
+            ////        this.Delete();
+            ////        break;
+
+            ////    case btSearch:
+
+            ////        break;
+            ////}
 
         }
 
@@ -601,27 +635,31 @@ namespace SSCC.Views.Product
 
         private void Manage_KeyDown(object sender, KeyEventArgs e)
         {
+            //if (e.Control)
+            //{
+            //    switch (e.KeyData)
+            //    {
+            //        case Keys.N:
+            //            this.Clear();
+            //            break;
 
-            if (e.Control)
-            {
-                switch (e.KeyData)
-                {
-                    case Keys.N:
-                        this.Clear();
-                        break;
+            //        case Keys.G:
+            //            this.Save();
+            //            break;
 
-                    case Keys.G:
-                        this.Save();
-                        break;
-
-                    case Keys.Delete:
-                        this.Delete();
-                        break;
-                }
-            }
+            //        case Keys.Delete:
+            //            this.Delete();
+            //            break;
+            //    }
+            //}
         }
 
         #endregion
+
+        private void ProductManage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
 
     }
 }
